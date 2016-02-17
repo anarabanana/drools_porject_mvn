@@ -10,8 +10,13 @@ html{
 	background-color: #efefef;
 }
 
+
+
 body{
-	font:14px/1.5 Arial, Helvetica, sans-serif;
+	/*font:14px/1.5 Arial, Helvetica, sans-serif;*/
+	font-family:Verdana,sans-serif;
+	font-size: 15px;
+    line-height: 1.5;
 	margin:0;
 }
 
@@ -20,7 +25,7 @@ header{
     box-sizing: border-box;
 	text-align: center;
     width: 100%;
-    padding: 25px 40px;
+    padding: 40px 40px;
     background-color: #673AB7;
     overflow: hidden;
 }
@@ -28,8 +33,10 @@ header{
 
 header h1{
     float: left;
-	font: normal 24px/1.5 'Open Sans', sans-serif;
-	color: #fff;
+	font: normal 24px/1.5 'Verdana', sans-serif;
+	color: #fff; 
+	
+    line-height: 1.5;
 }
 
 header a{
@@ -52,7 +59,7 @@ ul {
     padding: 20px;
     margin-top: 0;
     text-align: center;
-    margin-bottom: 75px;
+    margin-bottom: 35px;
 }
 
 ul a{
