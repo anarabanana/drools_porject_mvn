@@ -1,4 +1,5 @@
 package com.assessment;
+
 //package com.assessment.java;
 
 public class UserInfo {
@@ -52,6 +53,5 @@ public class UserInfo {
 	public double getResult() {
 		return result;
 	}
-
 
 }

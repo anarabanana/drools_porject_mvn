@@ -33,12 +33,13 @@ a:link {
 .modal-content {
 	background-color: #673AB7;
 	color: white;
-	font-family: Verdana, sans-serif; font-size : 17px; margin : auto;
-	padding: 20px;
-	
+	font-family: Verdana, sans-serif;
+	font-size: 17px; margin : auto; padding : 20px;
 	width: 80%;
 	margin: auto;
 	font-size: 15px;
+	margin: auto;
+	padding: 20px;
 }
 
 /* The Close Button */
@@ -54,6 +55,10 @@ a:link {
 	text-decoration: none;
 	cursor: pointer;
 }
+.form-basic .form-row{
+height: 200px;
+    max-height: 1000px;
+    }
 </STYLE>
 <SCRIPT type="text/javascript">
 	function SwapDivsWithClick(div1, div2) {
@@ -74,6 +79,7 @@ a:link {
 
 <LINK rel="stylesheet" href="assets/demo.css">
 <LINK rel="stylesheet" href="assets/form-basic.css">
+<link rel="icon" href="assets/favicon.ico" type="image/png" sizes="16x16">
 
 </HEAD>
 
@@ -83,7 +89,9 @@ a:link {
 </HEADER>
 
 <UL>
-	<LI><A href="index.jsp" class="active">User Input</A>
+	<LI><A href="Hello.html">Home</A>
+	</LI>
+	<LI><A href="index.jsp" class="active">Form</A>
 	</LI>
 	<LI><A href="Results.jsp">Results</A>
 	</LI>
@@ -103,6 +111,7 @@ a:link {
 			</DIV>
 
 			<DIV class="form-row" id="v1_1">
+			<LABEL><SPAN>Total number of questions: <B>17</B>.</SPAN> </LABEL>
 				<LABEL><SPAN><B>1. </B>Does your company follow Green
 						ICT procurement guidelines when ICT equipment is purchased?</SPAN> </LABEL>
 				<DIV class="form-radio-buttons">
@@ -122,9 +131,10 @@ a:link {
 							checked="checked"> <SPAN>No</SPAN> </LABEL>
 					</DIV>
 				</DIV>
+				<DIV class="form-row">
 				<A href="javascript:SwapDivsWithClick('v1_1','v1_2')"><BUTTON
 						type="button">Next</BUTTON> </A>
-
+				</DIV>
 			</DIV>
 
 			<DIV class="form-row" id="v1_2" style="display: none;">
@@ -142,10 +152,13 @@ a:link {
 							<SPAN>No</SPAN> </LABEL>
 					</DIV>
 				</DIV>
-
+				
+				<A href="javascript:SwapDivsWithClick('v1_2','v1_1')"  ><BUTTON
+						type="button" style="margin: 50px 450px 0 250px;">Back</BUTTON> </A>
+				
 				<A href="javascript:SwapDivsWithClick('v1_2','v1_3')"><BUTTON
 						type="button">Next</BUTTON> </A>
-
+				
 			</DIV>
 
 			<DIV class="form-row" id="v1_3" style="display: none;">
@@ -175,9 +188,15 @@ a:link {
 					</DIV>
 				</DIV>
 
-				<A href="javascript:SwapDivsWithClick('v1_3','v1_4')"><BUTTON
-						type="button">Next</BUTTON> </A>
-
+				
+				<TABLE>
+				<tr>
+				<td><A href="javascript:SwapDivsWithClick('v1_3','v1_2')"><BUTTON
+						type="button" style="margin: 50px 450px 0 250px;">Back</BUTTON> </A></td>
+				<td><A href="javascript:SwapDivsWithClick('v1_3','v1_4')"><BUTTON
+						type="button">Next</BUTTON> </A></td>
+				</tr>
+				</TABLE>
 			</DIV>
 
 
@@ -202,10 +221,14 @@ a:link {
 							checked="checked"> <SPAN>None</SPAN> </LABEL>
 					</DIV>
 				</DIV>
-
-				<A href="javascript:SwapDivsWithClick('v1_4','v2_1')"><BUTTON
-						type="button">Next</BUTTON> </A>
-
+			<TABLE>
+				<tr>
+				<td><A href="javascript:SwapDivsWithClick('v1_4','v1_3')"><BUTTON
+						type="button" style="margin: 50px 450px 0 250px;">Back</BUTTON> </A></td>
+				<td><A href="javascript:SwapDivsWithClick('v1_4','v2_1')"><BUTTON
+						type="button">Next</BUTTON> </A></td>
+				</tr>
+				</TABLE>
 			</DIV>
 
 			<DIV class="form-row" id="v2_1" style="display: none;">
@@ -224,9 +247,15 @@ a:link {
 					</DIV>
 				</DIV>
 
-				<A href="javascript:SwapDivsWithClick('v2_1','v2_2')"><BUTTON
-						type="button">Next</BUTTON> </A>
-
+				
+			<TABLE>
+				<tr>
+				<td><A href="javascript:SwapDivsWithClick('v2_1','v1_4')"><BUTTON
+						type="button" style="margin: 50px 450px 0 250px;">Back</BUTTON> </A></td>
+				<td><A href="javascript:SwapDivsWithClick('v2_1','v2_2')"><BUTTON
+						type="button">Next</BUTTON> </A></td>
+				</tr>
+				</TABLE>
 			</DIV>
 			<DIV class="form-row" id="v2_2" style="display: none;">
 				<LABEL><SPAN><B>6. </B>Is use of switch off and
@@ -249,9 +278,15 @@ a:link {
 					</DIV>
 				</DIV>
 
-				<A href="javascript:SwapDivsWithClick('v2_2','v2_3')"><BUTTON
-						type="button">Next</BUTTON> </A>
-
+				
+			<TABLE>
+				<tr>
+				<td><A href="javascript:SwapDivsWithClick('v2_2','v2_1')"><BUTTON
+						type="button" style="margin: 50px 450px 0 250px;">Back</BUTTON> </A></td>
+				<td><A href="javascript:SwapDivsWithClick('v2_2','v2_3')"><BUTTON
+						type="button">Next</BUTTON> </A></td>
+				</tr>
+				</TABLE>
 			</DIV>
 
 			<DIV class="form-row" id="v2_3" style="display: none;">
@@ -270,9 +305,15 @@ a:link {
 					</DIV>
 				</DIV>
 
-				<A href="javascript:SwapDivsWithClick('v2_3','v2_4')"><BUTTON
-						type="button">Next</BUTTON> </A>
-
+				
+			<TABLE>
+				<tr>
+				<td><A href="javascript:SwapDivsWithClick('v2_3','v2_2')"><BUTTON
+						type="button" style="margin: 50px 450px 0 250px;">Back</BUTTON> </A></td>
+				<td><A href="javascript:SwapDivsWithClick('v2_3','v2_4')"><BUTTON
+						type="button">Next</BUTTON> </A></td>
+				</tr>
+				</TABLE>
 			</DIV>
 			<DIV class="form-row" id="v2_4" style="display: none;">
 				<LABEL><SPAN><B>8. </B>Have you followed any
@@ -295,9 +336,15 @@ a:link {
 					</DIV>
 				</DIV>
 
-				<A href="javascript:SwapDivsWithClick('v2_4','v2_5')"><BUTTON
-						type="button">Next</BUTTON> </A>
-
+				
+			<TABLE>
+				<tr>
+				<td><A href="javascript:SwapDivsWithClick('v2_4','v2_3')"><BUTTON
+						type="button" style="margin: 50px 450px 0 250px;">Back</BUTTON> </A></td>
+				<td><A href="javascript:SwapDivsWithClick('v2_4','v2_5')"><BUTTON
+						type="button">Next</BUTTON> </A></td>
+				</tr>
+				</TABLE>
 			</DIV>
 
 			<DIV class="form-row" id="v2_5" style="display: none;">
@@ -316,9 +363,15 @@ a:link {
 					</DIV>
 				</DIV>
 
-				<A href="javascript:SwapDivsWithClick('v2_5','v3_1')"><BUTTON
-						type="button">Next</BUTTON> </A>
-
+				
+			<TABLE>
+				<tr>
+				<td><A href="javascript:SwapDivsWithClick('v2_5','v2_4')"><BUTTON
+						type="button" style="margin: 50px 450px 0 250px;">Back</BUTTON> </A></td>
+				<td><A href="javascript:SwapDivsWithClick('v2_5','v3_1')"><BUTTON
+						type="button">Next</BUTTON> </A></td>
+				</tr>
+				</TABLE>
 			</DIV>
 
 			<DIV class="form-row" id="v3_1" style="display: none;">
@@ -343,9 +396,15 @@ a:link {
 							<SPAN>Not at all</SPAN> </LABEL>
 					</DIV>
 				</DIV>
-				<A href="javascript:SwapDivsWithClick('v3_1','v3_2')"><BUTTON
-						type="button">Next</BUTTON> </A>
-
+				
+			<TABLE>
+				<tr>
+				<td><A href="javascript:SwapDivsWithClick('v3_1','v2_5')"><BUTTON
+						type="button" style="margin: 50px 450px 0 250px;">Back</BUTTON> </A></td>
+				<td><A href="javascript:SwapDivsWithClick('v3_1','v3_2')"><BUTTON
+						type="button">Next</BUTTON> </A></td>
+				</tr>
+				</TABLE>
 			</DIV>
 
 			<DIV class="form-row" id="v3_2" style="display: none;">
@@ -370,13 +429,19 @@ a:link {
 							<SPAN>Not at all</SPAN> </LABEL>
 					</DIV>
 				</DIV>
-				<A href="javascript:SwapDivsWithClick('v3_2','v3_3')"><BUTTON
-						type="button">Next</BUTTON> </A>
-
+				
+			<TABLE>
+				<tr>
+				<td><A href="javascript:SwapDivsWithClick('v3_2','v3_1')"><BUTTON
+						type="button" style="margin: 50px 450px 0 250px;">Back</BUTTON> </A></td>
+				<td><A href="javascript:SwapDivsWithClick('v3_2','v3_3')"><BUTTON
+						type="button">Next</BUTTON> </A></td>
+				</tr>
+				</TABLE>
 			</DIV>
 
 			<DIV class="form-row" id="v3_3" style="display: none;">
-				<LABEL><SPAN><B>11. </B>Do the following statement
+				<LABEL><SPAN><B>12. </B>Do the following statement
 						apply to your company? "Routing is made energy aware and offers
 						possibilities to choose the most energy efficient route instead of
 						the shortest path."</SPAN> </LABEL>
@@ -397,14 +462,20 @@ a:link {
 							<SPAN>Not at all</SPAN> </LABEL>
 					</DIV>
 				</DIV>
-				<A href="javascript:SwapDivsWithClick('v3_3','v4_1')"><BUTTON
-						type="button">Next</BUTTON> </A>
-
+				
+			<TABLE>
+				<tr>
+				<td><A href="javascript:SwapDivsWithClick('v3_3','v3_2')"><BUTTON
+						type="button" style="margin: 50px 450px 0 250px;">Back</BUTTON> </A></td>
+				<td><A href="javascript:SwapDivsWithClick('v3_3','v4_1')"><BUTTON
+						type="button">Next</BUTTON> </A></td>
+				</tr>
+				</TABLE>
 			</DIV>
 
 
 			<DIV class="form-row" id="v4_1" style="display: none;">
-				<LABEL><SPAN><B>12. </B>Has your company adopted any
+				<LABEL><SPAN><B>13. </B>Has your company adopted any
 						documented reference architecture (with guiding principles for
 						designing new services/products) aimed to minimize environmental
 						impact?</SPAN> </LABEL>
@@ -420,12 +491,18 @@ a:link {
 							<SPAN>False</SPAN> </LABEL>
 					</DIV>
 				</DIV>
-				<A href="javascript:SwapDivsWithClick('v4_1','v4_2')"><BUTTON
-						type="button">Next</BUTTON> </A>
-
+				
+			<TABLE>
+				<tr>
+				<td><A href="javascript:SwapDivsWithClick('v4_1','v3_3')"><BUTTON
+						type="button" style="margin: 50px 450px 0 250px;">Back</BUTTON> </A></td>
+				<td><A href="javascript:SwapDivsWithClick('v4_1','v4_2')"><BUTTON
+						type="button">Next</BUTTON> </A></td>
+				</tr>
+				</TABLE>
 			</DIV>
 			<DIV class="form-row" id="v4_2" style="display: none;">
-				<LABEL><SPAN><B>13. </B>Does your company have any
+				<LABEL><SPAN><B>14. </B>Does your company have any
 						sustainable development-related training and communication
 						activities for employees?</SPAN> </LABEL>
 				<DIV class="form-radio-buttons">
@@ -440,12 +517,18 @@ a:link {
 							<SPAN>False</SPAN> </LABEL>
 					</DIV>
 				</DIV>
-				<A href="javascript:SwapDivsWithClick('v4_2','v4_3')"><BUTTON
-						type="button">Next</BUTTON> </A>
-
+				
+			<TABLE>
+				<tr>
+				<td><A href="javascript:SwapDivsWithClick('v4_2','v4_1')"><BUTTON
+						type="button" style="margin: 50px 450px 0 250px;">Back</BUTTON> </A></td>
+				<td><A href="javascript:SwapDivsWithClick('v4_2','v4_3')"><BUTTON
+						type="button">Next</BUTTON> </A></td>
+				</tr>
+				</TABLE>
 			</DIV>
 			<DIV class="form-row" id="v4_3" style="display: none;">
-				<LABEL><SPAN><B>14. </B>Does your company promote the
+				<LABEL><SPAN><B>15. </B>Does your company promote the
 						use of audio and video conferencing facilities reduce travel?</SPAN> </LABEL>
 				<DIV class="form-radio-buttons">
 
@@ -459,14 +542,20 @@ a:link {
 							<SPAN>False</SPAN> </LABEL>
 					</DIV>
 				</DIV>
-				<A href="javascript:SwapDivsWithClick('v4_3','v5_1')"><BUTTON
-						type="button">Next</BUTTON> </A>
-
+				
+			<TABLE>
+				<tr>
+				<td><A href="javascript:SwapDivsWithClick('v4_3','v4_2')"><BUTTON
+						type="button" style="margin: 50px 450px 0 250px;">Back</BUTTON> </A></td>
+				<td><A href="javascript:SwapDivsWithClick('v4_3','v5_1')"><BUTTON
+						type="button">Next</BUTTON> </A></td>
+				</tr>
+				</TABLE>
 			</DIV>
 
 
 			<DIV class="form-row" id="v5_1" style="display: none;">
-				<LABEL><SPAN><B>15. </B>Does the following statement
+				<LABEL><SPAN><B>16. </B>Does the following statement
 						apply to your company? "Ensure a strict implementation of an
 						e-waste policy for the reuse or recycling of ICT equipment to
 						minimize environmental and social hazards after disposal." </SPAN> </LABEL>
@@ -487,11 +576,18 @@ a:link {
 							<SPAN>Not at all</SPAN> </LABEL>
 					</DIV>
 				</DIV>
-				<A href="javascript:SwapDivsWithClick('v5_1','v5_2')"><BUTTON
-						type="button">Next</BUTTON> </A>
+				
+			<TABLE>
+				<tr>
+				<td><A href="javascript:SwapDivsWithClick('v5_1','v4_3')"><BUTTON
+						type="button" style="margin: 50px 450px 0 250px;">Back</BUTTON> </A></td>
+				<td><A href="javascript:SwapDivsWithClick('v5_1','v5_2')"><BUTTON
+						type="button">Next</BUTTON> </A></td>
+				</tr>
+				</TABLE>
 			</DIV>
 			<DIV class="form-row" id="v5_2" style="display: none;">
-				<LABEL><SPAN><B>16. </B>Does your company have any
+				<LABEL><SPAN><B>17. </B>Does your company have any
 						collection and recovery (e.g. reuse, repairing, remanufacturing)
 						channels (subcontractors) that can reduce the amount of waste sent
 						to landfill? </SPAN> </LABEL>
@@ -507,7 +603,14 @@ a:link {
 							<SPAN>False </SPAN> </LABEL>
 					</DIV>
 				</DIV>
-				<BUTTON type="submit" id="myBtn">Submit Form</BUTTON>
+				<TABLE>
+				<tr>
+				<td><A href="javascript:SwapDivsWithClick('v5_2','v5_1')"><BUTTON
+						type="button" style="margin: 50px 450px 0 250px;">Back</BUTTON> </A></td>
+				<td><BUTTON type="submit" id="myBtn">Submit Form</BUTTON></td>
+				</tr>
+				</TABLE>
+				
 
 				<!-- The Modal -->
 				<div id="myModal" class="modal">
@@ -516,7 +619,7 @@ a:link {
 					<div class="modal-content">
 						<span class="close">×</span>
 						<p>It will take a few moments to process your request for the
-							first time.Please wait while page is loading.</p>
+							first time. Please wait while page is loading.</p>
 					</div>
 
 				</div>

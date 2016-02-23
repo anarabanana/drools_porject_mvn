@@ -1,0 +1,4 @@
+127.0.0.1 - - [22/Feb/2016:22:23:34 +0000] "GET /drools_project/index.jsp HTTP/1.1" 200 19507 http-bio-8899-exec-1 1571
+127.0.0.1 - - [22/Feb/2016:22:23:34 +0000] "GET /drools_project/assets/demo.css HTTP/1.1" 304 - http-bio-8899-exec-2 3
+127.0.0.1 - - [22/Feb/2016:22:23:34 +0000] "GET /drools_project/assets/form-basic.css HTTP/1.1" 304 - http-bio-8899-exec-3 3
+127.0.0.1 - - [22/Feb/2016:22:23:35 +0000] "GET /drools_project/assets/favicon.ico HTTP/1.1" 200 6867 http-bio-8899-exec-5 16

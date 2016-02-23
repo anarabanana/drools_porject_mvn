@@ -9,6 +9,8 @@
 <title>Results</title>
 <link rel="stylesheet" href="assets/demo.css">
 <link rel="stylesheet" href="assets/form-basic.css">
+<link rel="icon" href="assets/favicon.ico" type="image/png"
+	sizes="16x16">
 
 <script type="text/javascript"
 	src="https://www.gstatic.com/charts/loader.js"></script>
@@ -79,6 +81,7 @@
 				};
 			}
 		} ]);
+
 		var options = {
 			title : 'Categories share',
 			is3D : true,
@@ -108,7 +111,6 @@
 				.getElementById('piechart'));
 		chart.draw(data, options);
 	}
-
 </script>
 
 <style>
@@ -194,6 +196,7 @@ a:link {
 </header>
 
 <ul>
+	<LI><A href="Hello.html">Home</A></LI>
 	<li><a href="index.jsp">User Input</a>
 	</li>
 	<li><a href="Results.jsp" class="active">Results</a>
@@ -206,48 +209,60 @@ a:link {
 		<!-- You only need this form and the form-labels-on-top.css -->
 
 		<form class="form-basic"
-			action="http://localhost:8899/drools_project/Recommendations.jsp">
+			action="Recommendations.jsp">
 
 
 			<div class="form-title-row">
 				<h1>Results of your ER level</h1>
 
 			</div>
-			
-				<%if(doubleVar >= 80.0){%>
-					<div class="alert success">
-					<span class="closebtn">×</span> <strong>Leading!</strong> Your ER
-					index is great.Keep doing.
-				</div>  
-			
-			<% } else if (doubleVar >= 60.0 && doubleVar <= 80.0) { %>
-					<div class="alert info">
-					  <span class="closebtn">×</span>  
-					  <strong>Succeeding.</strong> You are doing almost perfect.
-					</div>
-				  <% } else if (doubleVar >= 40.0 && doubleVar <= 60.0) { %>
-					<div class="alert warning">
-					  <span class="closebtn">×</span>  
-					  <strong>Improving.</strong> You might want to see recommended activities to perform better.
-					</div>
-					 <% } else { %>
-					<div class="alert">
-					  <span class="closebtn">×</span>  
-					  <strong>Beginning.</strong> You should start from recommended activities list.
-					</div>
-				 <% } %>
-		
+
+			<%
+				if (doubleVar >= 80.0) {
+			%>
+			<div class="alert success">
+				<span class="closebtn">×</span> <strong>Level: Leading.</strong> Your ER
+				index is great.Keep doing.
+			</div>
+
+			<%
+				} else if (doubleVar >= 60.0 && doubleVar < 80.0) {
+			%>
+			<div class="alert info">
+				<span class="closebtn">×</span> <strong>Level: Succeeding.</strong> You are
+				doing almost perfect.
+			</div>
+			<%
+				} else if (doubleVar >= 40.0 && doubleVar < 60.0) {
+			%>
+			<div class="alert warning">
+				<span class="closebtn">×</span> <strong>Level: Improving.</strong> You
+				might want to see recommended activities to perform better.
+			</div>
+			<%
+				} else {
+			%>
+			<div class="alert">
+				<span class="closebtn">×</span> <strong>Level: Beginning.</strong> You
+				should start from recommended activities list.
+			</div>
+			<%
+				}
+			%>
+
 			<script>
-			var close = document.getElementsByClassName("closebtn");
-			var i;
-			
-			for (i = 0; i < close.length; i++) {
-			    close[i].onclick = function(){
-			        var div = this.parentElement;
-			        div.style.opacity = "0";
-			        setTimeout(function(){ div.style.display = "none"; }, 600);
-			    }
-			}
+				var close = document.getElementsByClassName("closebtn");
+				var i;
+
+				for (i = 0; i < close.length; i++) {
+					close[i].onclick = function() {
+						var div = this.parentElement;
+						div.style.opacity = "0";
+						setTimeout(function() {
+							div.style.display = "none";
+						}, 600);
+					}
+				}
 			</script>
 
 			<img id="loading" alt="img" src="ajax-loader.gif" />
@@ -302,6 +317,9 @@ a:link {
 								out.println(obj5);
 							%> %</span> </label><span class="tooltiptext">Click to see
 								recommendations</span>
+						</div>
+						<div class="form-row">
+							<label><span><B> Please hover over to see </B></span> </label>
 						</div></td>
 					<td>
 						<div class="form-row">

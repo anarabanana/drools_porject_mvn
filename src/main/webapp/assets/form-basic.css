@@ -10,6 +10,8 @@ html{
 
 .form-basic{
     max-width: 900px;
+    
+    position: static;
     margin: 0 auto;
     padding: 35px;
     box-sizing: border-box;
@@ -27,6 +29,7 @@ html{
 .form-basic .form-row{
     text-align: left;
     margin-bottom: 22px;
+    
 }
 
 .form-basic .form-title-row{
@@ -99,6 +102,7 @@ html{
 
 .form-basic .form-radio-buttons{
     display: inline-block;
+    
     vertical-align: default;
 }
 
@@ -118,6 +122,8 @@ html{
 
 .form-basic button{
     display: block;
+   	position: absolute;
+   	bottom: 100px;   
     border-radius: 2px;
     background-color:  #6caee0;
     color: #ffffff;
@@ -125,8 +131,10 @@ html{
     box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
     padding: 14px 22px;
     border: 0;
-    margin: 40px 300px 0;
+    margin: 50px 30px 0 400px;
 }
+
+
 
 /*	Making the form responsive. Remove this media query
     if you don't need the form to work on mobile devices. */
