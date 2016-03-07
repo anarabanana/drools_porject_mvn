@@ -68,9 +68,41 @@
 	type="text/javascript"></SCRIPT>
 	<SCRIPT src="http://docs.handsontable.com/0.15.0-beta6/scripts/graphael-demo/g.bar-min.js"
 	type="text/javascript"></SCRIPT>-->
+
+ <script src='http://alasql.org/console/xlsx.core.min.js'></script>
+<script src='http://alasql.org/console/alasql.min.js'></script> 
+
+<script src='assets/xlsx.full.min.js'></script>
+<!-- <script src='assets/alasql.min.js'></script>
+<script src='assets/xlsx.core.min.js'></script> -->
+
 <SCRIPT type="text/javascript">
+var indexesData = [];
+ //var indexesData; 
+/*   var getIndexesData = function(result){ 
+	 console.log(result)
+	 return result;	 
+	 }; */
+ var src = alasql('select * into ? from xlsx("assets/Data.xlsx",{range:"X23:Y176"})',
+        [indexesData,],function(data_xlsx){
+	
+		// getIndexesData(data_xlsx);
+		//console.log(indexesData)
+		//indexesData.push(data_xlsx); 
+		
+		});
+
+
+	 //indexesData = getIndexesData();
+console.log(indexesData)
+//alert(indexesData)
+	 
+
+
+//alert(indexesData[59].V)
 	var country;
 	var resultObject;
+	//var indexesData;
 	$(document).ready(
 
 			function() {
@@ -127,7 +159,7 @@
 						[ "35", "PABX distributed (i)", 250, 1.75, '=+(C35*D35)', 8760, , ,
 								"=+((E35*F35)/1000)" ],
 						[ "36", "PABX cooling and power supply (j)", 0, 0, , , 0.1, , '383.25' ],
-						[ "37", "Locally powered VOIP phones (k,Cisco) ", 0, 3, "=+(C37*D37)", 8760, , ,
+						[ "37", "Locally powered VOIP phones (k) ", 0, 3, "=+(C37*D37)", 8760, , ,
 								"=(E37*F37)/1000" ],
 
 						[ "38", "PHONES SUB-TOTAL", , , , , , , "=SUM(I35:I37)" ],
@@ -172,16 +204,16 @@
 						[ "61", "", , , , , , , '' ],
 						[ "62", "Category", "Energy Use (kWh/y)", "Energy Cost (£/y) ",
 								"CO2 emissions (kg/y)", , , , ],
-						[ "63", "Servers", '=SUM(I4:I6)', "=(C63*C72)", "=(C63*C73)" ],
-						[ "64", "PCs", '=(SUM(I11:I19))', "=(C64*C72)", "=(C64*C73)" ],
-						[ "65", "Networks", "=SUM(I24:I30)", "=(C65*C72)", "=(C65*C73)" ],
-						[ "66", "Telephony", "=SUM(I35:I37)", "=(C66*C72)", "=(C66*C73)" ],
-						[ "67", "Imaging", "=+SUM(I42:I51)", "=(C67*C72)", "=(C67*C73)" ],
-						[ "68", "AV", "=SUM(I56:I58)", "=(C68*C72)", "=(C68*C73)" ],
-						[ "69", "TOTAL", "=SUM(C63:C68)", "=(C69*C72)", "=(C69*C73)" ],
+						[ "63", "Servers", '=CEILING(SUM(I4:I6),1)', "=CEILING((C63*C72),1)", "=CEILING((C63*C73),1)" ],
+						[ "64", "PCs", '=CEILING(SUM(I11:I19),1)', "=CEILING((C64*C72),1)", "=CEILING((C64*C73),1)" ],
+						[ "65", "Networks", "=CEILING(SUM(I24:I30),1)", "=CEILING((C65*C72),1)", "=CEILING((C65*C73),1)" ],
+						[ "66", "Telephony", "=CEILING(SUM(I35:I37),1)", "=CEILING((C66*C72),1)", "=CEILING((C66*C73),1)" ],
+						[ "67", "Imaging", "=CEILING(SUM(I42:I51),1)", "=CEILING((C67*C72),1)", "=CEILING((C67*C73),1)" ],
+						[ "68", "AV", "=CEILING(SUM(I56:I58),1)", "=CEILING((C68*C72),1)", "=CEILING((C68*C73),1)" ],
+						[ "69", "TOTAL", "=CEILING(SUM(C63:C68),1)", "=CEILING((C69*C72),1)", "=CEILING((C69*C73),1)" ],
 						[ "70", "", , , , , , , '' ], [ "71	", "", , , , , , , '' ],
 						[ "72", "Default electricity price (p/KwH)", '0.12', , , , , , '' ],
-						[ "73", "Default CO2 emission (kg CO2/kWh) (w)", '0.5', , , , , , '' ],
+						[ "73", "Default CO2 emission (kg CO2/kWh) (w)", '0.5678', , , , , , '' ],
 						[ "74", "", , , , , , , '' ], [ "75	", "", , , , , , , '' ]
 
 				];
@@ -198,19 +230,31 @@
 				}
 				function negativeValueRenderer(instance, td, row, col, prop, value, cellProperties) {
 					Handsontable.renderers.TextRenderer.apply(this, arguments);
+					
 					//td.className = 'make-me-red';
 					//  td.style.background = '#ccccff';
 
 				}
+				greenRenderer = function (instance, td, row, col, prop, value, cellProperties) {
+					Handsontable.renderers.NumericRenderer.apply(this, arguments);
+					
+				  };
 				Handsontable.renderers.registerRenderer('negativeValueRenderer', negativeValueRenderer);
 
-				var indexesData = [ {
+			  	/* indexesData = [ {
 					name : 'GB',
 					factor : '0.527'
 				}, {
 					name : 'FR',
 					factor : '0.09'
-				} ];
+				} ,
+				{
+					name : 'KZ',
+					factor : '0.777'
+				},];  
+			  	console.log(indexesData) */
+
+				
 
 				var hot = new Handsontable(container,
 						{
@@ -612,7 +656,9 @@
 							}, {
 								row : 68,
 								col : 4,
-								readOnly : true
+								readOnly : true,
+								format: '0.00'
+								
 							},
 
 							{
@@ -621,17 +667,25 @@
 								type : 'handsontable',
 
 								handsontable : {
-									colHeaders : false,
-									data : indexesData
+									
+									colHeaders: ['Factor', 'Country'],
+									data : indexesData,
+								  /*   columns: [
+								      {
+								    	  indexesData:'Factor'
+								    	  
+								      },
+								      {
+								    	indexesData: 'Country',
+								        readOnly: true
+								      }], */
+									autoColumnSize: true
+									
+								
 								},
 
 							},
 
-							// id = indexesData.property('name')
-							// alert(id);
-
-							/* {row: 18, col: 1, className: "htLeft htMiddle"},
-							{row: 3, col: 4, className: "htLeft htBottom"} */
 							],
 							afterSelection : function(row, col, row2, col2) {
 								/*  var meta = this.getCellMeta(row2, col2);
@@ -650,6 +704,12 @@
 										|| row === 54 || row === 61) {
 									cellProperties.readOnly = true; // make cell read-only if it is first row or the text reads 'readOnly'
 								}
+								if (row === 71 && col === 2) {
+									cellProperties.renderer = greenRenderer;
+									 //cellProperties.type = 'numeric';
+								     cellProperties.format = '0.0';
+									}
+								
 								if (row === 0 || row === 9 || row === 22 || row === 33 || row === 40
 										|| row === 54 || row === 61) {
 									cellProperties.renderer = firstRowRenderer; // uses function directly
@@ -953,33 +1013,49 @@
 
 				function search(nameKey, myArray) {
 					for ( var i = 0; i < myArray.length; i++) {
-						if (myArray[i].name === nameKey) {
-							return myArray[i].factor;
+						if (myArray[i].W === nameKey) {
+							return myArray[i].V;
 						}
 					}
 				}
+				
+				
 				// alert(indexesData[i].name)
+				   $.getJSON("http://ip-api.com/xml/?fields=countryCode", function(data) {
+           
+            country = data.CountryCode;
+            alert(country+" yeah");
+        });
 				$.getJSON("http://freegeoip.net/json/", function(data) {
 					country = data.country_code;
+					//country_name = data.country_name;
+					//alert(country_name);
 
 					//alert(country);
 					// for (var i=0; i < indexesData.length; i++) 
 
 					//var regex = new RegExp( country, 'g' );
 					//resultObjectCode = search(country, indexesData);
-					resultObject = search(country, indexesData);
+					alasql('select * from xlsx("assets/Data.xlsx",{range:"V23:W176"})',
+				        [],function(data_xlsx) {
+					//console.log(data_xlsx);
+				//	alert(data_xlsx[59].W)
+					
+					resultObject = (search(country, data_xlsx))/1000;
 					alert("Your country code is: " + country + ". Emissions factor is: " + resultObject)
 					hot.setDataAtCell(72, 2, resultObject);
 
 					//indexesData[i].name.match(regex);
 					//alert(indexesData[i].name.match(regex));
-					//  
-				});
+					});
+					
 
 				hot.render();
 				// $('#servers_grid').handsontable('setDataAtCell', 73, 2, "100");
 				//data[72][2]=resultObject;
 
+			});
+				
 			});
 </SCRIPT>
 <STYLE type="text/css">
@@ -1004,7 +1080,7 @@
 <UL>
 	<LI><A href="index.html">Home</A>
 	</LI>
-	<LI><A href="Assessment.jsp">User Input</A>
+	<LI><A href="Assessment.jsp">Form</A>
 	</LI>
 	<LI><A href="Results.jsp">Results</A>
 	</LI>

@@ -89,13 +89,15 @@ height: 200px;
 </HEADER>
 
 <UL>
-	<LI><A href="Hello.html">Home</A>
+	<LI><A href="index.html">Home</A>
 	</LI>
-	<LI><A href="index.jsp" class="active">Form</A>
+	<LI><A href="Assessment.jsp" class="active">Form</A>
 	</LI>
 	<LI><A href="Results.jsp">Results</A>
 	</LI>
 	<LI><A href="Recommendations.jsp">Recommendations</A>
+	</LI>
+	<LI><A href="Calculate.jsp">Calculate</A>
 	</LI>
 </UL>
 <BODY>
@@ -118,17 +120,17 @@ height: 200px;
 
 					<DIV>
 						<LABEL> <INPUT type="radio" name="v1_1" value="high">
-							<SPAN>Yes</SPAN> </LABEL>
+							<SPAN>Always</SPAN> </LABEL>
 					</DIV>
 
 					<DIV>
 						<LABEL> <INPUT type="radio" name="v1_1" value="medium">
-							<SPAN>Undecided</SPAN> </LABEL>
+							<SPAN>Sometimes</SPAN> </LABEL>
 					</DIV>
 
 					<DIV>
 						<LABEL> <INPUT type="radio" name="v1_1" value="low"
-							checked="checked"> <SPAN>No</SPAN> </LABEL>
+							checked="checked"> <SPAN>Never</SPAN> </LABEL>
 					</DIV>
 				</DIV>
 				<DIV class="form-row">
@@ -269,7 +271,7 @@ height: 200px;
 
 					<DIV>
 						<LABEL> <INPUT type="radio" name="v2_2" value="medium">
-							<SPAN>Undecided</SPAN> </LABEL>
+							<SPAN>Occasionally</SPAN> </LABEL>
 					</DIV>
 
 					<DIV>

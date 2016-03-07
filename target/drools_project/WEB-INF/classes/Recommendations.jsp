@@ -32,10 +32,12 @@
 </header>
 
 <ul>
-	<LI><A href="Hello.html">Home</A></LI>
-	<li><a href="index.jsp">User Input</a></li>
+	<LI><A href="index.html">Home</A></LI>
+	<li><a href="Assessment.jsp">Form</a></li>
 	<li><a href="Results.jsp">Results</a></li>
 	<li><a href="Recommendations.jsp" class="active">Recommendations</a>
+	</li>
+	<li><a href="Calculate.jsp">Calculate</a>
 	</li>
 </ul>
 <body>
