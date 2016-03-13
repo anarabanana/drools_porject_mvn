@@ -1,22 +1,16 @@
 <!DOCTYPE html>
 <%@page import="java.util.ArrayList"%>
 <html>
-
 <head>
-
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Results</title>
 <link rel="stylesheet" href="assets/demo.css">
 <link rel="stylesheet" href="assets/form-basic.css">
-<link rel="icon" href="assets/favicon.ico" type="image/png"
-	sizes="16x16">
-
-<script type="text/javascript"
-	src="https://www.gstatic.com/charts/loader.js"></script>
-<script type="text/javascript"
-	src="http://jqueryjs.googlecode.com/files/jquery-1.3.2.min.js"></script>
+<link rel="icon" href="assets/favicon.ico" type="image/png" sizes="16x16">
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript" src="http://jqueryjs.googlecode.com/files/jquery-1.3.2.min.js"></script>
 <script type="text/javascript">
 	$(document).ready(function() {
 		$("#loading").hide();
@@ -91,6 +85,8 @@
 			title : 'ER index components',
 			is3D : true,
 			sliceVisibilityThreshold : 0,
+			'legend':'right',
+			
 
 			pieSliceText : 'label',
 			slices : {
@@ -117,10 +113,13 @@
 		chart.draw(data, options);
 	}
 </script>
-
 <style>
+.form-basic {
+	max-width: 1000px;
+}
+
 .form-basic .form-row>label span {
-	width: 360px;
+	width: 380px;
 }
 
 a:link {
@@ -134,12 +133,12 @@ a:link {
 
 .form-basic .form-row>label span:hover {
 	color: #8000ff;
-	font-weight: bold;
+	/* font-weight: bold; */
 }
 
 .form-row .tooltiptext {
 	visibility: hidden;
-	width: 140px;
+	width: 150px;
 	background-color: #bf80ff;
 	color: #fff;
 	text-align: center;
@@ -199,67 +198,54 @@ a:link {
 <header>
 	<h1>ER Assessment Belief rule-based system</h1>
 </header>
-
 <ul>
-	<LI><A href="index.html">Home</A></LI>
-	<li><a href="Assessment.jsp">Form</a>
-	</li>
-	<li><a href="Results.jsp" class="active">Results</a>
-	</li>
-	<li><a href="Recommendations.jsp">Recommendations</a>
-	</li>
-	<li><a href="Calculate.jsp">Calculate</a>
-	</li>
+	<LI><A href="index.html">Home</A>
+	</LI>
+	<li><a href="Assessment.jsp">Form</a></li>
+	<li><a href="Results.jsp" class="active">Results</a></li>
+	<li><a href="Recommendations.jsp">Recommendations</a></li>
+	<li><a href="Calculate.jsp">Calculate</a></li>
 </ul>
 <body>
 	<div class="main-content">
 		<!-- You only need this form and the form-labels-on-top.css -->
-
-		<form class="form-basic"
-			action="Recommendations.jsp">
-
-
+		<form class="form-basic" action="Recommendations.jsp">
 			<div class="form-title-row">
 				<h1>Results of your ER level</h1>
-			
-
 			</div>
 			<!-- alert(flag_activities)
 			console.log(flag_activities) -->
-
 			<%
 				if (doubleVar >= 80.0) {
 			%>
 			<div class="alert success">
-				<span class="closebtn">×</span> <strong>Level: Leading.</strong> Your ER
-				index is great.Keep doing.
+				<span class="closebtn">×</span> <strong>Level: Leading.</strong> Your ER index is great.Keep
+				doing.
 			</div>
-
 			<%
 				} else if (doubleVar >= 60.0 && doubleVar < 80.0) {
 			%>
 			<div class="alert info">
-				<span class="closebtn">×</span> <strong>Level: Succeeding.</strong> You are
-				doing almost perfect.
+				<span class="closebtn">×</span> <strong>Level: Succeeding.</strong> You are doing almost
+				perfect.
 			</div>
 			<%
 				} else if (doubleVar >= 40.0 && doubleVar < 60.0) {
 			%>
 			<div class="alert warning">
-				<span class="closebtn">×</span> <strong>Level: Improving.</strong> You
-				might want to see recommended activities to perform better.
+				<span class="closebtn">×</span> <strong>Level: Improving.</strong> You might want to see
+				recommended activities to perform better.
 			</div>
 			<%
 				} else {
 			%>
 			<div class="alert">
-				<span class="closebtn">×</span> <strong>Level: Beginning.</strong> You
-				should start from recommended activities list.
+				<span class="closebtn">×</span> <strong>Level: Beginning.</strong> You should start from
+				recommended activities list.
 			</div>
 			<%
 				}
 			%>
-
 			<script>
 				var close = document.getElementsByClassName("closebtn");
 				var i;
@@ -274,73 +260,61 @@ a:link {
 					}
 				}
 			</script>
-
-			
 			<table>
 				<tr>
 					<td>
 						<div class="form-row">
-							<label><span> Total ER index is <%
+							<label><span> Total estimated ER index is <%
 								Object obj = session.getAttribute("object");
 								out.println(obj);
-							%> %</span> </label>
+							%> %</span> </label> <label><span> ER indexes for: <br>
+							</label></span>
 						</div>
-						<div class="form-row"
-							onClick="window.location.href='Recommendations.jsp#V1';">
-
-							<label><span> ER index for Category 1 is <%
+						<div class="form-row" onClick="window.location.href='Recommendations.jsp#V1';">
+							<label><span>1. Equipment procurement compliance with Green ICT guidelines is
+									about <%
 								Object obj1 = session.getAttribute("ob");
 								out.println(obj1);
 								Double dD = (Double) session.getAttribute("ob");
-							%> %</span> </label><span class="tooltiptext">Click to see
-								recommendations</span>
-
+							%> %</span> </label><span class="tooltiptext">Click to see recommendations</span>
 						</div>
-						<div class="form-row"
-							onClick="window.location.href='Recommendations.jsp#V2';">
-							<label><span> ER index for Category 2 is <%
+						<div class="form-row" onClick="window.location.href='Recommendations.jsp#V2';">
+							<label><span>2. Energy performance improvement and monitoring is about <%
 								Object obj2 = session.getAttribute("ob2");
 								out.println(obj2);
-							%> %</span> </label><span class="tooltiptext">Click to see
-								recommendations</span>
+							%> %</span> </label><span class="tooltiptext">Click to see recommendations</span>
 						</div>
-						<div class="form-row"
-							onClick="window.location.href='Recommendations.jsp#V3';">
-							<label><span> ER index for Category 3 is <%
+						<div class="form-row" onClick="window.location.href='Recommendations.jsp#V3';">
+							<label><span>3. Energy aware networks engineering adherence is about <%
 								Object obj3 = session.getAttribute("ob3");
 								out.println(obj3);
-							%> %</span> </label><span class="tooltiptext">Click to see
-								recommendations</span>
+							%> %</span> </label><span class="tooltiptext">Click to see recommendations</span>
 						</div>
-						<div class="form-row"
-							onClick="window.location.href='Recommendations.jsp#V4';">
-							<label><span> ER index for Category 4 is <%
+						<div class="form-row" onClick="window.location.href='Recommendations.jsp#V4';">
+							<label><span>4. Social commitment is about <%
 								Object obj4 = session.getAttribute("ob4");
 								out.println(obj4);
-							%> %</span> </label><span class="tooltiptext">Click to see
-								recommendations</span>
+							%> %</span> </label><span class="tooltiptext">Click to see recommendations</span>
 						</div>
-						<div class="form-row"
-							onClick="window.location.href='Recommendations.jsp#V5';">
-							<label><span> ER index for Category 5 is <%
+						<div class="form-row" onClick="window.location.href='Recommendations.jsp#V5';">
+							<label><span>5. Waste management is about <%
 								Object obj5 = session.getAttribute("ob5");
 								out.println(obj5);
-							%> %</span> </label><span class="tooltiptext">Click to see
-								recommendations</span>
+							%> %</span> </label><span class="tooltiptext">Click to see recommendations</span>
 						</div>
 						<div class="form-row">
-							<label><span><B> Please hover over to see more</B></span> </label>
-						</div></td>
-					<td>
+							<label><span><B> Please hover over to see more</B>
+							</span> </label>
+						</div>
+					</td>
+					<td style="width: 50%">
 						<div class="form-row">
-							<div id="piechart" style="width: 500px; height: 400px;"></div>
-						</div></td>
+							<div id="piechart" style="width: 470px; height: 400px;"></div>
+						</div>
+					</td>
 				</tr>
 			</table>
 		</form>
-
 	</div>
-
 </body>
-
 </html>

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@page import="java.util.ArrayList"%>
 <html>
 
 <head>
@@ -39,7 +40,11 @@
 <%
 	Double doubleVar = (Double) session.getAttribute("object");
 %>
+<%
+	ArrayList<String> flag_activities = (ArrayList<String>) session.getAttribute("flag_activities");
+%>
 <script type="text/javascript">
+
 	google.charts.load("current", {
 		packages : [ "corechart" ]
 	});
@@ -216,8 +221,11 @@ a:link {
 
 			<div class="form-title-row">
 				<h1>Results of your ER level</h1>
+			
 
 			</div>
+			<!-- alert(flag_activities)
+			console.log(flag_activities) -->
 
 			<%
 				if (doubleVar >= 80.0) {
@@ -267,7 +275,7 @@ a:link {
 				}
 			</script>
 
-			<img id="loading" alt="img" src="ajax-loader.gif" />
+			
 			<table>
 				<tr>
 					<td>

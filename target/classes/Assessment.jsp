@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 <HTML>
-
 <HEAD>
-
 <META charset="utf-8">
 <META http-equiv="X-UA-Compatible" content="IE=edge">
 <META name="viewport" content="width=device-width, initial-scale=1">
-<SCRIPT
-	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"
+<SCRIPT src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"
 	type="text/javascript"></SCRIPT>
-
 <STYLE type="text/css">
 a:link {
 	text-decoration: none;
@@ -34,7 +30,9 @@ a:link {
 	background-color: #673AB7;
 	color: white;
 	font-family: Verdana, sans-serif;
-	font-size: 17px; margin : auto; padding : 20px;
+	font-size: 17px;
+	margin: auto;
+	padding: 20px;
 	width: 80%;
 	margin: auto;
 	font-size: 15px;
@@ -55,10 +53,11 @@ a:link {
 	text-decoration: none;
 	cursor: pointer;
 }
-.form-basic .form-row{
-height: 200px;
-    max-height: 1000px;
-    }
+
+.form-basic .form-row {
+	height: 200px;
+	max-height: 1000px;
+}
 </STYLE>
 <SCRIPT type="text/javascript">
 	function SwapDivsWithClick(div1, div2) {
@@ -73,564 +72,464 @@ height: 200px;
 		}
 	}
 </SCRIPT>
-
-
 <TITLE>ER Assessment BRB toolkit</TITLE>
-
 <LINK rel="stylesheet" href="assets/demo.css">
 <LINK rel="stylesheet" href="assets/form-basic.css">
 <link rel="icon" href="assets/favicon.ico" type="image/png" sizes="16x16">
-
 </HEAD>
-
-
 <HEADER>
 	<H1>ER Assessment Belief rule-based system</H1>
 </HEADER>
-
 <UL>
-	<LI><A href="index.html">Home</A>
-	</LI>
-	<LI><A href="Assessment.jsp" class="active">Form</A>
-	</LI>
-	<LI><A href="Results.jsp">Results</A>
-	</LI>
-	<LI><A href="Recommendations.jsp">Recommendations</A>
-	</LI>
-	<LI><A href="Calculate.jsp">Calculate</A>
-	</LI>
+	<LI><A href="index.html">Home</A></LI>
+	<LI><A href="Assessment.jsp" class="active">Form</A></LI>
+	<LI><A href="Results.jsp">Results</A></LI>
+	<LI><A href="Recommendations.jsp">Recommendations</A></LI>
+	<LI><A href="Calculate.jsp">Calculate</A></LI>
 </UL>
 <BODY>
-
 	<DIV class="main-content">
 		<!-- You only need this form and the form-labels-on-top.css -->
-
 		<FORM class="form-basic" method="POST" action="ReadParams">
-
-
 			<DIV class="form-title-row">
 				<H1>Please answer the questions</H1>
 			</DIV>
-
-			<DIV class="form-row" id="v1_1" >
-			<LABEL><SPAN>Total number of questions: <B>17</B>.</SPAN> </LABEL>
-				<LABEL><SPAN><B>1. </B>Does your company follow Green
-						ICT procurement guidelines when ICT equipment is purchased?</SPAN> </LABEL>
-				<DIV class="form-radio-buttons" >
-
+			<DIV class="form-row" id="v1_1">
+				<LABEL><SPAN>Total number of questions: <B>17</B>.</SPAN> </LABEL> <LABEL><SPAN><B>1.
+					</B>Does your company follow Green ICT procurement guidelines when ICT equipment is purchased?</SPAN> </LABEL>
+				<DIV class="form-radio-buttons">
 					<DIV>
-						<LABEL> <INPUT type="radio" name="v1_1" value="high">
-							<SPAN>Always</SPAN> </LABEL>
+						<LABEL> <INPUT type="radio" name="v1_1" value="high"> <SPAN>Always</SPAN> </LABEL>
 					</DIV>
-
 					<DIV>
-						<LABEL> <INPUT type="radio" name="v1_1" value="medium">
-							<SPAN>Sometimes</SPAN> </LABEL>
+						<LABEL> <INPUT type="radio" name="v1_1" value="medium"> <SPAN>Sometimes</SPAN>
+						</LABEL>
 					</DIV>
-
 					<DIV>
-						<LABEL> <INPUT type="radio" name="v1_1" value="low"
-							checked="checked"> <SPAN>Never</SPAN> </LABEL>
+						<LABEL> <INPUT type="radio" name="v1_1" value="low" checked="checked"> <SPAN>Never</SPAN>
+						</LABEL>
 					</DIV>
-					
 				</DIV>
 				<DIV class="form-row">
-				<A href="javascript:SwapDivsWithClick('v1_1','v1_2')"><BUTTON
-						type="button" onclick="myFlag1()" >Next</BUTTON> </A>
+					<A href="javascript:SwapDivsWithClick('v1_1','v1_2')"><BUTTON type="button"
+							onclick="myFlag1()">Next</BUTTON> </A>
 				</DIV>
 			</DIV>
-
 			<DIV class="form-row" id="v1_2" style="display: none;">
-				<LABEL><SPAN><B>2. </B>Have you ever used Life Cycle
-						Impact Assessment as a product/service purchase criterion?</SPAN> </LABEL>
+				<LABEL><SPAN><B>2. </B>Have you ever used Life Cycle Impact Assessment as a
+						product/service purchase criterion?</SPAN> </LABEL>
 				<DIV class="form-radio-buttons">
-
 					<DIV>
-						<LABEL> <INPUT type="radio" name="v1_2" value="high"
-							checked="checked"> <SPAN>Yes</SPAN> </LABEL>
+						<LABEL> <INPUT type="radio" name="v1_2" value="high" checked="checked"> <SPAN>Yes</SPAN>
+						</LABEL>
 					</DIV>
-
 					<DIV>
-						<LABEL> <INPUT type="radio" name="v1_2" value="low">
-							<SPAN>No</SPAN> </LABEL>
+						<LABEL> <INPUT type="radio" name="v1_2" value="low"> <SPAN>No</SPAN> </LABEL>
 					</DIV>
 				</DIV>
-				
-				<A href="javascript:SwapDivsWithClick('v1_2','v1_1')"  ><BUTTON
-						type="button" style="margin: 50px 450px 0 250px;">Back</BUTTON> </A>
-				
-				<A href="javascript:SwapDivsWithClick('v1_2','v1_3')"><BUTTON
-						type="button" onclick="myFlag2()">Next</BUTTON> </A>
-				
+				<A href="javascript:SwapDivsWithClick('v1_2','v1_1')"><BUTTON type="button"
+						style="margin: 50px 450px 0 250px;">Back</BUTTON> </A> <A
+					href="javascript:SwapDivsWithClick('v1_2','v1_3')"><BUTTON type="button"
+						onclick="myFlag2()">Next</BUTTON> </A>
 			</DIV>
-
 			<DIV class="form-row" id="v1_3" style="display: none;">
-				<LABEL><SPAN><B>3. </B>Do you prioritize eco-labels
-						(e.g. EPEAT, Energy Star, EU Ecolabel, SWAN etc.)?</SPAN> </LABEL>
+				<LABEL><SPAN><B>3. </B>Do you prioritize eco-labels (e.g. EPEAT, Energy Star, EU
+						Ecolabel, SWAN etc.)?</SPAN> </LABEL>
 				<DIV class="form-radio-buttons">
-
 					<DIV>
-						<LABEL> <INPUT type="radio" name="v1_3" value="high">
-							<SPAN>For 100 % of equipment</SPAN> </LABEL>
-					</DIV>
-
-					<DIV>
-						<LABEL> <INPUT type="radio" name="v1_3" value="high"
-							checked="checked"> <SPAN>For between 70 to 99 % of
-								equipment</SPAN> </LABEL>
+						<LABEL> <INPUT type="radio" name="v1_3" value="high"> <SPAN>For 100 %
+								of equipment</SPAN> </LABEL>
 					</DIV>
 					<DIV>
-						<LABEL> <INPUT type="radio" name="v1_3" value="medium"
-							checked="checked"> <SPAN>For between 40 to 69 % of
-								equipment</SPAN> </LABEL>
+						<LABEL> <INPUT type="radio" name="v1_3" value="high" checked="checked"> <SPAN>For
+								between 70 to 99 % of equipment</SPAN> </LABEL>
 					</DIV>
 					<DIV>
-						<LABEL> <INPUT type="radio" name="v1_3" value="low"
-							checked="checked"> <SPAN>For less than 40 % of
-								equipment</SPAN> </LABEL>
+						<LABEL> <INPUT type="radio" name="v1_3" value="medium" checked="checked"> <SPAN>For
+								between 40 to 69 % of equipment</SPAN> </LABEL>
+					</DIV>
+					<DIV>
+						<LABEL> <INPUT type="radio" name="v1_3" value="low" checked="checked"> <SPAN>For
+								less than 40 % of equipment</SPAN> </LABEL>
 					</DIV>
 				</DIV>
-
-				
 				<TABLE>
-				<tr>
-				<td><A href="javascript:SwapDivsWithClick('v1_3','v1_2')"><BUTTON
-						type="button" style="margin: 50px 450px 0 250px;">Back</BUTTON> </A></td>
-				<td><A href="javascript:SwapDivsWithClick('v1_3','v1_4')"><BUTTON
-						type="button" onclick="myFlag3()">Next</BUTTON> </A></td>
-				</tr>
+					<tr>
+						<td><A href="javascript:SwapDivsWithClick('v1_3','v1_2')"><BUTTON type="button"
+									style="margin: 50px 450px 0 250px;">Back</BUTTON> </A>
+						</td>
+						<td><A href="javascript:SwapDivsWithClick('v1_3','v1_4')"><BUTTON type="button"
+									onclick="myFlag3()">Next</BUTTON> </A>
+						</td>
+					</tr>
 				</TABLE>
 			</DIV>
-
-
 			<DIV class="form-row" id="v1_4" style="display: none;">
-				<LABEL><SPAN><B>4. </B>Are you familiar with use of
-						services that minimise the energy consumption and environmental
-						impact of ICT equipment (e.g. virtualization, optimization, etc.)?</SPAN>
-				</LABEL>
+				<LABEL><SPAN><B>4. </B>Are you familiar with use of services that minimise the
+						energy consumption and environmental impact of ICT equipment (e.g. virtualization,
+						optimization, etc.)?</SPAN> </LABEL>
 				<DIV class="form-radio-buttons">
-
 					<DIV>
-						<LABEL> <INPUT type="radio" name="v1_4" value="high">
-							<SPAN>Extremely</SPAN> </LABEL>
-					</DIV>
-
-					<DIV>
-						<LABEL> <INPUT type="radio" name="v1_4" value="medium"
-							checked="checked"> <SPAN>Moderately</SPAN> </LABEL>
+						<LABEL> <INPUT type="radio" name="v1_4" value="high"> <SPAN>Extremely</SPAN> </LABEL>
 					</DIV>
 					<DIV>
-						<LABEL> <INPUT type="radio" name="v1_4" value="low"
-							checked="checked"> <SPAN>None</SPAN> </LABEL>
+						<LABEL> <INPUT type="radio" name="v1_4" value="medium" checked="checked"> <SPAN>Moderately</SPAN>
+						</LABEL>
+					</DIV>
+					<DIV>
+						<LABEL> <INPUT type="radio" name="v1_4" value="low" checked="checked"> <SPAN>None</SPAN>
+						</LABEL>
 					</DIV>
 				</DIV>
-			<TABLE>
-				<tr>
-				<td><A href="javascript:SwapDivsWithClick('v1_4','v1_3')"><BUTTON
-						type="button" style="margin: 50px 450px 0 250px;">Back</BUTTON> </A></td>
-				<td><A href="javascript:SwapDivsWithClick('v1_4','v2_1')"><BUTTON
-						type="button" onclick="myFlag4()">Next</BUTTON> </A></td>
-				</tr>
+				<TABLE>
+					<tr>
+						<td><A href="javascript:SwapDivsWithClick('v1_4','v1_3')"><BUTTON type="button"
+									style="margin: 50px 450px 0 250px;">Back</BUTTON> </A>
+						</td>
+						<td><A href="javascript:SwapDivsWithClick('v1_4','v2_1')"><BUTTON type="button"
+									onclick="myFlag4()">Next</BUTTON> </A>
+						</td>
+					</tr>
 				</TABLE>
 			</DIV>
-
 			<DIV class="form-row" id="v2_1" style="display: none;">
-				<LABEL><SPAN><B>5. </B>Have you ever conducted any
-						ICT equipment energy consumption assessment?</SPAN> </LABEL>
+				<LABEL><SPAN><B>5. </B>Have you ever conducted any ICT equipment energy
+						consumption assessment?</SPAN> </LABEL>
 				<DIV class="form-radio-buttons">
-
 					<DIV>
-						<LABEL> <INPUT type="radio" name="v2_1" value="high">
-							<SPAN>Yes</SPAN> </LABEL>
+						<LABEL> <INPUT type="radio" name="v2_1" value="high"> <SPAN>Yes</SPAN> </LABEL>
 					</DIV>
-
 					<DIV>
-						<LABEL> <INPUT type="radio" name="v2_1" value="low"
-							checked="checked"> <SPAN>No</SPAN> </LABEL>
+						<LABEL> <INPUT type="radio" name="v2_1" value="low" checked="checked"> <SPAN>No</SPAN>
+						</LABEL>
 					</DIV>
 				</DIV>
-
-				
-			<TABLE>
-				<tr>
-				<td><A href="javascript:SwapDivsWithClick('v2_1','v1_4')"><BUTTON
-						type="button" style="margin: 50px 450px 0 250px;">Back</BUTTON> </A></td>
-				<td><A href="javascript:SwapDivsWithClick('v2_1','v2_2')"><BUTTON
-						type="button" onclick="myFlag2_1()">Next</BUTTON> </A></td>
-				</tr>
+				<TABLE>
+					<tr>
+						<td><A href="javascript:SwapDivsWithClick('v2_1','v1_4')"><BUTTON type="button"
+									style="margin: 50px 450px 0 250px;">Back</BUTTON> </A>
+						</td>
+						<td><A href="javascript:SwapDivsWithClick('v2_1','v2_2')"><BUTTON type="button"
+									onclick="myFlag2_1()">Next</BUTTON> </A>
+						</td>
+					</tr>
 				</TABLE>
 			</DIV>
 			<DIV class="form-row" id="v2_2" style="display: none;">
-				<LABEL><SPAN><B>6. </B>Is use of switch off and
-						standby modes common in your company?</SPAN> </LABEL>
+				<LABEL><SPAN><B>6. </B>Is use of switch off and standby modes common in your
+						company?</SPAN> </LABEL>
 				<DIV class="form-radio-buttons">
-
 					<DIV>
-						<LABEL> <INPUT type="radio" name="v2_2" value="high">
-							<SPAN>Yes for all</SPAN> </LABEL>
-					</DIV>
-
-					<DIV>
-						<LABEL> <INPUT type="radio" name="v2_2" value="medium">
-							<SPAN>Occasionally</SPAN> </LABEL>
-					</DIV>
-
-					<DIV>
-						<LABEL> <INPUT type="radio" name="v2_2" value="low"
-							checked="checked"> <SPAN>No</SPAN> </LABEL>
-					</DIV>
-				</DIV>
-
-				
-			<TABLE>
-				<tr>
-				<td><A href="javascript:SwapDivsWithClick('v2_2','v2_1')"><BUTTON
-						type="button" style="margin: 50px 450px 0 250px;">Back</BUTTON> </A></td>
-				<td><A href="javascript:SwapDivsWithClick('v2_2','v2_3')"><BUTTON
-						type="button" onclick="myFlag2_2()">Next</BUTTON> </A></td>
-				</tr>
-				</TABLE>
-			</DIV>
-
-			<DIV class="form-row" id="v2_3" style="display: none;">
-				<LABEL><SPAN><B>7. </B>Have you installed any power
-						management software in your company ICT equipment?</SPAN> </LABEL>
-				<DIV class="form-radio-buttons">
-
-					<DIV>
-						<LABEL> <INPUT type="radio" name="v2_3" value="high">
-							<SPAN>Yes</SPAN> </LABEL>
-					</DIV>
-
-					<DIV>
-						<LABEL> <INPUT type="radio" name="v2_3" value="low"
-							checked="checked"> <SPAN>No</SPAN> </LABEL>
-					</DIV>
-				</DIV>
-
-				
-			<TABLE>
-				<tr>
-				<td><A href="javascript:SwapDivsWithClick('v2_3','v2_2')"><BUTTON
-						type="button" style="margin: 50px 450px 0 250px;">Back</BUTTON> </A></td>
-				<td><A href="javascript:SwapDivsWithClick('v2_3','v2_4')"><BUTTON
-						type="button" onclick="myFlag2_3()">Next</BUTTON> </A></td>
-				</tr>
-				</TABLE>
-			</DIV>
-			<DIV class="form-row" id="v2_4" style="display: none;">
-				<LABEL><SPAN><B>8. </B>Have you followed any
-						systematic approach for energy efficiency improvement (e.g. data
-						collection, and data analysis)?</SPAN> </LABEL>
-				<DIV class="form-radio-buttons">
-
-					<DIV>
-						<LABEL> <INPUT type="radio" name="v2_4" value="high">
-							<SPAN>Always for all</SPAN> </LABEL>
-					</DIV>
-
-					<DIV>
-						<LABEL> <INPUT type="radio" name="v2_4" value="medium"
-							checked="checked"> <SPAN>Sometimes</SPAN> </LABEL>
+						<LABEL> <INPUT type="radio" name="v2_2" value="high"> <SPAN>Yes for all</SPAN>
+						</LABEL>
 					</DIV>
 					<DIV>
-						<LABEL> <INPUT type="radio" name="v2_4" value="low"
-							checked="checked"> <SPAN>Never</SPAN> </LABEL>
-					</DIV>
-				</DIV>
-
-				
-			<TABLE>
-				<tr>
-				<td><A href="javascript:SwapDivsWithClick('v2_4','v2_3')"><BUTTON
-						type="button" style="margin: 50px 450px 0 250px;">Back</BUTTON> </A></td>
-				<td><A href="javascript:SwapDivsWithClick('v2_4','v2_5')"><BUTTON
-						type="button" onclick="myFlag2_4()">Next</BUTTON> </A></td>
-				</tr>
-				</TABLE>
-			</DIV>
-
-			<DIV class="form-row" id="v2_5" style="display: none;">
-				<LABEL><SPAN><B>9. </B>Does your company use energy
-						from any of these renewable sources? (e.g. solar, wind, geothermal
-						or biomass energy)?</SPAN> </LABEL>
-				<DIV class="form-radio-buttons">
-
-					<DIV>
-						<LABEL> <INPUT type="radio" name="v2_5" value="high">
-							<SPAN>Yes, from at least one</SPAN> </LABEL>
+						<LABEL> <INPUT type="radio" name="v2_2" value="medium"> <SPAN>Occasionally</SPAN>
+						</LABEL>
 					</DIV>
 					<DIV>
-						<LABEL> <INPUT type="radio" name="v2_5" value="low"
-							checked="checked"> <SPAN>No</SPAN> </LABEL>
-					</DIV>
-				</DIV>
-
-				
-			<TABLE>
-				<tr>
-				<td><A href="javascript:SwapDivsWithClick('v2_5','v2_4')"><BUTTON
-						type="button" style="margin: 50px 450px 0 250px;">Back</BUTTON> </A></td>
-				<td><A href="javascript:SwapDivsWithClick('v2_5','v3_1')"><BUTTON
-						type="button" onclick="myFlag2_5()">Next</BUTTON> </A></td>
-				</tr>
-				</TABLE>
-			</DIV>
-
-			<DIV class="form-row" id="v3_1" style="display: none;">
-				<LABEL><SPAN><B>10. </B>Do the following statement
-						apply to your company? "The network infrastructure makes use of
-						equipment that adheres to the latest energy efficiency standards
-						(sleep mode or Energy Efficient Ethernet)" </SPAN> </LABEL>
-				<DIV class="form-radio-buttons">
-
-					<DIV>
-						<LABEL> <INPUT type="radio" name="v3_1" value="high">
-							<SPAN>Extremely</SPAN> </LABEL>
-					</DIV>
-
-					<DIV>
-						<LABEL> <INPUT type="radio" name="v3_1" value="medium"
-							checked="checked"> <SPAN>Moderately</SPAN> </LABEL>
-					</DIV>
-
-					<DIV>
-						<LABEL> <INPUT type="radio" name="v3_1" value="low">
-							<SPAN>Not at all</SPAN> </LABEL>
-					</DIV>
-				</DIV>
-				
-			<TABLE>
-				<tr>
-				<td><A href="javascript:SwapDivsWithClick('v3_1','v2_5')"><BUTTON
-						type="button" style="margin: 50px 450px 0 250px;">Back</BUTTON> </A></td>
-				<td><A href="javascript:SwapDivsWithClick('v3_1','v3_2')"><BUTTON
-						type="button" onclick="myFlag3_1()">Next</BUTTON> </A></td>
-				</tr>
-				</TABLE>
-			</DIV>
-
-			<DIV class="form-row" id="v3_2" style="display: none;">
-				<LABEL><SPAN><B>11. </B>Do the following statement
-						apply to your company? "The number of required IT equipment,
-						functionalities, and quality of service are optimized in order to
-						reduce environmental impact."</SPAN> </LABEL>
-				<DIV class="form-radio-buttons">
-
-					<DIV>
-						<LABEL> <INPUT type="radio" name="v3_2" value="high">
-							<SPAN>Extremely</SPAN> </LABEL>
-					</DIV>
-
-					<DIV>
-						<LABEL> <INPUT type="radio" name="v3_2" value="medium"
-							checked="checked"> <SPAN>Moderately</SPAN> </LABEL>
-					</DIV>
-
-					<DIV>
-						<LABEL> <INPUT type="radio" name="v3_2" value="low">
-							<SPAN>Not at all</SPAN> </LABEL>
-					</DIV>
-				</DIV>
-				
-			<TABLE>
-				<tr>
-				<td><A href="javascript:SwapDivsWithClick('v3_2','v3_1')"><BUTTON
-						type="button" style="margin: 50px 450px 0 250px;">Back</BUTTON> </A></td>
-				<td><A href="javascript:SwapDivsWithClick('v3_2','v3_3')"><BUTTON
-						type="button" onclick="myFlag3_2()">Next</BUTTON> </A></td>
-				</tr>
-				</TABLE>
-			</DIV>
-
-			<DIV class="form-row" id="v3_3" style="display: none;">
-				<LABEL><SPAN><B>12. </B>Do the following statement
-						apply to your company? "Routing is made energy aware and offers
-						possibilities to choose the most energy efficient route instead of
-						the shortest path."</SPAN> </LABEL>
-				<DIV class="form-radio-buttons">
-
-					<DIV>
-						<LABEL> <INPUT type="radio" name="v3_3" value="high">
-							<SPAN>Extremely</SPAN> </LABEL>
-					</DIV>
-
-					<DIV>
-						<LABEL> <INPUT type="radio" name="v3_3" value="medium"
-							checked="checked"> <SPAN>Moderately</SPAN> </LABEL>
-					</DIV>
-
-					<DIV>
-						<LABEL> <INPUT type="radio" name="v3_3" value="low">
-							<SPAN>Not at all</SPAN> </LABEL>
-					</DIV>
-				</DIV>
-				
-			<TABLE>
-				<tr>
-				<td><A href="javascript:SwapDivsWithClick('v3_3','v3_2')"><BUTTON
-						type="button" style="margin: 50px 450px 0 250px;">Back</BUTTON> </A></td>
-				<td><A href="javascript:SwapDivsWithClick('v3_3','v4_1')"><BUTTON
-						type="button" onclick="myFlag3_3()">Next</BUTTON> </A></td>
-				</tr>
-				</TABLE>
-			</DIV>
-
-
-			<DIV class="form-row" id="v4_1" style="display: none;">
-				<LABEL><SPAN><B>13. </B>Has your company adopted any
-						documented reference architecture (with guiding principles for
-						designing new services/products) aimed to minimize environmental
-						impact?</SPAN> </LABEL>
-				<DIV class="form-radio-buttons">
-
-					<DIV>
-						<LABEL> <INPUT type="radio" name="v4_1" value="high"
-							checked="checked"> <SPAN>True</SPAN> </LABEL>
-					</DIV>
-
-					<DIV>
-						<LABEL> <INPUT type="radio" name="v4_1" value="low">
-							<SPAN>False</SPAN> </LABEL>
-					</DIV>
-				</DIV>
-				
-			<TABLE>
-				<tr>
-				<td><A href="javascript:SwapDivsWithClick('v4_1','v3_3')"><BUTTON
-						type="button" style="margin: 50px 450px 0 250px;">Back</BUTTON> </A></td>
-				<td><A href="javascript:SwapDivsWithClick('v4_1','v4_2')"><BUTTON
-						type="button" onclick="myFlag4_1()">Next</BUTTON> </A></td>
-				</tr>
-				</TABLE>
-			</DIV>
-			<DIV class="form-row" id="v4_2" style="display: none;">
-				<LABEL><SPAN><B>14. </B>Does your company have any
-						sustainable development-related training and communication
-						activities for employees?</SPAN> </LABEL>
-				<DIV class="form-radio-buttons">
-
-					<DIV>
-						<LABEL> <INPUT type="radio" name="v4_2" value="high"
-							checked="checked"> <SPAN>True</SPAN> </LABEL>
-					</DIV>
-
-					<DIV>
-						<LABEL> <INPUT type="radio" name="v4_2" value="low">
-							<SPAN>False</SPAN> </LABEL>
-					</DIV>
-				</DIV>
-				
-			<TABLE>
-				<tr>
-				<td><A href="javascript:SwapDivsWithClick('v4_2','v4_1')"><BUTTON
-						type="button" style="margin: 50px 450px 0 250px;">Back</BUTTON> </A></td>
-				<td><A href="javascript:SwapDivsWithClick('v4_2','v4_3')"><BUTTON
-						type="button" onclick="myFlag4_2()">Next</BUTTON> </A></td>
-				</tr>
-				</TABLE>
-			</DIV>
-			<DIV class="form-row" id="v4_3" style="display: none;">
-				<LABEL><SPAN><B>15. </B>Does your company promote the
-						use of audio and video conferencing facilities reduce travel?</SPAN> </LABEL>
-				<DIV class="form-radio-buttons">
-
-					<DIV>
-						<LABEL> <INPUT type="radio" name="v4_3" value="high"
-							checked="checked"> <SPAN>True</SPAN> </LABEL>
-					</DIV>
-
-					<DIV>
-						<LABEL> <INPUT type="radio" name="v4_3" value="low">
-							<SPAN>False</SPAN> </LABEL>
-					</DIV>
-				</DIV>
-				
-			<TABLE>
-				<tr>
-				<td><A href="javascript:SwapDivsWithClick('v4_3','v4_2')"><BUTTON
-						type="button" style="margin: 50px 450px 0 250px;">Back</BUTTON> </A></td>
-				<td><A href="javascript:SwapDivsWithClick('v4_3','v5_1')"><BUTTON
-						type="button"onclick="myFlag4_3()">Next</BUTTON> </A></td>
-				</tr>
-				</TABLE>
-			</DIV>
-
-
-			<DIV class="form-row" id="v5_1" style="display: none;">
-				<LABEL><SPAN><B>16. </B>Does the following statement
-						apply to your company? "Ensure a strict implementation of an
-						e-waste policy for the reuse or recycling of ICT equipment to
-						minimize environmental and social hazards after disposal." </SPAN> </LABEL>
-				<DIV class="form-radio-buttons">
-
-					<DIV>
-						<LABEL> <INPUT type="radio" name="v5_1" value="high"
-							checked="checked"> <SPAN>Extremely</SPAN> </LABEL>
-					</DIV>
-
-					<DIV>
-						<LABEL> <INPUT type="radio" name="v5_1" value="medium">
-							<SPAN>Moderately</SPAN> </LABEL>
-					</DIV>
-
-					<DIV>
-						<LABEL> <INPUT type="radio" name="v5_1" value="low">
-							<SPAN>Not at all</SPAN> </LABEL>
-					</DIV>
-				</DIV>
-				
-			<TABLE>
-				<tr>
-				<td><A href="javascript:SwapDivsWithClick('v5_1','v4_3')"><BUTTON
-						type="button" style="margin: 50px 450px 0 250px;">Back</BUTTON> </A></td>
-				<td><A href="javascript:SwapDivsWithClick('v5_1','v5_2')"><BUTTON
-						type="button" onclick="myFlag5_1()">Next</BUTTON> </A></td>
-				</tr>
-				</TABLE>
-			</DIV>
-			<DIV class="form-row" id="v5_2" style="display: none;">
-				<LABEL><SPAN><B>17. </B>Does your company have any
-						collection and recovery (e.g. reuse, repairing, remanufacturing)
-						channels (subcontractors) that can reduce the amount of waste sent
-						to landfill? </SPAN> </LABEL>
-				<DIV class="form-radio-buttons">
-
-					<DIV>
-						<LABEL> <INPUT type="radio" name="v5_2" value="high"
-							checked="checked"> <SPAN>True</SPAN> </LABEL>
-					</DIV>
-
-					<DIV>
-						<LABEL> <INPUT type="radio" name="v5_2" value="low">
-							<SPAN>False </SPAN> </LABEL>
+						<LABEL> <INPUT type="radio" name="v2_2" value="low" checked="checked"> <SPAN>No</SPAN>
+						</LABEL>
 					</DIV>
 				</DIV>
 				<TABLE>
-				<tr>
-				<td><A href="javascript:SwapDivsWithClick('v5_2','v5_1')"><BUTTON
-						type="button" style="margin: 50px 450px 0 250px;">Back</BUTTON> </A></td>
-				<td><BUTTON type="submit" id="myBtn" onclick="myFlag5_1()">Submit Form</BUTTON></td>
-				</tr>
+					<tr>
+						<td><A href="javascript:SwapDivsWithClick('v2_2','v2_1')"><BUTTON type="button"
+									style="margin: 50px 450px 0 250px;">Back</BUTTON> </A>
+						</td>
+						<td><A href="javascript:SwapDivsWithClick('v2_2','v2_3')"><BUTTON type="button"
+									onclick="myFlag2_2()">Next</BUTTON> </A>
+						</td>
+					</tr>
 				</TABLE>
-				
-
+			</DIV>
+			<DIV class="form-row" id="v2_3" style="display: none;">
+				<LABEL><SPAN><B>7. </B>Have you installed any power management software in your
+						company ICT equipment?</SPAN> </LABEL>
+				<DIV class="form-radio-buttons">
+					<DIV>
+						<LABEL> <INPUT type="radio" name="v2_3" value="high"> <SPAN>Yes</SPAN> </LABEL>
+					</DIV>
+					<DIV>
+						<LABEL> <INPUT type="radio" name="v2_3" value="low" checked="checked"> <SPAN>No</SPAN>
+						</LABEL>
+					</DIV>
+				</DIV>
+				<TABLE>
+					<tr>
+						<td><A href="javascript:SwapDivsWithClick('v2_3','v2_2')"><BUTTON type="button"
+									style="margin: 50px 450px 0 250px;">Back</BUTTON> </A>
+						</td>
+						<td><A href="javascript:SwapDivsWithClick('v2_3','v2_4')"><BUTTON type="button"
+									onclick="myFlag2_3()">Next</BUTTON> </A>
+						</td>
+					</tr>
+				</TABLE>
+			</DIV>
+			<DIV class="form-row" id="v2_4" style="display: none;">
+				<LABEL><SPAN><B>8. </B>Have you followed any systematic approach for energy
+						efficiency improvement (e.g. data collection, and data analysis)?</SPAN> </LABEL>
+				<DIV class="form-radio-buttons">
+					<DIV>
+						<LABEL> <INPUT type="radio" name="v2_4" value="high"> <SPAN>Always for
+								all</SPAN> </LABEL>
+					</DIV>
+					<DIV>
+						<LABEL> <INPUT type="radio" name="v2_4" value="medium" checked="checked"> <SPAN>Sometimes</SPAN>
+						</LABEL>
+					</DIV>
+					<DIV>
+						<LABEL> <INPUT type="radio" name="v2_4" value="low" checked="checked"> <SPAN>Never</SPAN>
+						</LABEL>
+					</DIV>
+				</DIV>
+				<TABLE>
+					<tr>
+						<td><A href="javascript:SwapDivsWithClick('v2_4','v2_3')"><BUTTON type="button"
+									style="margin: 50px 450px 0 250px;">Back</BUTTON> </A>
+						</td>
+						<td><A href="javascript:SwapDivsWithClick('v2_4','v2_5')"><BUTTON type="button"
+									onclick="myFlag2_4()">Next</BUTTON> </A>
+						</td>
+					</tr>
+				</TABLE>
+			</DIV>
+			<DIV class="form-row" id="v2_5" style="display: none;">
+				<LABEL><SPAN><B>9. </B>Does your company use energy from any of these renewable
+						sources? (e.g. solar, wind, geothermal or biomass energy)?</SPAN> </LABEL>
+				<DIV class="form-radio-buttons">
+					<DIV>
+						<LABEL> <INPUT type="radio" name="v2_5" value="high"> <SPAN>Yes, from
+								at least one</SPAN> </LABEL>
+					</DIV>
+					<DIV>
+						<LABEL> <INPUT type="radio" name="v2_5" value="low" checked="checked"> <SPAN>No</SPAN>
+						</LABEL>
+					</DIV>
+				</DIV>
+				<TABLE>
+					<tr>
+						<td><A href="javascript:SwapDivsWithClick('v2_5','v2_4')"><BUTTON type="button"
+									style="margin: 50px 450px 0 250px;">Back</BUTTON> </A>
+						</td>
+						<td><A href="javascript:SwapDivsWithClick('v2_5','v3_1')"><BUTTON type="button"
+									onclick="myFlag2_5()">Next</BUTTON> </A>
+						</td>
+					</tr>
+				</TABLE>
+			</DIV>
+			<DIV class="form-row" id="v3_1" style="display: none;">
+				<LABEL><SPAN><B>10. </B>Do the following statement apply to your company? "The
+						network infrastructure makes use of equipment that adheres to the latest energy efficiency
+						standards (sleep mode or Energy Efficient Ethernet)" </SPAN> </LABEL>
+				<DIV class="form-radio-buttons">
+					<DIV>
+						<LABEL> <INPUT type="radio" name="v3_1" value="high"> <SPAN>Extremely</SPAN> </LABEL>
+					</DIV>
+					<DIV>
+						<LABEL> <INPUT type="radio" name="v3_1" value="medium" checked="checked"> <SPAN>Moderately</SPAN>
+						</LABEL>
+					</DIV>
+					<DIV>
+						<LABEL> <INPUT type="radio" name="v3_1" value="low"> <SPAN>Not at all</SPAN> </LABEL>
+					</DIV>
+				</DIV>
+				<TABLE>
+					<tr>
+						<td><A href="javascript:SwapDivsWithClick('v3_1','v2_5')"><BUTTON type="button"
+									style="margin: 50px 450px 0 250px;">Back</BUTTON> </A>
+						</td>
+						<td><A href="javascript:SwapDivsWithClick('v3_1','v3_2')"><BUTTON type="button"
+									onclick="myFlag3_1()">Next</BUTTON> </A>
+						</td>
+					</tr>
+				</TABLE>
+			</DIV>
+			<DIV class="form-row" id="v3_2" style="display: none;">
+				<LABEL><SPAN><B>11. </B>Do the following statement apply to your company? "The
+						number of required IT equipment, functionalities, and quality of service are optimized in
+						order to reduce environmental impact."</SPAN> </LABEL>
+				<DIV class="form-radio-buttons">
+					<DIV>
+						<LABEL> <INPUT type="radio" name="v3_2" value="high"> <SPAN>Extremely</SPAN> </LABEL>
+					</DIV>
+					<DIV>
+						<LABEL> <INPUT type="radio" name="v3_2" value="medium" checked="checked"> <SPAN>Moderately</SPAN>
+						</LABEL>
+					</DIV>
+					<DIV>
+						<LABEL> <INPUT type="radio" name="v3_2" value="low"> <SPAN>Not at all</SPAN> </LABEL>
+					</DIV>
+				</DIV>
+				<TABLE>
+					<tr>
+						<td><A href="javascript:SwapDivsWithClick('v3_2','v3_1')"><BUTTON type="button"
+									style="margin: 50px 450px 0 250px;">Back</BUTTON> </A>
+						</td>
+						<td><A href="javascript:SwapDivsWithClick('v3_2','v3_3')"><BUTTON type="button"
+									onclick="myFlag3_2()">Next</BUTTON> </A>
+						</td>
+					</tr>
+				</TABLE>
+			</DIV>
+			<DIV class="form-row" id="v3_3" style="display: none;">
+				<LABEL><SPAN><B>12. </B>Do the following statement apply to your company?
+						"Routing is made energy aware and offers possibilities to choose the most energy efficient
+						route instead of the shortest path."</SPAN> </LABEL>
+				<DIV class="form-radio-buttons">
+					<DIV>
+						<LABEL> <INPUT type="radio" name="v3_3" value="high"> <SPAN>Extremely</SPAN> </LABEL>
+					</DIV>
+					<DIV>
+						<LABEL> <INPUT type="radio" name="v3_3" value="medium" checked="checked"> <SPAN>Moderately</SPAN>
+						</LABEL>
+					</DIV>
+					<DIV>
+						<LABEL> <INPUT type="radio" name="v3_3" value="low"> <SPAN>Not at all</SPAN> </LABEL>
+					</DIV>
+				</DIV>
+				<TABLE>
+					<tr>
+						<td><A href="javascript:SwapDivsWithClick('v3_3','v3_2')"><BUTTON type="button"
+									style="margin: 50px 450px 0 250px;">Back</BUTTON> </A>
+						</td>
+						<td><A href="javascript:SwapDivsWithClick('v3_3','v4_1')"><BUTTON type="button"
+									onclick="myFlag3_3()">Next</BUTTON> </A>
+						</td>
+					</tr>
+				</TABLE>
+			</DIV>
+			<DIV class="form-row" id="v4_1" style="display: none;">
+				<LABEL><SPAN><B>13. </B>Has your company adopted any documented reference
+						architecture (with guiding principles for designing new services/products) aimed to minimize
+						environmental impact?</SPAN> </LABEL>
+				<DIV class="form-radio-buttons">
+					<DIV>
+						<LABEL> <INPUT type="radio" name="v4_1" value="high" checked="checked"> <SPAN>True</SPAN>
+						</LABEL>
+					</DIV>
+					<DIV>
+						<LABEL> <INPUT type="radio" name="v4_1" value="low"> <SPAN>False</SPAN> </LABEL>
+					</DIV>
+				</DIV>
+				<TABLE>
+					<tr>
+						<td><A href="javascript:SwapDivsWithClick('v4_1','v3_3')"><BUTTON type="button"
+									style="margin: 50px 450px 0 250px;">Back</BUTTON> </A>
+						</td>
+						<td><A href="javascript:SwapDivsWithClick('v4_1','v4_2')"><BUTTON type="button"
+									onclick="myFlag4_1()">Next</BUTTON> </A>
+						</td>
+					</tr>
+				</TABLE>
+			</DIV>
+			<DIV class="form-row" id="v4_2" style="display: none;">
+				<LABEL><SPAN><B>14. </B>Does your company have any sustainable
+						development-related training and communication activities for employees?</SPAN> </LABEL>
+				<DIV class="form-radio-buttons">
+					<DIV>
+						<LABEL> <INPUT type="radio" name="v4_2" value="high" checked="checked"> <SPAN>True</SPAN>
+						</LABEL>
+					</DIV>
+					<DIV>
+						<LABEL> <INPUT type="radio" name="v4_2" value="low"> <SPAN>False</SPAN> </LABEL>
+					</DIV>
+				</DIV>
+				<TABLE>
+					<tr>
+						<td><A href="javascript:SwapDivsWithClick('v4_2','v4_1')"><BUTTON type="button"
+									style="margin: 50px 450px 0 250px;">Back</BUTTON> </A>
+						</td>
+						<td><A href="javascript:SwapDivsWithClick('v4_2','v4_3')"><BUTTON type="button"
+									onclick="myFlag4_2()">Next</BUTTON> </A>
+						</td>
+					</tr>
+				</TABLE>
+			</DIV>
+			<DIV class="form-row" id="v4_3" style="display: none;">
+				<LABEL><SPAN><B>15. </B>Does your company promote the use of audio and video
+						conferencing facilities reduce travel?</SPAN> </LABEL>
+				<DIV class="form-radio-buttons">
+					<DIV>
+						<LABEL> <INPUT type="radio" name="v4_3" value="high" checked="checked"> <SPAN>True</SPAN>
+						</LABEL>
+					</DIV>
+					<DIV>
+						<LABEL> <INPUT type="radio" name="v4_3" value="low"> <SPAN>False</SPAN> </LABEL>
+					</DIV>
+				</DIV>
+				<TABLE>
+					<tr>
+						<td><A href="javascript:SwapDivsWithClick('v4_3','v4_2')"><BUTTON type="button"
+									style="margin: 50px 450px 0 250px;">Back</BUTTON> </A>
+						</td>
+						<td><A href="javascript:SwapDivsWithClick('v4_3','v5_1')"><BUTTON type="button"
+									onclick="myFlag4_3()">Next</BUTTON> </A>
+						</td>
+					</tr>
+				</TABLE>
+			</DIV>
+			<DIV class="form-row" id="v5_1" style="display: none;">
+				<LABEL><SPAN><B>16. </B>Does the following statement apply to your company?
+						"Ensure a strict implementation of an e-waste policy for the reuse or recycling of ICT
+						equipment to minimize environmental and social hazards after disposal." </SPAN> </LABEL>
+				<DIV class="form-radio-buttons">
+					<DIV>
+						<LABEL> <INPUT type="radio" name="v5_1" value="high" checked="checked"> <SPAN>Extremely</SPAN>
+						</LABEL>
+					</DIV>
+					<DIV>
+						<LABEL> <INPUT type="radio" name="v5_1" value="medium"> <SPAN>Moderately</SPAN>
+						</LABEL>
+					</DIV>
+					<DIV>
+						<LABEL> <INPUT type="radio" name="v5_1" value="low"> <SPAN>Not at all</SPAN> </LABEL>
+					</DIV>
+				</DIV>
+				<TABLE>
+					<tr>
+						<td><A href="javascript:SwapDivsWithClick('v5_1','v4_3')"><BUTTON type="button"
+									style="margin: 50px 450px 0 250px;">Back</BUTTON> </A>
+						</td>
+						<td><A href="javascript:SwapDivsWithClick('v5_1','v5_2')"><BUTTON type="button"
+									onclick="myFlag5_1()">Next</BUTTON> </A>
+						</td>
+					</tr>
+				</TABLE>
+			</DIV>
+			<DIV class="form-row" id="v5_2" style="display: none;">
+				<LABEL><SPAN><B>17. </B>Does your company have any collection and recovery (e.g.
+						reuse, repairing, remanufacturing) channels (subcontractors) that can reduce the amount of
+						waste sent to landfill? </SPAN> </LABEL>
+				<DIV class="form-radio-buttons">
+					<DIV>
+						<LABEL> <INPUT type="radio" name="v5_2" value="high" checked="checked"> <SPAN>True</SPAN>
+						</LABEL>
+					</DIV>
+					<DIV>
+						<LABEL> <INPUT type="radio" name="v5_2" value="low"> <SPAN>False </SPAN> </LABEL>
+					</DIV>
+				</DIV>
+				<TABLE>
+					<tr>
+						<td><A href="javascript:SwapDivsWithClick('v5_2','v5_1')"><BUTTON type="button"
+									style="margin: 50px 450px 0 250px;">Back</BUTTON> </A>
+						</td>
+						<td><BUTTON type="submit" id="myBtn" onmousedown="myFlag5_2()">Submit Form</BUTTON>
+						</td>
+					</tr>
+				</TABLE>
 				<!-- The Modal -->
 				<div id="myModal" class="modal">
-
 					<!-- Modal content -->
 					<div class="modal-content">
 						<span class="close">×</span>
-						<p>It will take a few moments to process your request for the
-							first time. Please wait while page is loading.</p>
+						<p>It will take a few moments to process your request for the first time. Please wait
+							while page is loading.</p>
 					</div>
-
 				</div>
 			</DIV>
-
-
 		</FORM>
-
 	</DIV>
 	<script>
 	
@@ -673,6 +572,7 @@ height: 200px;
 				if (row_v1_4[i].checked) {
 					v1_4_value = row_v1_4[i].value;
 					localStorage.setItem("v1_4", v1_4_value);
+					//window.location.href='Recommendations.jsp#V1';
 					
 				}
 			}
@@ -851,7 +751,5 @@ height: 200px;
 			}
 		}
 	</SCRIPT>
-
 </BODY>
-
 </HTML>

@@ -112,11 +112,11 @@ height: 200px;
 				<H1>Please answer the questions</H1>
 			</DIV>
 
-			<DIV class="form-row" id="v1_1">
+			<DIV class="form-row" id="v1_1" >
 			<LABEL><SPAN>Total number of questions: <B>17</B>.</SPAN> </LABEL>
 				<LABEL><SPAN><B>1. </B>Does your company follow Green
 						ICT procurement guidelines when ICT equipment is purchased?</SPAN> </LABEL>
-				<DIV class="form-radio-buttons">
+				<DIV class="form-radio-buttons" >
 
 					<DIV>
 						<LABEL> <INPUT type="radio" name="v1_1" value="high">
@@ -132,10 +132,11 @@ height: 200px;
 						<LABEL> <INPUT type="radio" name="v1_1" value="low"
 							checked="checked"> <SPAN>Never</SPAN> </LABEL>
 					</DIV>
+					
 				</DIV>
 				<DIV class="form-row">
 				<A href="javascript:SwapDivsWithClick('v1_1','v1_2')"><BUTTON
-						type="button">Next</BUTTON> </A>
+						type="button" onclick="myFlag1()" >Next</BUTTON> </A>
 				</DIV>
 			</DIV>
 
@@ -159,7 +160,7 @@ height: 200px;
 						type="button" style="margin: 50px 450px 0 250px;">Back</BUTTON> </A>
 				
 				<A href="javascript:SwapDivsWithClick('v1_2','v1_3')"><BUTTON
-						type="button">Next</BUTTON> </A>
+						type="button" onclick="myFlag2()">Next</BUTTON> </A>
 				
 			</DIV>
 
@@ -196,7 +197,7 @@ height: 200px;
 				<td><A href="javascript:SwapDivsWithClick('v1_3','v1_2')"><BUTTON
 						type="button" style="margin: 50px 450px 0 250px;">Back</BUTTON> </A></td>
 				<td><A href="javascript:SwapDivsWithClick('v1_3','v1_4')"><BUTTON
-						type="button">Next</BUTTON> </A></td>
+						type="button" onclick="myFlag3()">Next</BUTTON> </A></td>
 				</tr>
 				</TABLE>
 			</DIV>
@@ -228,7 +229,7 @@ height: 200px;
 				<td><A href="javascript:SwapDivsWithClick('v1_4','v1_3')"><BUTTON
 						type="button" style="margin: 50px 450px 0 250px;">Back</BUTTON> </A></td>
 				<td><A href="javascript:SwapDivsWithClick('v1_4','v2_1')"><BUTTON
-						type="button">Next</BUTTON> </A></td>
+						type="button" onclick="myFlag4()">Next</BUTTON> </A></td>
 				</tr>
 				</TABLE>
 			</DIV>
@@ -255,7 +256,7 @@ height: 200px;
 				<td><A href="javascript:SwapDivsWithClick('v2_1','v1_4')"><BUTTON
 						type="button" style="margin: 50px 450px 0 250px;">Back</BUTTON> </A></td>
 				<td><A href="javascript:SwapDivsWithClick('v2_1','v2_2')"><BUTTON
-						type="button">Next</BUTTON> </A></td>
+						type="button" onclick="myFlag2_1()">Next</BUTTON> </A></td>
 				</tr>
 				</TABLE>
 			</DIV>
@@ -286,7 +287,7 @@ height: 200px;
 				<td><A href="javascript:SwapDivsWithClick('v2_2','v2_1')"><BUTTON
 						type="button" style="margin: 50px 450px 0 250px;">Back</BUTTON> </A></td>
 				<td><A href="javascript:SwapDivsWithClick('v2_2','v2_3')"><BUTTON
-						type="button">Next</BUTTON> </A></td>
+						type="button" onclick="myFlag2_2()">Next</BUTTON> </A></td>
 				</tr>
 				</TABLE>
 			</DIV>
@@ -313,7 +314,7 @@ height: 200px;
 				<td><A href="javascript:SwapDivsWithClick('v2_3','v2_2')"><BUTTON
 						type="button" style="margin: 50px 450px 0 250px;">Back</BUTTON> </A></td>
 				<td><A href="javascript:SwapDivsWithClick('v2_3','v2_4')"><BUTTON
-						type="button">Next</BUTTON> </A></td>
+						type="button" onclick="myFlag2_3()">Next</BUTTON> </A></td>
 				</tr>
 				</TABLE>
 			</DIV>
@@ -344,7 +345,7 @@ height: 200px;
 				<td><A href="javascript:SwapDivsWithClick('v2_4','v2_3')"><BUTTON
 						type="button" style="margin: 50px 450px 0 250px;">Back</BUTTON> </A></td>
 				<td><A href="javascript:SwapDivsWithClick('v2_4','v2_5')"><BUTTON
-						type="button">Next</BUTTON> </A></td>
+						type="button" onclick="myFlag2_4()">Next</BUTTON> </A></td>
 				</tr>
 				</TABLE>
 			</DIV>
@@ -371,7 +372,7 @@ height: 200px;
 				<td><A href="javascript:SwapDivsWithClick('v2_5','v2_4')"><BUTTON
 						type="button" style="margin: 50px 450px 0 250px;">Back</BUTTON> </A></td>
 				<td><A href="javascript:SwapDivsWithClick('v2_5','v3_1')"><BUTTON
-						type="button">Next</BUTTON> </A></td>
+						type="button" onclick="myFlag2_5()">Next</BUTTON> </A></td>
 				</tr>
 				</TABLE>
 			</DIV>
@@ -404,7 +405,7 @@ height: 200px;
 				<td><A href="javascript:SwapDivsWithClick('v3_1','v2_5')"><BUTTON
 						type="button" style="margin: 50px 450px 0 250px;">Back</BUTTON> </A></td>
 				<td><A href="javascript:SwapDivsWithClick('v3_1','v3_2')"><BUTTON
-						type="button">Next</BUTTON> </A></td>
+						type="button" onclick="myFlag3_1()">Next</BUTTON> </A></td>
 				</tr>
 				</TABLE>
 			</DIV>
@@ -437,7 +438,7 @@ height: 200px;
 				<td><A href="javascript:SwapDivsWithClick('v3_2','v3_1')"><BUTTON
 						type="button" style="margin: 50px 450px 0 250px;">Back</BUTTON> </A></td>
 				<td><A href="javascript:SwapDivsWithClick('v3_2','v3_3')"><BUTTON
-						type="button">Next</BUTTON> </A></td>
+						type="button" onclick="myFlag3_2()">Next</BUTTON> </A></td>
 				</tr>
 				</TABLE>
 			</DIV>
@@ -470,7 +471,7 @@ height: 200px;
 				<td><A href="javascript:SwapDivsWithClick('v3_3','v3_2')"><BUTTON
 						type="button" style="margin: 50px 450px 0 250px;">Back</BUTTON> </A></td>
 				<td><A href="javascript:SwapDivsWithClick('v3_3','v4_1')"><BUTTON
-						type="button">Next</BUTTON> </A></td>
+						type="button" onclick="myFlag3_3()">Next</BUTTON> </A></td>
 				</tr>
 				</TABLE>
 			</DIV>
@@ -499,7 +500,7 @@ height: 200px;
 				<td><A href="javascript:SwapDivsWithClick('v4_1','v3_3')"><BUTTON
 						type="button" style="margin: 50px 450px 0 250px;">Back</BUTTON> </A></td>
 				<td><A href="javascript:SwapDivsWithClick('v4_1','v4_2')"><BUTTON
-						type="button">Next</BUTTON> </A></td>
+						type="button" onclick="myFlag4_1()">Next</BUTTON> </A></td>
 				</tr>
 				</TABLE>
 			</DIV>
@@ -525,7 +526,7 @@ height: 200px;
 				<td><A href="javascript:SwapDivsWithClick('v4_2','v4_1')"><BUTTON
 						type="button" style="margin: 50px 450px 0 250px;">Back</BUTTON> </A></td>
 				<td><A href="javascript:SwapDivsWithClick('v4_2','v4_3')"><BUTTON
-						type="button">Next</BUTTON> </A></td>
+						type="button" onclick="myFlag4_2()">Next</BUTTON> </A></td>
 				</tr>
 				</TABLE>
 			</DIV>
@@ -550,7 +551,7 @@ height: 200px;
 				<td><A href="javascript:SwapDivsWithClick('v4_3','v4_2')"><BUTTON
 						type="button" style="margin: 50px 450px 0 250px;">Back</BUTTON> </A></td>
 				<td><A href="javascript:SwapDivsWithClick('v4_3','v5_1')"><BUTTON
-						type="button">Next</BUTTON> </A></td>
+						type="button"onclick="myFlag4_3()">Next</BUTTON> </A></td>
 				</tr>
 				</TABLE>
 			</DIV>
@@ -584,7 +585,7 @@ height: 200px;
 				<td><A href="javascript:SwapDivsWithClick('v5_1','v4_3')"><BUTTON
 						type="button" style="margin: 50px 450px 0 250px;">Back</BUTTON> </A></td>
 				<td><A href="javascript:SwapDivsWithClick('v5_1','v5_2')"><BUTTON
-						type="button">Next</BUTTON> </A></td>
+						type="button" onclick="myFlag5_1()">Next</BUTTON> </A></td>
 				</tr>
 				</TABLE>
 			</DIV>
@@ -609,7 +610,7 @@ height: 200px;
 				<tr>
 				<td><A href="javascript:SwapDivsWithClick('v5_2','v5_1')"><BUTTON
 						type="button" style="margin: 50px 450px 0 250px;">Back</BUTTON> </A></td>
-				<td><BUTTON type="submit" id="myBtn">Submit Form</BUTTON></td>
+				<td><BUTTON type="submit" id="myBtn" onclick="myFlag5_1()">Submit Form</BUTTON></td>
 				</tr>
 				</TABLE>
 				
@@ -631,6 +632,198 @@ height: 200px;
 		</FORM>
 
 	</DIV>
+	<script>
+	
+		function myFlag1() {
+			var row_v1_1 = document.getElementsByName('v1_1');
+			var v1_1_value;
+			for ( var i = 0; i < row_v1_1.length; i++) {
+				if (row_v1_1[i].checked) {
+					v1_1_value = row_v1_1[i].value;
+					localStorage.setItem("v1_1", v1_1_value);
+				}
+			}
+
+		}
+		function myFlag2() {
+			var row_v1_2 = document.getElementsByName('v1_2');
+			var v1_2_value;
+			for ( var i = 0; i < row_v1_2.length; i++) {
+				if (row_v1_2[i].checked) {
+					v1_2_value = row_v1_2[i].value;
+					localStorage.setItem("v1_2", v1_2_value);
+				}
+			}
+
+		}
+		function myFlag3() {
+			var row_v1_3 = document.getElementsByName('v1_3');
+			var v1_3_value;
+			for ( var i = 0; i < row_v1_3.length; i++) {
+				if (row_v1_3[i].checked) {
+					v1_3_value = row_v1_3[i].value;
+					localStorage.setItem("v1_3", v1_3_value);
+				}
+			}
+		}
+		function myFlag4() {
+			var row_v1_4 = document.getElementsByName('v1_4');
+			var v1_4_value;
+			for ( var i = 0; i < row_v1_4.length; i++) {
+				if (row_v1_4[i].checked) {
+					v1_4_value = row_v1_4[i].value;
+					localStorage.setItem("v1_4", v1_4_value);
+					
+				}
+			}
+		}
+		function myFlag2_1() {
+			var row_v2_1 = document.getElementsByName('v2_1');
+			var v2_1_value;
+			for ( var i = 0; i < row_v2_1.length; i++) {
+				if (row_v2_1[i].checked) {
+					v2_1_value = row_v2_1[i].value;
+					localStorage.setItem("v2_1", v2_1_value);
+					
+				}
+			}
+		}
+		function myFlag2_2() {
+			var row_v2_2 = document.getElementsByName('v2_2');
+			var v2_2_value;
+			for ( var i = 0; i < row_v2_2.length; i++) {
+				if (row_v2_2[i].checked) {
+					v2_2_value = row_v2_2[i].value;
+					localStorage.setItem("v2_2", v2_2_value);
+					
+				}
+			}
+		}
+		function myFlag2_3() {
+			var row_v2_3 = document.getElementsByName('v2_3');
+			var v2_3_value;
+			for ( var i = 0; i < row_v2_3.length; i++) {
+				if (row_v2_3[i].checked) {
+					v2_3_value = row_v2_3[i].value;
+					localStorage.setItem("v2_3", v2_3_value);
+					
+				}
+			}
+		}
+		function myFlag2_4() {
+			var row_v2_4 = document.getElementsByName('v2_4');
+			var v2_4_value;
+			for ( var i = 0; i < row_v2_4.length; i++) {
+				if (row_v2_4[i].checked) {
+					v2_4_value = row_v2_4[i].value;
+					localStorage.setItem("v2_4", v2_4_value);
+					
+				}
+			}
+		}
+		function myFlag2_5() {
+			var row_v2_5 = document.getElementsByName('v2_5');
+			var v2_5_value;
+			for ( var i = 0; i < row_v2_5.length; i++) {
+				if (row_v2_5[i].checked) {
+					v2_5_value = row_v2_5[i].value;
+					localStorage.setItem("v2_5", v2_5_value);
+					
+				}
+			}
+		}
+		function myFlag3_1() {
+			var row_v3_1 = document.getElementsByName('v3_1');
+			var v3_1_value;
+			for ( var i = 0; i < row_v3_1.length; i++) {
+				if (row_v3_1[i].checked) {
+					v3_1_value = row_v3_1[i].value;
+					localStorage.setItem("v3_1", v3_1_value);
+					
+				}
+			}
+		}
+		function myFlag3_2() {
+			var row_v3_2 = document.getElementsByName('v3_2');
+			var v3_2_value;
+			for ( var i = 0; i < row_v3_2.length; i++) {
+				if (row_v3_2[i].checked) {
+					v3_2_value = row_v3_2[i].value;
+					localStorage.setItem("v3_2", v3_2_value);
+					
+				}
+			}
+		}
+		function myFlag3_3() {
+			var row_v3_3 = document.getElementsByName('v3_3');
+			var v3_3_value;
+			for ( var i = 0; i < row_v3_3.length; i++) {
+				if (row_v3_3[i].checked) {
+					v3_3_value = row_v3_3[i].value;
+					localStorage.setItem("v3_3", v3_3_value);
+					
+				}
+			}
+		}
+		function myFlag4_1() {
+			var row_v4_1 = document.getElementsByName('v4_1');
+			var v4_1_value;
+			for ( var i = 0; i < row_v4_1.length; i++) {
+				if (row_v4_1[i].checked) {
+					v4_1_value = row_v4_1[i].value;
+					localStorage.setItem("v4_1", v4_1_value);
+					
+				}
+			}
+		}
+		function myFlag4_2() {
+			var row_v4_2 = document.getElementsByName('v4_2');
+			var v4_2_value;
+			for ( var i = 0; i < row_v4_2.length; i++) {
+				if (row_v4_2[i].checked) {
+					v4_2_value = row_v4_2[i].value;
+					localStorage.setItem("v4_2", v4_2_value);
+					
+				}
+			}
+		}
+		function myFlag4_3() {
+			var row_v4_3 = document.getElementsByName('v4_3');
+			var v4_3_value;
+			for ( var i = 0; i < row_v4_3.length; i++) {
+				if (row_v4_3[i].checked) {
+					v4_3_value = row_v4_3[i].value;
+					localStorage.setItem("v4_3", v4_3_value);
+					
+				}
+			}
+		}
+		function myFlag5_1() {
+			var row_v5_1 = document.getElementsByName('v5_1');
+			var v5_1_value;
+			for ( var i = 0; i < row_v5_1.length; i++) {
+				if (row_v5_1[i].checked) {
+					v5_1_value = row_v5_1[i].value;
+					localStorage.setItem("v5_1", v5_1_value);
+					
+				}
+			}
+		}
+		function myFlag5_2() {
+			var row_v5_2 = document.getElementsByName('v5_2');
+			var v5_2_value;
+			for ( var i = 0; i < row_v5_2.length; i++) {
+				if (row_v5_2[i].checked) {
+					v5_2_value = row_v5_2[i].value;
+					localStorage.setItem("v5_2", v5_2_value);
+					
+				}
+			}
+		}
+		
+
+		// alert(x)
+	</script>
 	<SCRIPT>
 		// Get the modal
 		var modal = document.getElementById('myModal');

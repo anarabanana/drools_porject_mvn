@@ -159,7 +159,7 @@ console.log(indexesData)
 						[ "35", "PABX distributed (i)", 250, 1.75, '=+(C35*D35)', 8760, , ,
 								"=+((E35*F35)/1000)" ],
 						[ "36", "PABX cooling and power supply (j)", 0, 0, , , 0.1, , '383.25' ],
-						[ "37", "Locally powered VOIP phones (k,Cisco) ", 0, 3, "=+(C37*D37)", 8760, , ,
+						[ "37", "Locally powered VOIP phones (k) ", 0, 3, "=+(C37*D37)", 8760, , ,
 								"=(E37*F37)/1000" ],
 
 						[ "38", "PHONES SUB-TOTAL", , , , , , , "=SUM(I35:I37)" ],
