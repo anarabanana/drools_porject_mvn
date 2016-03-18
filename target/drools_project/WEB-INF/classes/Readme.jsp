@@ -42,7 +42,11 @@ p {
 					<b>Instructions</b><br>
 				<p>Below are the different categories of ICT equipment and the assumptions used to obtain
 					the default data. Note that all usage figures assume that equipment is NOT switched off at the
-					mains supply at any point, i.e. standby mode is the lowest power mode in this tool.</p>
+					mains supply at any point, i.e. standby mode is the lowest power mode in this tool.
+					For some equipment types it may not be practical or cost effective to measure actual energy consumption,
+in which case a theoretical measurement can be used. Ensure that the source of the data is documented
+for future reference, for example supplier or equipment specification information. Use of theoretical data
+should be kept to a minimum to improve overall accuracy.</p>
 									<ol style = "text-indent: 20px;">
 					<li>Server Rooms - Enter data on central and departmental servers plus storage and
 						cooling/power supply overhead</li>

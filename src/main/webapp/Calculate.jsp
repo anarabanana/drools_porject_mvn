@@ -1081,6 +1081,14 @@
 .form-mini {
 	padding: 20px;
 }
+.text {
+color:grey;
+width: 90%;
+   /*  margin: auto; */
+	text-align:left;
+	border: 1px;
+    
+}
 
 .make-me-red { //
 	color: #000099;
@@ -1104,20 +1112,23 @@
 	<DIV class="main-content">
 		<FORM class="form-mini" action="">
 			<DIV class="container">
-				<DIV class="form-radio-buttons">
-					<label><span>Introduction<BR> This tool is designed to help SMEs estimate
-							their in-office energy use, costs and carbon footprint of non-residential ICT usage. <BR>It
+				<DIV class="text">
+					This tool is designed to help SMEs estimate
+							their in-office energy use, costs and carbon footprint of non-residential ICT usage. It
 							requires a number for each of the different types of ICT device and/or to get more accurate
 							results in addition to numbers of devices users can enter company specific data on the power
-							rating of equipment and typical usage hours. <BR>For each item please fill in determined
-							(estimated) data and measure your progress directly (totals sections gets adjusted). <BR>
-							For more information and assumptions please check <a href="Readme.jsp">README</a> section. </span>
-					</label>
+							rating of equipment and typical usage hours. For each item please fill in determined
+							(estimated) data and measure your progress directly (totals sections gets adjusted). 
+							For more information and assumptions please check <a href="Readme.jsp">README</a> section.
+					
 				</DIV>
 				<BR>
-				<DIV id="servers_grid"></DIV>
+			
+				<DIV id="servers_grid" style = "margin: 0 auto;"></DIV>
+				
 				<BR> <BR> <BR>
 				<TABLE>
+				
 					<TR>
 						<TD><DIV id="piechart" style="width: 400px; height: 400px;"></DIV>
 						</TD>
