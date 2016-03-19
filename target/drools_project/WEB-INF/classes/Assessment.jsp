@@ -55,8 +55,9 @@ a:link {
 }
 
 .form-basic .form-row {
-	height: 200px;
-	max-height: 1000px;
+	height: 200px; */
+	min-height: 100%;
+	/*max-height: 1000px; */
 }
 </STYLE>
 <SCRIPT type="text/javascript">
@@ -78,14 +79,19 @@ a:link {
 <link rel="icon" href="assets/favicon.ico" type="image/png" sizes="16x16">
 </HEAD>
 <HEADER>
-	<H1>ER Assessment Belief rule-based system</H1>
+	<H1>ER ASSESSMENT BELIEF RULE-BASED SYSTEM</H1>
 </HEADER>
 <UL>
-	<LI><A href="index.html">Home</A></LI>
-	<LI><A href="Assessment.jsp" class="active">Form</A></LI>
-	<LI><A href="Results.jsp">Results</A></LI>
-	<LI><A href="Recommendations.jsp">Recommendations</A></LI>
-	<LI><A href="Calculate.jsp">Calculate</A></LI>
+	<LI><A href="index.html">Home</A>
+	</LI>
+	<LI><A href="Assessment.jsp" class="active">Form</A>
+	</LI>
+	<LI><A href="Results.jsp">Results</A>
+	</LI>
+	<LI><A href="Recommendations.jsp">Recommendations</A>
+	</LI>
+	<LI><A href="Calculate.jsp">Calculate</A>
+	</LI>
 </UL>
 <BODY>
 	<DIV class="main-content">
@@ -110,7 +116,7 @@ a:link {
 						</LABEL>
 					</DIV>
 				</DIV>
-				<DIV class="form-row">
+				<div class="btn_pairs_next">
 					<A href="javascript:SwapDivsWithClick('v1_1','v1_2')"><BUTTON type="button"
 							onclick="myFlag1()">Next</BUTTON> </A>
 				</DIV>
@@ -127,10 +133,16 @@ a:link {
 						<LABEL> <INPUT type="radio" name="v1_2" value="low"> <SPAN>No</SPAN> </LABEL>
 					</DIV>
 				</DIV>
-				<A href="javascript:SwapDivsWithClick('v1_2','v1_1')"><BUTTON type="button"
-						style="margin: 50px 450px 0 250px;">Back</BUTTON> </A> <A
-					href="javascript:SwapDivsWithClick('v1_2','v1_3')"><BUTTON type="button"
-						onclick="myFlag2()">Next</BUTTON> </A>
+				<!--  margin: 50px 30px 0 400px;
+				margin: 50px 450px 0 250px; -->
+				<div class="btn_pairs_back">
+					<A href="javascript:SwapDivsWithClick('v1_2','v1_1')"><BUTTON type="button" style="">Back</BUTTON>
+					</A>
+				</DIV>
+				<div class="btn_pairs_next">
+					<A href="javascript:SwapDivsWithClick('v1_2','v1_3')"><BUTTON type="button"
+							onclick="myFlag2()">Next</BUTTON> </A>
+				</DIV>
 			</DIV>
 			<DIV class="form-row" id="v1_3" style="display: none;">
 				<LABEL><SPAN><B>3. </B>Do you prioritize eco-labels (e.g. EPEAT, Energy Star, EU
@@ -155,12 +167,14 @@ a:link {
 				</DIV>
 				<TABLE>
 					<tr>
-						<td><A href="javascript:SwapDivsWithClick('v1_3','v1_2')"><BUTTON type="button"
-									style="margin: 50px 450px 0 250px;">Back</BUTTON> </A>
-						</td>
-						<td><A href="javascript:SwapDivsWithClick('v1_3','v1_4')"><BUTTON type="button"
-									onclick="myFlag3()">Next</BUTTON> </A>
-						</td>
+						<td><div class="btn_pairs_back">
+								<A href="javascript:SwapDivsWithClick('v1_3','v1_2')"><BUTTON type="button">Back</BUTTON>
+								</A>
+							</div></td>
+						<td><div class="btn_pairs_next">
+								<A href="javascript:SwapDivsWithClick('v1_3','v1_4')"><BUTTON type="button"
+										onclick="myFlag3()">Next</BUTTON> </A>
+							</div></td>
 					</tr>
 				</TABLE>
 			</DIV>
@@ -183,12 +197,14 @@ a:link {
 				</DIV>
 				<TABLE>
 					<tr>
-						<td><A href="javascript:SwapDivsWithClick('v1_4','v1_3')"><BUTTON type="button"
-									style="margin: 50px 450px 0 250px;">Back</BUTTON> </A>
-						</td>
-						<td><A href="javascript:SwapDivsWithClick('v1_4','v2_1')"><BUTTON type="button"
-									onclick="myFlag4()">Next</BUTTON> </A>
-						</td>
+						<td><div class="btn_pairs_back">
+								<A href="javascript:SwapDivsWithClick('v1_4','v1_3')"><BUTTON type="button">Back</BUTTON>
+								</A>
+							</div></td>
+						<td><div class="btn_pairs_next">
+								<A href="javascript:SwapDivsWithClick('v1_4','v2_1')"><BUTTON type="button"
+										onclick="myFlag4()">Next</BUTTON> </A>
+							</div></td>
 					</tr>
 				</TABLE>
 			</DIV>
@@ -206,12 +222,14 @@ a:link {
 				</DIV>
 				<TABLE>
 					<tr>
-						<td><A href="javascript:SwapDivsWithClick('v2_1','v1_4')"><BUTTON type="button"
-									style="margin: 50px 450px 0 250px;">Back</BUTTON> </A>
-						</td>
-						<td><A href="javascript:SwapDivsWithClick('v2_1','v2_2')"><BUTTON type="button"
-									onclick="myFlag2_1()">Next</BUTTON> </A>
-						</td>
+						<td><div class="btn_pairs_back">
+								<A href="javascript:SwapDivsWithClick('v2_1','v1_4')"><BUTTON type="button">Back</BUTTON>
+								</A>
+							</div></td>
+						<td><div class="btn_pairs_next">
+								<A href="javascript:SwapDivsWithClick('v2_1','v2_2')"><BUTTON type="button"
+										onclick="myFlag2_1()">Next</BUTTON> </A>
+							</div></td>
 					</tr>
 				</TABLE>
 			</DIV>
@@ -234,12 +252,14 @@ a:link {
 				</DIV>
 				<TABLE>
 					<tr>
-						<td><A href="javascript:SwapDivsWithClick('v2_2','v2_1')"><BUTTON type="button"
-									style="margin: 50px 450px 0 250px;">Back</BUTTON> </A>
-						</td>
-						<td><A href="javascript:SwapDivsWithClick('v2_2','v2_3')"><BUTTON type="button"
-									onclick="myFlag2_2()">Next</BUTTON> </A>
-						</td>
+						<td><div class="btn_pairs_back">
+								<A href="javascript:SwapDivsWithClick('v2_2','v2_1')"><BUTTON type="button">Back</BUTTON>
+								</A>
+							</div></td>
+						<td><div class="btn_pairs_next">
+								<A href="javascript:SwapDivsWithClick('v2_2','v2_3')"><BUTTON type="button"
+										onclick="myFlag2_2()">Next</BUTTON> </A>
+							</div></td>
 					</tr>
 				</TABLE>
 			</DIV>
@@ -257,12 +277,14 @@ a:link {
 				</DIV>
 				<TABLE>
 					<tr>
-						<td><A href="javascript:SwapDivsWithClick('v2_3','v2_2')"><BUTTON type="button"
-									style="margin: 50px 450px 0 250px;">Back</BUTTON> </A>
-						</td>
-						<td><A href="javascript:SwapDivsWithClick('v2_3','v2_4')"><BUTTON type="button"
-									onclick="myFlag2_3()">Next</BUTTON> </A>
-						</td>
+						<td><div class="btn_pairs_back">
+								<A href="javascript:SwapDivsWithClick('v2_3','v2_2')"><BUTTON type="button">Back</BUTTON>
+								</A>
+							</div></td>
+						<td><div class="btn_pairs_next">
+								<A href="javascript:SwapDivsWithClick('v2_3','v2_4')"><BUTTON type="button"
+										onclick="myFlag2_3()">Next</BUTTON> </A>
+							</div></td>
 					</tr>
 				</TABLE>
 			</DIV>
@@ -285,12 +307,14 @@ a:link {
 				</DIV>
 				<TABLE>
 					<tr>
-						<td><A href="javascript:SwapDivsWithClick('v2_4','v2_3')"><BUTTON type="button"
-									style="margin: 50px 450px 0 250px;">Back</BUTTON> </A>
-						</td>
-						<td><A href="javascript:SwapDivsWithClick('v2_4','v2_5')"><BUTTON type="button"
-									onclick="myFlag2_4()">Next</BUTTON> </A>
-						</td>
+						<td><div class="btn_pairs_back">
+								<A href="javascript:SwapDivsWithClick('v2_4','v2_3')"><BUTTON type="button">Back</BUTTON>
+								</A>
+							</div></td>
+						<td><div class="btn_pairs_next">
+								<A href="javascript:SwapDivsWithClick('v2_4','v2_5')"><BUTTON type="button"
+										onclick="myFlag2_4()">Next</BUTTON> </A>
+							</div></td>
 					</tr>
 				</TABLE>
 			</DIV>
@@ -309,12 +333,14 @@ a:link {
 				</DIV>
 				<TABLE>
 					<tr>
-						<td><A href="javascript:SwapDivsWithClick('v2_5','v2_4')"><BUTTON type="button"
-									style="margin: 50px 450px 0 250px;">Back</BUTTON> </A>
-						</td>
-						<td><A href="javascript:SwapDivsWithClick('v2_5','v3_1')"><BUTTON type="button"
-									onclick="myFlag2_5()">Next</BUTTON> </A>
-						</td>
+						<td><div class="btn_pairs_back">
+								<A href="javascript:SwapDivsWithClick('v2_5','v2_4')"><BUTTON type="button">Back</BUTTON>
+								</A>
+							</div></td>
+						<td><div class="btn_pairs_next">
+								<A href="javascript:SwapDivsWithClick('v2_5','v3_1')"><BUTTON type="button"
+										onclick="myFlag2_5()">Next</BUTTON> </A>
+							</div></td>
 					</tr>
 				</TABLE>
 			</DIV>
@@ -336,12 +362,14 @@ a:link {
 				</DIV>
 				<TABLE>
 					<tr>
-						<td><A href="javascript:SwapDivsWithClick('v3_1','v2_5')"><BUTTON type="button"
-									style="margin: 50px 450px 0 250px;">Back</BUTTON> </A>
-						</td>
-						<td><A href="javascript:SwapDivsWithClick('v3_1','v3_2')"><BUTTON type="button"
-									onclick="myFlag3_1()">Next</BUTTON> </A>
-						</td>
+						<td><div class="btn_pairs_back">
+								<A href="javascript:SwapDivsWithClick('v3_1','v2_5')"><BUTTON type="button">Back</BUTTON>
+								</A>
+							</div></td>
+						<td><div class="btn_pairs_next">
+								<A href="javascript:SwapDivsWithClick('v3_1','v3_2')"><BUTTON type="button"
+										onclick="myFlag3_1()">Next</BUTTON> </A>
+							</div></td>
 					</tr>
 				</TABLE>
 			</DIV>
@@ -363,12 +391,14 @@ a:link {
 				</DIV>
 				<TABLE>
 					<tr>
-						<td><A href="javascript:SwapDivsWithClick('v3_2','v3_1')"><BUTTON type="button"
-									style="margin: 50px 450px 0 250px;">Back</BUTTON> </A>
-						</td>
-						<td><A href="javascript:SwapDivsWithClick('v3_2','v3_3')"><BUTTON type="button"
-									onclick="myFlag3_2()">Next</BUTTON> </A>
-						</td>
+						<td><div class="btn_pairs_back">
+								<A href="javascript:SwapDivsWithClick('v3_2','v3_1')"><BUTTON type="button">Back</BUTTON>
+								</A>
+							</div></td>
+						<td><div class="btn_pairs_next">
+								<A href="javascript:SwapDivsWithClick('v3_2','v3_3')"><BUTTON type="button"
+										onclick="myFlag3_2()">Next</BUTTON> </A>
+							</div></td>
 					</tr>
 				</TABLE>
 			</DIV>
@@ -390,12 +420,14 @@ a:link {
 				</DIV>
 				<TABLE>
 					<tr>
-						<td><A href="javascript:SwapDivsWithClick('v3_3','v3_2')"><BUTTON type="button"
-									style="margin: 50px 450px 0 250px;">Back</BUTTON> </A>
-						</td>
-						<td><A href="javascript:SwapDivsWithClick('v3_3','v4_1')"><BUTTON type="button"
-									onclick="myFlag3_3()">Next</BUTTON> </A>
-						</td>
+						<td><div class="btn_pairs_back">
+								<A href="javascript:SwapDivsWithClick('v3_3','v3_2')"><BUTTON type="button">Back</BUTTON>
+								</A>
+							</div></td>
+						<td><div class="btn_pairs_next">
+								<A href="javascript:SwapDivsWithClick('v3_3','v4_1')"><BUTTON type="button"
+										onclick="myFlag3_3()">Next</BUTTON> </A>
+							</div></td>
 					</tr>
 				</TABLE>
 			</DIV>
@@ -414,12 +446,14 @@ a:link {
 				</DIV>
 				<TABLE>
 					<tr>
-						<td><A href="javascript:SwapDivsWithClick('v4_1','v3_3')"><BUTTON type="button"
-									style="margin: 50px 450px 0 250px;">Back</BUTTON> </A>
-						</td>
-						<td><A href="javascript:SwapDivsWithClick('v4_1','v4_2')"><BUTTON type="button"
-									onclick="myFlag4_1()">Next</BUTTON> </A>
-						</td>
+						<td><div class="btn_pairs_back">
+								<A href="javascript:SwapDivsWithClick('v4_1','v3_3')"><BUTTON type="button">Back</BUTTON>
+								</A>
+							</div></td>
+						<td><div class="btn_pairs_next">
+								<A href="javascript:SwapDivsWithClick('v4_1','v4_2')"><BUTTON type="button"
+										onclick="myFlag4_1()">Next</BUTTON> </A>
+							</div></td>
 					</tr>
 				</TABLE>
 			</DIV>
@@ -437,12 +471,14 @@ a:link {
 				</DIV>
 				<TABLE>
 					<tr>
-						<td><A href="javascript:SwapDivsWithClick('v4_2','v4_1')"><BUTTON type="button"
-									style="margin: 50px 450px 0 250px;">Back</BUTTON> </A>
-						</td>
-						<td><A href="javascript:SwapDivsWithClick('v4_2','v4_3')"><BUTTON type="button"
-									onclick="myFlag4_2()">Next</BUTTON> </A>
-						</td>
+						<td><div class="btn_pairs_back">
+								<A href="javascript:SwapDivsWithClick('v4_2','v4_1')"><BUTTON type="button">Back</BUTTON>
+								</A>
+							</div></td>
+						<td><div class="btn_pairs_next">
+								<A href="javascript:SwapDivsWithClick('v4_2','v4_3')"><BUTTON type="button"
+										onclick="myFlag4_2()">Next</BUTTON> </A>
+							</div></td>
 					</tr>
 				</TABLE>
 			</DIV>
@@ -460,12 +496,14 @@ a:link {
 				</DIV>
 				<TABLE>
 					<tr>
-						<td><A href="javascript:SwapDivsWithClick('v4_3','v4_2')"><BUTTON type="button"
-									style="margin: 50px 450px 0 250px;">Back</BUTTON> </A>
-						</td>
-						<td><A href="javascript:SwapDivsWithClick('v4_3','v5_1')"><BUTTON type="button"
-									onclick="myFlag4_3()">Next</BUTTON> </A>
-						</td>
+						<td><div class="btn_pairs_back">
+								<A href="javascript:SwapDivsWithClick('v4_3','v4_2')"><BUTTON type="button">Back</BUTTON>
+								</A>
+							</div></td>
+						<td><div class="btn_pairs_next">
+								<A href="javascript:SwapDivsWithClick('v4_3','v5_1')"><BUTTON type="button"
+										onclick="myFlag4_3()">Next</BUTTON> </A>
+							</div></td>
 					</tr>
 				</TABLE>
 			</DIV>
@@ -488,12 +526,14 @@ a:link {
 				</DIV>
 				<TABLE>
 					<tr>
-						<td><A href="javascript:SwapDivsWithClick('v5_1','v4_3')"><BUTTON type="button"
-									style="margin: 50px 450px 0 250px;">Back</BUTTON> </A>
-						</td>
-						<td><A href="javascript:SwapDivsWithClick('v5_1','v5_2')"><BUTTON type="button"
-									onclick="myFlag5_1()">Next</BUTTON> </A>
-						</td>
+						<td><div class="btn_pairs_back">
+								<A href="javascript:SwapDivsWithClick('v5_1','v4_3')"><BUTTON type="button">Back</BUTTON>
+								</A>
+							</div></td>
+						<td><div class="btn_pairs_next">
+								<A href="javascript:SwapDivsWithClick('v5_1','v5_2')"><BUTTON type="button"
+										onclick="myFlag5_1()">Next</BUTTON> </A>
+							</div></td>
 					</tr>
 				</TABLE>
 			</DIV>
@@ -512,11 +552,13 @@ a:link {
 				</DIV>
 				<TABLE>
 					<tr>
-						<td><A href="javascript:SwapDivsWithClick('v5_2','v5_1')"><BUTTON type="button"
-									style="margin: 50px 450px 0 250px;">Back</BUTTON> </A>
-						</td>
-						<td><BUTTON type="submit" id="myBtn" onmousedown="myFlag5_2()">Submit Form</BUTTON>
-						</td>
+						<td><div class="btn_pairs_back">
+								<A href="javascript:SwapDivsWithClick('v5_2','v5_1')"><BUTTON type="button">Back</BUTTON>
+								</A>
+							</div></td>
+						<td><div class="btn_pairs_next">
+								<BUTTON type="submit" id="myBtn" onmousedown="myFlag5_2()">Submit Form</BUTTON>
+							</div></td>
 					</tr>
 				</TABLE>
 				<!-- The Modal -->
@@ -532,7 +574,6 @@ a:link {
 		</FORM>
 	</DIV>
 	<script>
-	
 		function myFlag1() {
 			var row_v1_1 = document.getElementsByName('v1_1');
 			var v1_1_value;
@@ -573,7 +614,7 @@ a:link {
 					v1_4_value = row_v1_4[i].value;
 					localStorage.setItem("v1_4", v1_4_value);
 					//window.location.href='Recommendations.jsp#V1';
-					
+
 				}
 			}
 		}
@@ -584,7 +625,7 @@ a:link {
 				if (row_v2_1[i].checked) {
 					v2_1_value = row_v2_1[i].value;
 					localStorage.setItem("v2_1", v2_1_value);
-					
+
 				}
 			}
 		}
@@ -595,7 +636,7 @@ a:link {
 				if (row_v2_2[i].checked) {
 					v2_2_value = row_v2_2[i].value;
 					localStorage.setItem("v2_2", v2_2_value);
-					
+
 				}
 			}
 		}
@@ -606,7 +647,7 @@ a:link {
 				if (row_v2_3[i].checked) {
 					v2_3_value = row_v2_3[i].value;
 					localStorage.setItem("v2_3", v2_3_value);
-					
+
 				}
 			}
 		}
@@ -617,7 +658,7 @@ a:link {
 				if (row_v2_4[i].checked) {
 					v2_4_value = row_v2_4[i].value;
 					localStorage.setItem("v2_4", v2_4_value);
-					
+
 				}
 			}
 		}
@@ -628,7 +669,7 @@ a:link {
 				if (row_v2_5[i].checked) {
 					v2_5_value = row_v2_5[i].value;
 					localStorage.setItem("v2_5", v2_5_value);
-					
+
 				}
 			}
 		}
@@ -639,7 +680,7 @@ a:link {
 				if (row_v3_1[i].checked) {
 					v3_1_value = row_v3_1[i].value;
 					localStorage.setItem("v3_1", v3_1_value);
-					
+
 				}
 			}
 		}
@@ -650,7 +691,7 @@ a:link {
 				if (row_v3_2[i].checked) {
 					v3_2_value = row_v3_2[i].value;
 					localStorage.setItem("v3_2", v3_2_value);
-					
+
 				}
 			}
 		}
@@ -661,7 +702,7 @@ a:link {
 				if (row_v3_3[i].checked) {
 					v3_3_value = row_v3_3[i].value;
 					localStorage.setItem("v3_3", v3_3_value);
-					
+
 				}
 			}
 		}
@@ -672,7 +713,7 @@ a:link {
 				if (row_v4_1[i].checked) {
 					v4_1_value = row_v4_1[i].value;
 					localStorage.setItem("v4_1", v4_1_value);
-					
+
 				}
 			}
 		}
@@ -683,7 +724,7 @@ a:link {
 				if (row_v4_2[i].checked) {
 					v4_2_value = row_v4_2[i].value;
 					localStorage.setItem("v4_2", v4_2_value);
-					
+
 				}
 			}
 		}
@@ -694,7 +735,7 @@ a:link {
 				if (row_v4_3[i].checked) {
 					v4_3_value = row_v4_3[i].value;
 					localStorage.setItem("v4_3", v4_3_value);
-					
+
 				}
 			}
 		}
@@ -705,7 +746,7 @@ a:link {
 				if (row_v5_1[i].checked) {
 					v5_1_value = row_v5_1[i].value;
 					localStorage.setItem("v5_1", v5_1_value);
-					
+
 				}
 			}
 		}
@@ -716,11 +757,10 @@ a:link {
 				if (row_v5_2[i].checked) {
 					v5_2_value = row_v5_2[i].value;
 					localStorage.setItem("v5_2", v5_2_value);
-					
+
 				}
 			}
 		}
-		
 
 		// alert(x)
 	</script>

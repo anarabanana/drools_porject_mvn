@@ -1081,13 +1081,13 @@
 .form-mini {
 	padding: 20px;
 }
+
 .text {
-color:grey;
-width: 90%;
-   /*  margin: auto; */
-	text-align:left;
+	color: grey;
+	width: 90%;
+	/*  margin: auto; */
+	text-align: left;
 	border: 1px;
-    
 }
 
 .make-me-red { //
@@ -1098,45 +1098,41 @@ width: 90%;
 </STYLE>
 </HEAD>
 <HEADER>
-	<H1>ER Assessment Belief rule-based system</H1>
+	<H1>ER ASSESSMENT BELIEF RULE-BASED SYSTEM</H1>
 </HEADER>
 <UL>
-	<LI><A href="index.html">Home</A></LI>
-	<LI><A href="Assessment.jsp">Form</A></LI>
-	<LI><A href="Results.jsp">Results</A></LI>
-	<LI><A href="Recommendations.jsp">Recommendations</A></LI>
-	<LI><A href="Calculate.jsp" class="active">Calculator</A>
+	<LI><A href="index.html">Home</A>
 	</LI>
+	<LI><A href="Assessment.jsp">Form</A>
+	</LI>
+	<LI><A href="Results.jsp">Results</A>
+	</LI>
+	<LI><A href="Recommendations.jsp">Recommendations</A>
+	</LI>
+	<LI><A href="Calculate.jsp" class="active">Calculator</A></LI>
 </UL>
 <BODY>
 	<DIV class="main-content">
 		<FORM class="form-mini" action="">
 			<DIV class="container">
 				<DIV class="text">
-					This tool is designed to help SMEs estimate
-							their in-office energy use, costs and carbon footprint of non-residential ICT usage. It
-							requires a number for each of the different types of ICT device and/or to get more accurate
-							results in addition to numbers of devices users can enter company specific data on the power
-							rating of equipment and typical usage hours. For each item please fill in determined
-							(estimated) data and measure your progress directly (totals sections gets adjusted). 
-							For more information and assumptions please check <a href="Readme.jsp">README</a> section.
-					
+					This tool is designed to help SMEs estimate their in-office energy use, costs and carbon
+					footprint of non-residential ICT usage. It requires a number for each of the different types of
+					ICT device and/or to get more accurate results in addition to numbers of devices users can
+					enter company specific data on the power rating of equipment and typical usage hours. For each
+					item please fill in determined (estimated) data and measure your progress directly (totals
+					sections gets adjusted). For more information and assumptions please check <a href="Readme.jsp">README</a>
+					section.
 				</DIV>
 				<BR>
-			
-				<DIV id="servers_grid" style = "margin: 0 auto;"></DIV>
-				
+				<DIV id="servers_grid" style="margin: 0 auto;"></DIV>
 				<BR> <BR> <BR>
 				<TABLE>
-				
 					<TR>
-						<TD><DIV id="piechart" style="width: 400px; height: 400px;"></DIV>
-						</TD>
-						<TD><DIV id="piechart_energy" style="width: 400px; height: 400px;"></DIV>
-						</TD>
+						<TD><DIV id="piechart" style="width: 400px; height: 400px;"></DIV></TD>
+						<TD><DIV id="piechart_energy" style="width: 400px; height: 400px;"></DIV></TD>
 						<TD>
-							<DIV id="piechart_carbon" style="width: 400px; height: 400px;"></DIV>
-						</TD>
+							<DIV id="piechart_carbon" style="width: 400px; height: 400px;"></DIV></TD>
 					</TR>
 				</TABLE>
 			</DIV>

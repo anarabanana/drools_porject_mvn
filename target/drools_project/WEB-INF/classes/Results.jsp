@@ -196,15 +196,18 @@ a:link {
 </style>
 </head>
 <header>
-	<h1>ER Assessment Belief rule-based system</h1>
+	<h1>ER ASSESSMENT BELIEF RULE-BASED SYSTEM</h1>
 </header>
 <ul>
-	<LI><A href="index.html">Home</A>
-	</LI>
-	<li><a href="Assessment.jsp">Form</a></li>
-	<li><a href="Results.jsp" class="active">Results</a></li>
-	<li><a href="Recommendations.jsp">Recommendations</a></li>
-	<li><a href="Calculate.jsp">Calculate</a></li>
+	<LI><A href="index.html">Home</A></LI>
+	<li><a href="Assessment.jsp">Form</a>
+	</li>
+	<li><a href="Results.jsp" class="active">Results</a>
+	</li>
+	<li><a href="Recommendations.jsp">Recommendations</a>
+	</li>
+	<li><a href="Calculate.jsp">Calculate</a>
+	</li>
 </ul>
 <body>
 	<div class="main-content">
@@ -303,15 +306,12 @@ a:link {
 							%> %</span> </label><span class="tooltiptext">Click to see recommendations</span>
 						</div>
 						<div class="form-row">
-							<label><span><B> Please hover over to see more</B>
-							</span> </label>
-						</div>
-					</td>
+							<label><span><B> Please hover over to see more</B> </span> </label>
+						</div></td>
 					<td style="width: 50%">
 						<div class="form-row">
 							<div id="piechart" style="width: 470px; height: 400px;"></div>
-						</div>
-					</td>
+						</div></td>
 				</tr>
 			</table>
 		</form>

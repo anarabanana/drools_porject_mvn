@@ -356,8 +356,7 @@ public class ReadParams extends HttpServlet {
 		session.setAttribute("ob3", ob_res3);
 		session.setAttribute("ob4", ob_res4);
 		session.setAttribute("ob5", ob_res5);
-		
-		
+
 		List<String> myListActivities = new ArrayList<String>();
 		myListActivities.add("false");
 		myListActivities.add("true");

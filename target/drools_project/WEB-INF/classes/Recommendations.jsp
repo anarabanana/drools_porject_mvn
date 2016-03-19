@@ -16,7 +16,7 @@
 		$("#flip_1_1", this).click(function() {
 			$("#panel_1_1").slideToggle("slow", function() {
 				$('html, body').animate({
-					scrollTop : $("#panel_1_1").offset().top
+					scrollTop : $("#panel_1_1").offset().top - 100
 				}, 800);
 			});
 
@@ -24,70 +24,70 @@
 		$("#flip_1_2", this).click(function() {
 			$("#panel_1_2").slideToggle("slow", function() {
 				$('html, body').animate({
-					scrollTop : $("#panel_1_2").offset().top
+					scrollTop : $("#panel_1_2").offset().top - 100
 				}, 800);
 			});
 		});
 		$("#flip_1_3", this).click(function() {
 			$("#panel_1_3").slideToggle("slow", function() {
 				$('html, body').animate({
-					scrollTop : $("#panel_1_3").offset().top
+					scrollTop : $("#panel_1_3").offset().top - 100
 				}, 800);
 			});
 		});
 		$("#flip_1_4", this).click(function() {
 			$("#panel_1_4").slideToggle("slow", function() {
 				$('html, body').animate({
-					scrollTop : $("#panel_1_4").offset().top
+					scrollTop : $("#panel_1_4").offset().top - 100
 				}, 800);
 			});
 		});
 		$("#flip_1_4_2", this).click(function() {
 			$("#panel_1_4_2").slideToggle("slow", function() {
 				$('html, body').animate({
-					scrollTop : $("#panel_1_4_2").offset().top
+					scrollTop : $("#panel_1_4_2").offset().top - 100
 				}, 800);
 			});
 		});
 		$("#flip_1_4_3", this).click(function() {
 			$("#panel_1_4_3").slideToggle("slow", function() {
 				$('html, body').animate({
-					scrollTop : $("#panel_1_4_3").offset().top
+					scrollTop : $("#panel_1_4_3").offset().top - 100
 				}, 800);
 			});
 		});
 		$("#flip_1_4_4", this).click(function() {
 			$("#panel_1_4_4").slideToggle("slow", function() {
 				$('html, body').animate({
-					scrollTop : $("#panel_1_4_4").offset().top
+					scrollTop : $("#panel_1_4_4").offset().top - 100
 				}, 800);
 			});
 		});
 		$("#flip_2_1", this).click(function() {
 			$("#panel_2_1").slideToggle("slow", function() {
 				$('html, body').animate({
-					scrollTop : $("#panel_2_1").offset().top
+					scrollTop : $("#panel_2_1").offset().top - 100
 				}, 800);
 			});
 		});
 		$("#flip_2_2", this).click(function() {
 			$("#panel_2_2").slideToggle("slow", function() {
 				$('html, body').animate({
-					scrollTop : $("#panel_2_2").offset().top
+					scrollTop : $("#panel_2_2").offset().top - 100
 				}, 800);
 			});
 		});
 		$("#flip_2_2_1", this).click(function() {
 			$("#panel_2_2_1").slideToggle("slow", function() {
 				$('html, body').animate({
-					scrollTop : $("#panel_2_2_1").offset().top
+					scrollTop : $("#panel_2_2_1").offset().top - 100
 				}, 800);
 			});
 		});
 		$("#flip_2_2_2", this).click(function() {
 			$("#panel_2_2_2").slideToggle("slow", function() {
 				$('html, body').animate({
-					scrollTop : $("#panel_2_2_2").offset().top
+					scrollTop : $("#panel_2_2_2").offset().top - 100
 				}, 800);
 			});
 		});
@@ -95,154 +95,154 @@
 		$("#flip_2_3", this).click(function() {
 			$("#panel_2_3").slideToggle("slow", function() {
 				$('html, body').animate({
-					scrollTop : $("#panel_2_3").offset().top
+					scrollTop : $("#panel_2_3").offset().top - 100
 				}, 800);
 			});
 		});
 		$("#flip_2_4", this).click(function() {
 			$("#panel_2_4").slideToggle("slow", function() {
 				$('html, body').animate({
-					scrollTop : $("#panel_2_4").offset().top
+					scrollTop : $("#panel_2_4").offset().top - 100
 				}, 800);
 			});
 		});
 		$("#flip_2_4_1", this).click(function() {
 			$("#panel_2_4_1").slideToggle("slow", function() {
 				$('html, body').animate({
-					scrollTop : $("#panel_2_4_1").offset().top
+					scrollTop : $("#panel_2_4_1").offset().top - 100
 				}, 800);
 			});
 		});
 		$("#flip_2_4_2", this).click(function() {
 			$("#panel_2_4_2").slideToggle("slow", function() {
 				$('html, body').animate({
-					scrollTop : $("#panel_2_4_2").offset().top
+					scrollTop : $("#panel_2_4_2").offset().top - 100
 				}, 800);
 			});
 		});
 		$("#flip_2_4_3", this).click(function() {
 			$("#panel_2_4_3").slideToggle("slow", function() {
 				$('html, body').animate({
-					scrollTop : $("#panel_2_4_3").offset().top
+					scrollTop : $("#panel_2_4_3").offset().top - 100
 				}, 800);
 			});
 		});
 		$("#flip_2_4_4", this).click(function() {
 			$("#panel_2_4_4").slideToggle("slow", function() {
 				$('html, body').animate({
-					scrollTop : $("#panel_2_4_4").offset().top
+					scrollTop : $("#panel_2_4_4").offset().top - 100
 				}, 800);
 			});
 		});
 		$("#flip_2_4_5", this).click(function() {
 			$("#panel_2_4_5").slideToggle("slow", function() {
 				$('html, body').animate({
-					scrollTop : $("#panel_2_4_5").offset().top
+					scrollTop : $("#panel_2_4_5").offset().top - 100
 				}, 800);
 			});
 		});
 		$("#flip_2_5", this).click(function() {
 			$("#panel_2_5").slideToggle("slow", function() {
 				$('html, body').animate({
-					scrollTop : $("#panel_2_5").offset().top
+					scrollTop : $("#panel_2_5").offset().top - 100
 				}, 800);
 			});
 		});
 		$("#flip_2_5_1", this).click(function() {
 			$("#panel_2_5_1").slideToggle("slow", function() {
 				$('html, body').animate({
-					scrollTop : $("#panel_2_5_1").offset().top
+					scrollTop : $("#panel_2_5_1").offset().top - 100
 				}, 800);
 			});
 		});
 		$("#flip_3_1", this).click(function() {
 			$("#panel_3_1").slideToggle("slow", function() {
 				$('html, body').animate({
-					scrollTop : $("#panel_3_1").offset().top
+					scrollTop : $("#panel_3_1").offset().top - 100
 				}, 800);
 			});
 		});
 		$("#flip_3_2", this).click(function() {
 			$("#panel_3_2").slideToggle("slow", function() {
 				$('html, body').animate({
-					scrollTop : $("#panel_3_2").offset().top
+					scrollTop : $("#panel_3_2").offset().top - 100
 				}, 800);
 			});
 		});
 		$("#flip_3_2_1", this).click(function() {
 			$("#panel_3_2_1").slideToggle("slow", function() {
 				$('html, body').animate({
-					scrollTop : $("#panel_3_2_1").offset().top
+					scrollTop : $("#panel_3_2_1").offset().top - 100
 				}, 800);
 			});
 		});
 		$("#flip_3_3", this).click(function() {
 			$("#panel_3_3").slideToggle("slow", function() {
 				$('html, body').animate({
-					scrollTop : $("#panel_3_3").offset().top
+					scrollTop : $("#panel_3_3").offset().top - 100
 				}, 800);
 			});
 		});
 		$("#flip_4_1", this).click(function() {
 			$("#panel_4_1").slideToggle("slow", function() {
 				$('html, body').animate({
-					scrollTop : $("#panel_4_1").offset().top
+					scrollTop : $("#panel_4_1").offset().top - 100
 				}, 800);
 			});
 		});
 		$("#flip_4_1_1", this).click(function() {
 			$("#panel_4_1_1").slideToggle("slow", function() {
 				$('html, body').animate({
-					scrollTop : $("#panel_4_1_1").offset().top
+					scrollTop : $("#panel_4_1_1").offset().top - 100
 				}, 800);
 			});
 		});
 		$("#flip_4_2", this).click(function() {
 			$("#panel_4_2").slideToggle("slow", function() {
 				$('html, body').animate({
-					scrollTop : $("#panel_4_2").offset().top
+					scrollTop : $("#panel_4_2").offset().top - 100
 				}, 800);
 			});
 		});
 		$("#flip_4_2_1", this).click(function() {
 			$("#panel_4_2_1").slideToggle("slow", function() {
 				$('html, body').animate({
-					scrollTop : $("#panel_4_2_1").offset().top
+					scrollTop : $("#panel_4_2_1").offset().top - 100
 				}, 800);
 			});
 		});
 		$("#flip_4_3", this).click(function() {
 			$("#panel_4_3").slideToggle("slow", function() {
 				$('html, body').animate({
-					scrollTop : $("#panel_4_3").offset().top
+					scrollTop : $("#panel_4_3").offset().top - 100
 				}, 800);
 			});
 		});
 		$("#flip_5_1", this).click(function() {
 			$("#panel_5_1").slideToggle("slow", function() {
 				$('html, body').animate({
-					scrollTop : $("#panel_5_1").offset().top
+					scrollTop : $("#panel_5_1").offset().top - 100
 				}, 800);
 			});
 		});
 		$("#flip_5_1_1", this).click(function() {
 			$("#panel_5_1_1").slideToggle("slow", function() {
 				$('html, body').animate({
-					scrollTop : $("#panel_5_1_1").offset().top
+					scrollTop : $("#panel_5_1_1").offset().top - 100
 				}, 800);
 			});
 		});
 		$("#flip_5_2", this).click(function() {
 			$("#panel_5_2").slideToggle("slow", function() {
 				$('html, body').animate({
-					scrollTop : $("#panel_5_2").offset().top
+					scrollTop : $("#panel_5_2").offset().top - 100
 				}, 800);
 			});
 		});
 		$("#flip_5_2_1", this).click(function() {
 			$("#panel_5_2_1").slideToggle("slow", function() {
 				$('html, body').animate({
-					scrollTop : $("#panel_5_2_1").offset().top
+					scrollTop : $("#panel_5_2_1").offset().top - 100
 				}, 800);
 			});
 		});
@@ -505,16 +505,17 @@ ul {
 </style>
 </head>
 <header>
-	<h1>ER Assessment Belief rule-based system</h1>
+	<h1>ER ASSESSMENT BELIEF RULE-BASED SYSTEM</h1>
 </header>
 <ul>
-	<LI><A href="index.html">Home</A></LI>
-	<li><a href="Assessment.jsp">Form</a></li>
-	<li><a href="Results.jsp">Results</a></li>
-	<li><a href="Recommendations.jsp" class="active">Recommendations</a>
+	<LI><A href="index.html">Home</A>
+	</LI>
+	<li><a href="Assessment.jsp">Form</a>
 	</li>
-	<li><a href="Calculate.jsp">Calculate</a>
+	<li><a href="Results.jsp">Results</a>
 	</li>
+	<li><a href="Recommendations.jsp" class="active">Recommendations</a></li>
+	<li><a href="Calculate.jsp">Calculate</a></li>
 </ul>
 <body>
 	<div class="main-content">
@@ -525,12 +526,13 @@ ul {
 					<div>
 						<div>
 							<span class="checkmark" style="float: left;"> </span> &nbsp;&nbsp;- acitivites you are
-							assumed to fulfill partially/completely based on responses. <br>Please hover over each
+							assumed to fulfill completely, if answered "Yes/Always etc."<br>Please hover over each
 							item to see more.
 						</div>
 						</br> <label><span>1. Equipment procurement compliance with Green ICT guidelines</span>
 							<li class="flip" id="flip_1_1">Green ICT procurement guidelines when buying new ICT
-								equipment <span class="checkmark" id="1_1"></span></li>
+								equipment <span class="checkmark" id="1_1"></span>
+						</li>
 							<div class="panel" id="panel_1_1">
 								There are a number of initiatives to be aware of designed to assist organisations to make
 								more informed choices when purchasing new equipment: <br> The Green Electronics Council
@@ -540,8 +542,7 @@ ul {
 							</div>
 							<li class="flip" id="flip_1_2">Life Cycle Assessment technique is useful to assess
 								environmental impacts associated with all the stages of a product's life <span
-								class="checkmark" id="1_2"></span>
-						</li>
+								class="checkmark" id="1_2"></span></li>
 							<div class="panel" id="panel_1_2">
 								Life-cycle assessment is a technique to assess environmental impacts associated with all the
 								stages of a product's life from cradle to grave (i.e., from raw material extraction through
@@ -556,7 +557,8 @@ ul {
 									procedure</a>
 							</div>
 							<li class="flip" id="flip_1_3">Use of eco labelled devices <span class="checkmark"
-								id="1_3"></span></li>
+								id="1_3"></span>
+						</li>
 							<div class="panel" id="panel_1_3">
 								There are a number of country-relevant labels and standards covering, in whole or part, the
 								environmental impacts of information and communication technology (ICT), including: <br>
@@ -578,7 +580,8 @@ ul {
 								</ol>
 							</div>
 							<li class="flip" id="flip_1_4">Parts replacement of equipment <span class="checkmark"
-								name="1_4"></span></li>
+								name="1_4"></span>
+						</li>
 							<div class="panel" id="panel_1_4">
 								The capacity of new ICT equipment (such as storage or processor speed) increases by
 								approximately 100% every year, while energy consumption increases by about 20%. ICT
@@ -592,9 +595,11 @@ ul {
 									AWS Total cost of ownership calculator to compare the cost of running your applications in
 									an on-premises or colocation environment to AWS Reference - <a
 										href="https://awstcocalculator.com/#">AWS Calclator</a>
-								</div></li>
+								</div>
+						</li>
 							<li class="flip" id="flip_1_4_3">Use cloud computing services<span class="checkmark"
-								name="1_4"></span></li>
+								name="1_4"></span>
+						</li>
 							<div class="panel" id="panel_1_4_3">
 								Small and Medium sized businesses can take a lot of benefit from embracing business cloud
 								solutions.<br> <a
@@ -604,7 +609,8 @@ ul {
 									Cloud Apps and Services for Small Business </a>
 							</div>
 							<li class="flip" id="flip_1_4_4">Desktop virtualization software <span class="checkmark"
-								name="1_4"></span></li> </label>
+								name="1_4"></span>
+						</li> </label>
 						<div class="panel" id="panel_1_4_4">
 							VDI solutions are easy, affordable, all-in-one software appliances enable desktop IT to
 							rapidly deliver centrally-managed virtual desktops for less than the cost of new PCs. <br>References
@@ -625,9 +631,11 @@ ul {
 									management software for organization may vary from open source to commercial fully
 									supported products. <br>Reference - <a
 										href="http://www.capterra.com/energy-management-software/">Energy management software</a>
-								</div></li>
+								</div>
+						</li>
 							<li class="flip" id="flip_2_2">Enable PC energy saving functions <span class="checkmark"
-								name="2_2"></span></li>
+								name="2_2"></span>
+						</li>
 							<div class="panel" id="panel_2_2">
 								Purchase low power CPU's, omplement thin clients <br>Thin client computing provides
 								users with the same interface, applications, and performance as a desktop based computer but
@@ -639,14 +647,18 @@ ul {
 								This balance needs to be assessed for your own particular circumstance.
 							</div>
 							<li class="flip" id="flip_2_2_1">Switch off unused devices completely <span
-								class="checkmark" name="2_2"></span></li>
+								class="checkmark" name="2_2"></span>
+						</li>
 							<div class="panel" id="panel_2_2_1">Shut down PC equipment after hours, or use remote
 								monitoring software solutions to do so</div>
 							<li>Turn off peripherals, or set them to stand-by mode respectively <span
-								class="checkmark" name="2_2"></span></li>
-							<li>Switch on/off WiFi Access Points <span class="checkmark" name="2_2"></span></li>
+								class="checkmark" name="2_2"></span>
+						</li>
+							<li>Switch on/off WiFi Access Points <span class="checkmark" name="2_2"></span>
+						</li>
 							<li class="flip" id="flip_2_2_2">Power management software can automate switch off
-								activities <span class="checkmark" name="2_3"></span></li>
+								activities <span class="checkmark" name="2_3"></span>
+						</li>
 							<div class="panel" id="panel_2_2_2">You can set up a 'dimming and switch off' option on
 								your PC by adjusting your OS settings. Dimming and switching off occurs automatically after
 								a certain period (e.g. 5 minutes) when the PC has been idle. You can start saving energy by
@@ -655,7 +667,8 @@ ul {
 								hardware. For example, in a company with 200 PCs, turning off all the computers and monitors
 								every night and at weekends would save &pound;12,000 a year.</div>
 							<li class="flip" id="flip_2_4">Integration assessment into management system (Green IT
-								officer) <span class="checkmark" name="2_4"></span></li>
+								officer) <span class="checkmark" name="2_4"></span>
+						</li>
 							<div class="panel" id="panel_2_4">
 								Carbon emissions can be calculated from the energy consumption of your ICT department's
 								infrastructure, which is then useful in planning and prioritising projects.
@@ -673,11 +686,13 @@ ul {
 								</ol>
 							</div>
 							<li class="flip" id="flip_2_4_1">Use multifunction devices<span class="checkmark"
-								name="2_4"></span></li>
+								name="2_4"></span>
+						</li>
 							<div class="panel" id="panel_2_4_1">Consolidate equipment and use MultiFunction Devices
 								(printers, copiers, scanners)</div>
 							<li class="flip" id="flip_2_4_2">Adjust monitor's brightness <span class="checkmark"
-								name="2_4"></span></li>
+								name="2_4"></span>
+						</li>
 							<div class="panel" id="panel_2_4_2">Also, consider replacing CRT monitors with LCD</div>
 							<li class="flip" id="flip_2_4_3">Duplex printing <span class="checkmark" name="2_4"></span>
 						</li>
@@ -686,7 +701,8 @@ ul {
 							<li>Colour print-outs reduction,Toner disposal <span class="checkmark" name="2_4"></span>
 						</li>
 							<li class="flip" id="flip_2_4_4">Printing centralization <span class="checkmark"
-								name="2_4"></span></li>
+								name="2_4"></span>
+						</li>
 							<div class="panel" id="panel_2_4_4">When considering imaging equipment such as
 								printers, scanners, faxes, copiers a ratio of 10:1 is considered best practice i.e. ten
 								employees to 1 device. To improve the ratio in your organisation replace individual
@@ -697,13 +713,15 @@ ul {
 								printing. Utilise print authentication solutions - prints are only output upon user
 								authentication at the printer</div>
 							<li class="flip" id="flip_2_4_5">Optimize cooling in server rooms<span class="checkmark"
-								name="2_4"></span></li>
+								name="2_4"></span>
+						</li>
 							<div class="panel" id="panel_2_4_5">ICT equipment in a server room such as servers,
 								storage- and network equipment cause considerable heat. Cooling helps to ensure the
 								reliability of this equipment. Optimize cooling by optimizing the air current. Make sure
 								that cold air is lost or blocked as little as possible.</div>
 							<li class="flip" id="flip_2_5">Use of alternative energy from renewable sources <span
-								class="checkmark" name="2_5"></span></li>
+								class="checkmark" name="2_5"></span>
+						</li>
 							<div class="panel" id="panel_2_5">Electricity generation from renewable sources
 								significantly reduces the carbon footprint of electricity. On-site electricity generation
 								systems using solar, wind, geothermal or biomass energy can be set up in order to supply ICT
@@ -711,7 +729,8 @@ ul {
 								produced on site, e.g. by building wind turbines or by setting up solar PVs on the roof (in
 								urban areas) or around the facility (in rural areas).</div>
 							<li class="flip" id="flip_2_5_1">Install energy-efficient rectifiers <span
-								class="checkmark" name="2_5"></span></li>
+								class="checkmark" name="2_5"></span>
+						</li>
 							<div class="panel" id="panel_2_5_1">
 								Installing newer energy-efficient rectifiers and selecting ICT equipment functioning with DC
 								current may reduce energy losses due to energy conversion. The efficiency gains of using DC
@@ -729,14 +748,16 @@ ul {
 								</ol>
 							</div>
 							<li>ICT equipment functioning with DC current may reduce energy losses due to energy
-								conversion <span class="checkmark" name="2_5"></span></li>
+								conversion <span class="checkmark" name="2_5"></span>
+						</li>
 					</div>
 				</div>
 				<div class="form-radio-buttons" id="V3">
 					<div>
 						<label> <span>3. Energy aware networks engineering adherence </span>
 							<li class="flip" id="flip_3_1">Network infrastructure deploying intelligent switches,
-								Power over Ethernet <span class="checkmark" id="3_1"></span></li>
+								Power over Ethernet <span class="checkmark" id="3_1"></span>
+						</li>
 							<div class="panel" id="panel_3_1">
 								With various networking equipment available on market deployment of managed switches can get
 								capabilities such as cable diagnostics, prioritization of traffic using default QoS
@@ -756,16 +777,14 @@ ul {
 								of the router is reduced and the associated power consumption as well. Furthermore energy
 								losses related to optical / electronic / optical conversions are also reduced.</div>
 							<li class="flip" id="flip_3_2_1">Replacing existing devices by new more-energy-efficient<span
-								class="checkmark" name="3_2"></span>
-						</li>
+								class="checkmark" name="3_2"></span></li>
 							<div class="panel" id="panel_3_2_1">Reducing the number of active ICT equipment and
 								replacing existing devices with new more energy-efficient ones can allow significant energy
 								savings within core and wireline networks. Another solution for reducing energy consumption
 								relies on powering-down, removing and decommissioning unused line circuit packs and other
 								network components.</div>
 							<li class="flip" id="flip_3_3">Traffic optimisation, rerouting<span class="checkmark"
-								id="3_3"></span>
-						</li> </label>
+								id="3_3"></span></li> </label>
 						<div class="panel" id="panel_3_3">Dynamic rerouting (nodes and links switch off, traffic
 							redistribution, etc.) and protection technology (filters, sorry servers, etc.) can result in
 							significant energy savings by controlling the traffic in a dynamic manner. Optimising data
@@ -807,7 +826,8 @@ ul {
 									href="http://carbonfootprintmanagement.com/communicating-carbon-neutral-business/">Communicate</a>
 							</div>
 							<li class="flip" id="flip_4_2_1">Community collaboration: best practices sharing <span
-								class="checkmark" name="4_2"></span></li>
+								class="checkmark" name="4_2"></span>
+						</li>
 							<div class="panel" id="panel_4_2_1">
 								The main principles behind any successful behaviour change programme apply to changing
 								behaviours around ICT.
@@ -830,7 +850,8 @@ ul {
 								</ol>
 							</div>
 							<li class="flip" id="flip_4_3">Travel reductions: Audio and video conferencing <span
-								class="checkmark" id="4_3"></span></li>
+								class="checkmark" id="4_3"></span>
+						</li>
 							<div class="panel" id="panel_4_3">Use technology to reduce business travel,e.g. webex,
 								video conferencing, teleconferencing.</div> </label>
 					</div>
@@ -839,8 +860,7 @@ ul {
 					<div>
 						<label> <span>5. Waste management </span>
 							<li class="flip" id="flip_5_1">Adopt policies for ICT equipment recycling, recovery,
-								reuse of materials and responsible disposal <span class="checkmark" name="5_1"></span>
-						</li>
+								reuse of materials and responsible disposal <span class="checkmark" name="5_1"></span></li>
 							<div class="panel" id="panel_5_1">The WEEE (Waste Electrical and Electronic Equipment)
 								directive means that the disposal of electronic equipment is no longer the responsibility of
 								the user organisation. The responsibility falls to the manufacturers and sellers who should
@@ -848,7 +868,8 @@ ul {
 								responsibly dispose of it. Remember, when buying new equipment - ensure you are given the
 								details of who to contact when you no longer require the equipment to arrange collection.</div>
 							<li class="flip" id="flip_5_1_1">Extending ICT equipment life - waste prevention <span
-								class="checkmark" name="5_1"></span></li>
+								class="checkmark" name="5_1"></span>
+						</li>
 							<div class="panel" id="panel_5_1_1">By simply extending the refresh cycle of PCs in
 								your organisation you reduce your organisation's environmental impact. Some manufacturers
 								are now making efforts to find out the level of embedded carbon that is in their equipment,
@@ -859,8 +880,7 @@ ul {
 							<div class="panel" id="panel_5_2">Start from simple wastes separation in your office
 								household and find contractors to collect them for recycling.</div>
 							<li class="flip" id="flip_5_2_1">Recycle used electronic devices, use recycled paper <span
-								class="checkmark" name="5_2"></span>
-						</li>
+								class="checkmark" name="5_2"></span></li>
 							<div class="panel" id="panel_5_2_1">There are many electronics recycling organisations
 								which will recycle or reuse unwanted equipment where possible, in accordance with the WEEE
 								directive, the Environmental Protection Act and the Data Protection Act. Also, look at how
