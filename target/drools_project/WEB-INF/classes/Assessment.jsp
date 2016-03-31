@@ -38,6 +38,7 @@ a:link {
 	font-size: 15px;
 	margin: auto;
 	padding: 20px;
+	text-align: center;
 }
 
 /* The Close Button */
@@ -213,10 +214,10 @@ a:link {
 						consumption assessment?</SPAN> </LABEL>
 				<DIV class="form-radio-buttons">
 					<DIV>
-						<LABEL> <INPUT type="radio" name="v2_1" value="high"> <SPAN>Yes</SPAN> </LABEL>
+						<LABEL> <INPUT type="radio" name="v2_1" value="high" checked="checked"> <SPAN>Yes</SPAN> </LABEL>
 					</DIV>
 					<DIV>
-						<LABEL> <INPUT type="radio" name="v2_1" value="low" checked="checked"> <SPAN>No</SPAN>
+						<LABEL> <INPUT type="radio" name="v2_1" value="low" > <SPAN>No</SPAN>
 						</LABEL>
 					</DIV>
 				</DIV>
@@ -437,11 +438,11 @@ a:link {
 						environmental impact?</SPAN> </LABEL>
 				<DIV class="form-radio-buttons">
 					<DIV>
-						<LABEL> <INPUT type="radio" name="v4_1" value="high" checked="checked"> <SPAN>True</SPAN>
+						<LABEL> <INPUT type="radio" name="v4_1" value="high" checked="checked"> <SPAN>Yes</SPAN>
 						</LABEL>
 					</DIV>
 					<DIV>
-						<LABEL> <INPUT type="radio" name="v4_1" value="low"> <SPAN>False</SPAN> </LABEL>
+						<LABEL> <INPUT type="radio" name="v4_1" value="low"> <SPAN>No</SPAN> </LABEL>
 					</DIV>
 				</DIV>
 				<TABLE>
@@ -462,11 +463,11 @@ a:link {
 						development-related training and communication activities for employees?</SPAN> </LABEL>
 				<DIV class="form-radio-buttons">
 					<DIV>
-						<LABEL> <INPUT type="radio" name="v4_2" value="high" checked="checked"> <SPAN>True</SPAN>
+						<LABEL> <INPUT type="radio" name="v4_2" value="high" checked="checked"> <SPAN>Yes</SPAN>
 						</LABEL>
 					</DIV>
 					<DIV>
-						<LABEL> <INPUT type="radio" name="v4_2" value="low"> <SPAN>False</SPAN> </LABEL>
+						<LABEL> <INPUT type="radio" name="v4_2" value="low"> <SPAN>No</SPAN> </LABEL>
 					</DIV>
 				</DIV>
 				<TABLE>
@@ -487,11 +488,11 @@ a:link {
 						conferencing facilities reduce travel?</SPAN> </LABEL>
 				<DIV class="form-radio-buttons">
 					<DIV>
-						<LABEL> <INPUT type="radio" name="v4_3" value="high" checked="checked"> <SPAN>True</SPAN>
+						<LABEL> <INPUT type="radio" name="v4_3" value="high" checked="checked"> <SPAN>Yes</SPAN>
 						</LABEL>
 					</DIV>
 					<DIV>
-						<LABEL> <INPUT type="radio" name="v4_3" value="low"> <SPAN>False</SPAN> </LABEL>
+						<LABEL> <INPUT type="radio" name="v4_3" value="low"> <SPAN>No</SPAN> </LABEL>
 					</DIV>
 				</DIV>
 				<TABLE>
@@ -543,11 +544,11 @@ a:link {
 						waste sent to landfill? </SPAN> </LABEL>
 				<DIV class="form-radio-buttons">
 					<DIV>
-						<LABEL> <INPUT type="radio" name="v5_2" value="high" checked="checked"> <SPAN>True</SPAN>
+						<LABEL> <INPUT type="radio" name="v5_2" value="high" checked="checked"> <SPAN>Yes</SPAN>
 						</LABEL>
 					</DIV>
 					<DIV>
-						<LABEL> <INPUT type="radio" name="v5_2" value="low"> <SPAN>False </SPAN> </LABEL>
+						<LABEL> <INPUT type="radio" name="v5_2" value="low"> <SPAN>No </SPAN> </LABEL>
 					</DIV>
 				</DIV>
 				<TABLE>

@@ -88,7 +88,7 @@ public class ReadParams extends HttpServlet {
 		if (myListV1.get(1).toString().equalsIgnoreCase("high")) {
 			v1_av += 25;
 		} else {
-			v1_av = v1_av + 1;
+			v1_av = v1_av + 0;
 		}
 
 		if (myListV1.get(2).toString().equalsIgnoreCase("high")) {
@@ -134,7 +134,7 @@ public class ReadParams extends HttpServlet {
 		} else if (myListV2.get(1).toString().equalsIgnoreCase("medium")) {
 			v2_av += 10;
 		} else {
-			v2_av = v2_av + 1;
+			v2_av = v2_av + 0;
 		}
 
 		if (myListV2.get(2).toString().equalsIgnoreCase("high")) {
@@ -147,7 +147,7 @@ public class ReadParams extends HttpServlet {
 		} else if (myListV2.get(3).toString().equalsIgnoreCase("medium")) {
 			v2_av += 10;
 		} else if (myListV2.get(3).toString().equalsIgnoreCase("low")) {
-			v2_av += 1;
+			v2_av += 0;
 		}
 
 		if (myListV2.get(4).toString().equalsIgnoreCase("high")) {
@@ -176,21 +176,21 @@ public class ReadParams extends HttpServlet {
 		} else if (myListV3.get(0).toString().equalsIgnoreCase("medium")) {
 			v3_av += 16;
 		} else {
-			v3_av = v3_av + 1;
+			v3_av = v3_av + 0;
 		}
 		if (myListV3.get(1).toString().equalsIgnoreCase("high")) {
 			v3_av += 33;
 		} else if (myListV3.get(1).toString().equalsIgnoreCase("medium")) {
 			v3_av += 16;
 		} else {
-			v3_av = v3_av + 1;
+			v3_av = v3_av + 0;
 		}
 		if (myListV3.get(2).toString().equalsIgnoreCase("high")) {
-			v3_av += 33;
+			v3_av += 34;
 		} else if (myListV3.get(2).toString().equalsIgnoreCase("medium")) {
 			v3_av += 16;
 		} else {
-			v3_av = v3_av + 1;
+			v3_av = v3_av + 0;
 		}
 
 		if (v3_av >= 66) {
@@ -211,17 +211,17 @@ public class ReadParams extends HttpServlet {
 		if (myListV4.get(0).toString().equalsIgnoreCase("high")) {
 			v4_av += 33;
 		} else {
-			v4_av = v4_av + 1;
+			v4_av = v4_av + 0;
 		}
 		if (myListV4.get(1).toString().equalsIgnoreCase("high")) {
 			v4_av += 33;
 		} else {
-			v4_av = v4_av + 1;
+			v4_av = v4_av + 0;
 		}
 		if (myListV4.get(2).toString().equalsIgnoreCase("high")) {
-			v4_av += 33;
+			v4_av += 34;
 		} else {
-			v4_av = v4_av + 1;
+			v4_av = v4_av + 0;
 		}
 
 		if (v4_av >= 66) {
@@ -243,13 +243,13 @@ public class ReadParams extends HttpServlet {
 		} else if (myListV5.get(0).toString().equalsIgnoreCase("medium")) {
 			v5_av += 25;
 		} else {
-			v4_av = v4_av + 1;
+			v4_av = v4_av + 0;
 		}
 
 		if (myListV5.get(1).toString().equalsIgnoreCase("high")) {
 			v5_av += 50;
 		} else {
-			v5_av = v5_av + 1;
+			v5_av = v5_av + 0;
 		}
 
 		if (v5_av >= 66) {
@@ -356,12 +356,16 @@ public class ReadParams extends HttpServlet {
 		session.setAttribute("ob3", ob_res3);
 		session.setAttribute("ob4", ob_res4);
 		session.setAttribute("ob5", ob_res5);
+		
+		session.setAttribute("v1_av", v1_av);
+		session.setAttribute("v2_av", v2_av);
+		session.setAttribute("v3_av", v3_av);
+		session.setAttribute("v4_av", v4_av);
+		session.setAttribute("v5_av", v5_av);
+		
+		
+		
 
-		List<String> myListActivities = new ArrayList<String>();
-		myListActivities.add("false");
-		myListActivities.add("true");
-		myListActivities.add("false");
-		session.setAttribute("flag_activities", myListActivities);
 
 		String nextJSP = "/Results.jsp";
 		RequestDispatcher dispatcher = getServletContext()

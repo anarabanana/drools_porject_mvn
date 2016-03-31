@@ -167,6 +167,7 @@ html {
 		margin: 0 auto;
 		/*  margin: 25px auto; */
 		text-align: left;
+		
 	}
 	.form-basic .btn_pairs_next {
 		position: absolute;
@@ -186,6 +187,8 @@ html {
 		text-align: left;
 		padding: 0 0 15px;
 		width: 100%;
+		
+		
 	}
 	.form-basic select {
 		width: 240px;
@@ -199,4 +202,13 @@ html {
 	.form-basic button {
 		margin: 0;
 	}
+	.form-basic table, tbody,td, tr { 
+		display: block; 
+		
+		
+	}
+	.form-basic .column-align { 
+	width: 100%;
+	
+	
 }

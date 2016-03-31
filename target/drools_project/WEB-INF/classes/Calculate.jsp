@@ -73,6 +73,8 @@
 <script src='assets/xlsx.full.min.js'></script>
 <!-- <script src='assets/alasql.min.js'></script>
 <script src='assets/xlsx.core.min.js'></script> -->
+
+	
 <SCRIPT type="text/javascript">
 	var indexesData = [];
 	//var indexesData; 
@@ -234,19 +236,36 @@
 							td.style.color = 'black';
 							td.style.background = '#e0e0d1';
 						}
-						function negativeValueRenderer(instance, td, row, col, prop, value, cellProperties) {
+						function wrongValueRenderer(instance, td, row, col, prop, value, cellProperties) {
 							Handsontable.renderers.TextRenderer.apply(this, arguments);
+							if ((parseInt(value, 10) < 0) || isNaN(value)) {
 
+								td.style.background = 'red';
+
+							}
+
+						}
+						function editableValueRenderer(instance, td, row, col, prop, value, cellProperties) {
+							Handsontable.renderers.TextRenderer.apply(this, arguments);
+							//	td.style.color = '#683AB7';
+							td.style.fontStyle = 'oblique';
+							//td.style.fontWeight = 'bold';
 							//td.className = 'make-me-red';
-							//  td.style.background = '#ccccff';
+							td.style.background = '#eaeafb';
+							if ((parseInt(value, 10) < 0) || isNaN(value)) {
+
+								td.style.background = 'red';
+
+							}
 
 						}
 						greenRenderer = function(instance, td, row, col, prop, value, cellProperties) {
 							Handsontable.renderers.NumericRenderer.apply(this, arguments);
 
 						};
-						Handsontable.renderers.registerRenderer('negativeValueRenderer',
-								negativeValueRenderer);
+						Handsontable.renderers.registerRenderer('editableValueRenderer',
+								editableValueRenderer);
+						Handsontable.renderers.registerRenderer('wrongValueRenderer', wrongValueRenderer);
 
 						/* indexesData = [ {
 						name : 'GB',
@@ -272,9 +291,16 @@
 									enterBeginsEditing : false,
 									manualColumnResize : true,
 									manualRowResize : true,
-									cell : [
-
-									{
+									allowInvalid : false,
+									cell : [ {
+										row : 1,
+										col : 4,
+										readOnly : true
+									}, {
+										row : 2,
+										col : 4,
+										readOnly : true
+									}, {
 										row : 1,
 										col : 8,
 										readOnly : true
@@ -325,6 +351,30 @@
 									}, {
 										row : 15,
 										col : 7,
+										readOnly : true
+									}, {
+										row : 10,
+										col : 6,
+										readOnly : true
+									}, {
+										row : 11,
+										col : 6,
+										readOnly : true
+									}, {
+										row : 12,
+										col : 6,
+										readOnly : true
+									}, {
+										row : 13,
+										col : 6,
+										readOnly : true
+									}, {
+										row : 14,
+										col : 6,
+										readOnly : true
+									}, {
+										row : 15,
+										col : 6,
 										readOnly : true
 									},
 
@@ -459,8 +509,19 @@
 										row : 37,
 										col : 8,
 										readOnly : true
+									}, {
+										row : 34,
+										col : 4,
+										readOnly : true
+									}, {
+										row : 35,
+										col : 4,
+										readOnly : true
+									}, {
+										row : 36,
+										col : 4,
+										readOnly : true
 									},
-
 									/* Imaging */
 
 									{
@@ -506,6 +567,46 @@
 									}, {
 										row : 51,
 										col : 8,
+										readOnly : true
+									}, {
+										row : 41,
+										col : 6,
+										readOnly : true
+									}, {
+										row : 42,
+										col : 6,
+										readOnly : true
+									}, {
+										row : 43,
+										col : 6,
+										readOnly : true
+									}, {
+										row : 44,
+										col : 6,
+										readOnly : true
+									}, {
+										row : 45,
+										col : 6,
+										readOnly : true
+									}, {
+										row : 46,
+										col : 6,
+										readOnly : true
+									}, {
+										row : 47,
+										col : 6,
+										readOnly : true
+									}, {
+										row : 48,
+										col : 6,
+										readOnly : true
+									}, {
+										row : 49,
+										col : 6,
+										readOnly : true
+									}, {
+										row : 50,
+										col : 6,
 										readOnly : true
 									},
 
@@ -568,6 +669,18 @@
 									}, {
 										row : 58,
 										col : 8,
+										readOnly : true
+									}, {
+										row : 55,
+										col : 6,
+										readOnly : true
+									}, {
+										row : 56,
+										col : 6,
+										readOnly : true
+									}, {
+										row : 57,
+										col : 6,
 										readOnly : true
 									},
 
@@ -676,8 +789,9 @@
 											colHeaders : [ 'Factor', 'Country' ],
 											data : indexesData,
 											//strict: true,
-											allowInvalid : false,
+											//allowInvalid : false,
 											type : 'autocomplete',
+											strict : false,
 											width : 300,
 											height : 250,
 											visibleRows : 4,
@@ -710,19 +824,17 @@
 									cells : function(row, col, prop) {
 										var cellProperties = {};
 
-										if (row === 0 || row === 9 || row === 22 || row === 33 || row === 40
-												|| row === 54 || row === 61) {
-											cellProperties.readOnly = true; // make cell read-only if it is first row or the text reads 'readOnly'
-										}
 										if (row === 71 && col === 2) {
 											cellProperties.renderer = greenRenderer;
 											//cellProperties.type = 'numeric';
 											cellProperties.format = '0.0';
+
 										}
 
 										if (row === 0 || row === 9 || row === 22 || row === 33 || row === 40
 												|| row === 54 || row === 61) {
-											cellProperties.renderer = firstRowRenderer; // uses function directly
+											cellProperties.renderer = firstRowRenderer;
+											cellProperties.readOnly = true;// uses function directly
 										}
 										if (row === 1 && col === 2 || row === 2 && col === 2 || row === 10
 												&& col === 2 || row === 11 && col === 2 || row === 12
@@ -746,7 +858,72 @@
 												|| row === 5 && col === 7
 
 										) {
-											cellProperties.renderer = "negativeValueRenderer"; // uses lookup 
+											cellProperties.renderer = "editableValueRenderer";
+											// uses lookup 
+										}
+										if (row === 1 && col === 3 || row === 2 && col === 3 || row === 1
+												&& col === 5 || row === 2 && col === 5 || row === 3
+												&& col === 7 || row === 10 && col === 3 || row === 11
+												&& col === 3 || row === 12 && col === 3 || row === 13
+												&& col === 3 || row === 14 && col === 3 || row === 15
+												&& col === 3 || row === 16 && col === 3 || row === 17
+												&& col === 3 || row === 23 && col === 3 || row === 24
+												&& col === 3 || row === 25 && col === 3 || row === 26
+												&& col === 3 || row === 27 && col === 3 || row === 28
+												&& col === 3 || row === 29 && col === 3 || row === 10
+												&& col === 4 || row === 11 && col === 4 || row === 12
+												&& col === 4 || row === 13 && col === 4 || row === 14
+												&& col === 4 || row === 15 && col === 4 || row === 16
+												&& col === 4 || row === 17 && col === 4 || row === 23
+												&& col === 4 || row === 24 && col === 4 || row === 25
+												&& col === 4 || row === 26 && col === 4 || row === 27
+												&& col === 4 || row === 28 && col === 4 || row === 29
+												&& col === 4 || row === 10 && col === 5 || row === 11
+												&& col === 5 || row === 12 && col === 5 || row === 13
+												&& col === 5 || row === 14 && col === 5 || row === 15
+												&& col === 5 || row === 16 && col === 5 || row === 17
+												&& col === 5 || row === 23 && col === 5 || row === 24
+												&& col === 5 || row === 25 && col === 5 || row === 26
+												&& col === 5 || row === 27 && col === 5 || row === 28
+												&& col === 5 || row === 29 && col === 5 || row === 34
+												&& col === 3 || row === 35 && col === 3 || row === 36
+												&& col === 3 || row === 34 && col === 5 || row === 35
+												&& col === 5 || row === 36 && col === 5 || row === 35
+												&& col === 6
+
+												|| row === 41 && col === 3 || row === 42 && col === 3
+												|| row === 43 && col === 3 || row === 44 && col === 3
+												|| row === 45 && col === 3 || row === 46 && col === 3
+												|| row === 47 && col === 3 || row === 48 && col === 3
+												|| row === 49 && col === 3 || row === 50 && col === 3
+
+												|| row === 41 && col === 4 || row === 42 && col === 4
+												|| row === 43 && col === 4 || row === 44 && col === 4
+												|| row === 45 && col === 4 || row === 46 && col === 4
+												|| row === 47 && col === 4 || row === 48 && col === 4
+												|| row === 49 && col === 4 || row === 50 && col === 4
+
+												|| row === 41 && col === 5 || row === 42 && col === 5
+												|| row === 43 && col === 5 || row === 44 && col === 5
+												|| row === 45 && col === 5 || row === 46 && col === 5
+												|| row === 47 && col === 5 || row === 48 && col === 5
+												|| row === 49 && col === 5 || row === 50 && col === 5
+
+												|| row === 55 && col === 3 || row === 56 && col === 3
+												|| row === 57 && col === 3
+
+												|| row === 55 && col === 4 || row === 56 && col === 4
+												|| row === 57 && col === 4
+
+												|| row === 55 && col === 5 || row === 56 && col === 5
+												|| row === 57 && col === 5
+
+												|| row === 71 && col === 2 || row === 72 && col === 2
+
+										) {
+											cellProperties.renderer = "wrongValueRenderer";
+
+											// uses lookup 
 										}
 
 										return cellProperties;
@@ -1078,13 +1255,13 @@
   white-space: pre-line;
   max-width: 100;
 } */
-.form-mini {
+/* .form-mini {
 	padding: 20px;
-}
+} */
 
 .text {
 	color: grey;
-	width: 90%;
+	width: 100%;
 	/*  margin: auto; */
 	text-align: left;
 	border: 1px;
@@ -1101,38 +1278,58 @@
 	<H1>ER ASSESSMENT BELIEF RULE-BASED SYSTEM</H1>
 </HEADER>
 <UL>
-	<LI><A href="index.html">Home</A>
+	<LI><A href="index.html">Home</A></LI>
+	<LI><A href="Assessment.jsp">Form</A></LI>
+	<LI><A href="Results.jsp">Results</A></LI>
+	<LI><A href="Recommendations.jsp">Recommendations</A></LI>
+	<LI><A href="Calculate.jsp" class="active">Calculator</A>
 	</LI>
-	<LI><A href="Assessment.jsp">Form</A>
-	</LI>
-	<LI><A href="Results.jsp">Results</A>
-	</LI>
-	<LI><A href="Recommendations.jsp">Recommendations</A>
-	</LI>
-	<LI><A href="Calculate.jsp" class="active">Calculator</A></LI>
 </UL>
 <BODY>
 	<DIV class="main-content">
 		<FORM class="form-mini" action="">
 			<DIV class="container">
-				<DIV class="text">
+				<DIV class="text" >
 					This tool is designed to help SMEs estimate their in-office energy use, costs and carbon
 					footprint of non-residential ICT usage. It requires a number for each of the different types of
 					ICT device and/or to get more accurate results in addition to numbers of devices users can
 					enter company specific data on the power rating of equipment and typical usage hours. For each
 					item please fill in determined (estimated) data and measure your progress directly (totals
 					sections gets adjusted). For more information and assumptions please check <a href="Readme.jsp">README</a>
-					section.
+					section.<br> <b>For your convenience the grid is completed with some default values as an
+					indicative example for information purpose.</b> Please make appropriate changes according to your company's information.
+					<div class="row" style="text-align:center;">
+						
+							<svg width="52" height="25">
+  <rect width="50" height="25"
+									style="fill:'#eaeafb';stroke:grey;stroke-width:2;fill-opacity:0.1;stroke-opacity:0.9" />
+	<text x="7" y="17" font-family="Verdana" font-style = "italic" font-size="15" fill="black">N</text>
+</svg> - adjust number of devices. 
+<svg width="52" height="25">
+  <rect width="50" height="25"
+									style="fill:white;stroke:grey;stroke-width:2;fill-opacity:0.1;stroke-opacity:0.9" />
+	<text x="7" y="17" font-family="Verdana" font-size="15" fill="black">N</text>
+</svg> - fill in for more accurate estimations. 
+<svg width="52" height="25">
+  <rect width="50" height="25"
+									style="fill:white;stroke:grey;stroke-width:2;fill-opacity:0.1;stroke-opacity:0.9" />
+	<text x="7" y="17" font-family="Verdana" font-size="15" fill="grey"> N </text>
+</svg> - read-only values and formula results. 
+						
+					</DIV>
 				</DIV>
 				<BR>
 				<DIV id="servers_grid" style="margin: 0 auto;"></DIV>
 				<BR> <BR> <BR>
 				<TABLE>
 					<TR>
-						<TD><DIV id="piechart" style="width: 400px; height: 400px;"></DIV></TD>
-						<TD><DIV id="piechart_energy" style="width: 400px; height: 400px;"></DIV></TD>
+						<TD><DIV id="piechart" style="width: 400px; height: 400px;"></DIV>
+						</TD>
+						<TD><DIV id="piechart_energy" style="width: 400px; height: 400px;"></DIV>
+						</TD>
 						<TD>
-							<DIV id="piechart_carbon" style="width: 400px; height: 400px;"></DIV></TD>
+							<DIV id="piechart_carbon" style="width: 400px; height: 400px;"></DIV>
+						</TD>
 					</TR>
 				</TABLE>
 			</DIV>

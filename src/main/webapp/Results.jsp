@@ -11,6 +11,21 @@
 <link rel="icon" href="assets/favicon.ico" type="image/png" sizes="16x16">
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script type="text/javascript" src="http://jqueryjs.googlecode.com/files/jquery-1.3.2.min.js"></script>
+<SCRIPT src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"
+	type="text/javascript"></SCRIPT>
+<LINK rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+	integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+	crossorigin="anonymous">
+<!-- Optional theme -->
+<LINK rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
+	integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r"
+	crossorigin="anonymous">
+<!-- Latest compiled and minified JavaScript -->
+<SCRIPT src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+	integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+	crossorigin="anonymous" type="text/javascript"></SCRIPT>
+
 <script type="text/javascript">
 	$(document).ready(function() {
 		$("#loading").hide();
@@ -35,9 +50,22 @@
 	Double doubleVar = (Double) session.getAttribute("object");
 %>
 <%
-	ArrayList<String> flag_activities = (ArrayList<String>) session.getAttribute("flag_activities");
+	Integer v1_av_int = (Integer) session.getAttribute("v1_av");
+%>
+<%
+	Integer v2_av_int = (Integer) session.getAttribute("v2_av");
+%>
+<%
+	Integer v3_av_int = (Integer) session.getAttribute("v3_av");
+%>
+<%
+	Integer v4_av_int = (Integer) session.getAttribute("v4_av");
+%>
+<%
+	Integer v5_av_int = (Integer) session.getAttribute("v5_av");
 %>
 <script type="text/javascript">
+
 
 	google.charts.load("current", {
 		packages : [ "corechart" ]
@@ -45,6 +73,21 @@
 	google.charts.setOnLoadCallback(drawChart);
 	function drawChart() {
 		var var1 =
+			<%=v1_av_int%>
+				;
+				var var2 =
+					<%=v2_av_int%>
+						;
+						var var3 =
+							<%=v3_av_int%>
+								;
+								var var4 =
+									<%=v4_av_int%>
+										;
+										var var5 =
+											<%=v5_av_int%>
+												;
+		<%-- var var1 =
 <%=doubleVar1%>
 	;
 		var var2 =
@@ -58,11 +101,11 @@
 	;
 		var var5 =
 <%=doubleVar5%>
-	;
+	; --%>
 
 		var data = google.visualization.arrayToDataTable([ [ 'Category', '%' ],
-				[ 'Category 1', var1 ], [ 'Category 2', var2 ], [ 'Category 3', var3 ], [ 'Category 4', var4 ],
-				[ 'Category 5', var5 ] ]);
+				[ 'Equipment procurement', var1 ], [ 'Energy performance', var2 ], [ 'Networking', var3 ], [ 'Social commitment', var4 ],
+				[ 'Wastes management', var5 ] ]);
 		var view = new google.visualization.DataView(data);
 		view.setColumns([ 0, {
 			type : 'number',
@@ -86,6 +129,9 @@
 			is3D : true,
 			sliceVisibilityThreshold : 0,
 			'legend':'right',
+			width: 350,
+            height: 350,
+		        chartArea: {  width: "80%", height: "80%" },
 			
 
 			pieSliceText : 'label',
@@ -113,28 +159,42 @@
 		chart.draw(data, options);
 	}
 </script>
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+</script>
 <style>
-.form-basic {
-	max-width: 1000px;
+body{
+font-family: Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
 }
-
 .form-basic .form-row>label span {
-	width: 380px;
+	 width: 100%; 
 }
+.test{
 
-a:link {
-	text-decoration: none;
+color: #1a1a1a;
 }
+.test:hover{
+color:grey;
 
-.form-row {
-	position: relative;
-	display: inline-block;
 }
+ 
+  /* Tooltip */
+  .test + .tooltip > .tooltip-inner {
+      background-color: #009900; 
+      color: #FFFFFF; 
+      border: 1px solid green; 
+      padding: 10px;
+      font-size: 18px;
+  }
 
-.form-basic .form-row>label span:hover {
+.form-basic .form-row>p:hover {
 	color: #8000ff;
 	/* font-weight: bold; */
-}
+} 
 
 .form-row .tooltiptext {
 	visibility: hidden;
@@ -145,8 +205,8 @@ a:link {
 	border-radius: 6px;
 	padding: 5px 0;
 	position: absolute;
-	z-index: 1;
-	bottom: 100%;
+	z-index: 2;
+	/* bottom: 100%; */
 	left: 50%;
 	margin-left: -60px;
 	/* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
@@ -193,6 +253,22 @@ a:link {
 .closebtn:hover {
 	color: black;
 }
+/* #piechart {
+    
+    width:100%;
+    height:100%;
+} */
+ a:hover, 
+.a:hover {
+   text-decoration: none !important;
+  /* color: inherit;  */
+  opacity: 1;
+  color:white;
+/*   color: #FFF; */
+} 
+
+
+
 </style>
 </head>
 <header>
@@ -211,13 +287,12 @@ a:link {
 </ul>
 <body>
 	<div class="main-content">
+	
 		<!-- You only need this form and the form-labels-on-top.css -->
 		<form class="form-basic" action="Recommendations.jsp">
 			<div class="form-title-row">
 				<h1>Results of your ER level</h1>
 			</div>
-			<!-- alert(flag_activities)
-			console.log(flag_activities) -->
 			<%
 				if (doubleVar >= 80.0) {
 			%>
@@ -263,57 +338,117 @@ a:link {
 					}
 				}
 			</script>
-			<table>
-				<tr>
-					<td>
+			<DIV class="container-fluid">
+			<div class="row">
+		<div class="col-md-6">
 						<div class="form-row">
-							<label><span> Total estimated ER index is <%
+						<p>Total estimated ER index is <%
 								Object obj = session.getAttribute("object");
 								out.println(obj);
-							%> %</span> </label> <label><span> ER indexes for: <br>
-							</label></span>
+							%> %</p>
+							<br>ER indexes for: <br>
+							
 						</div>
 						<div class="form-row" onClick="window.location.href='Recommendations.jsp#V1';">
-							<label><span>1. Equipment procurement compliance with Green ICT guidelines is
+						<%-- <p>	1. Equipment procurement compliance with Green ICT guidelines is
 									about <%
 								Object obj1 = session.getAttribute("ob");
-								out.println(obj1);
+							//	out.println(obj1);
+								Object v1_av_obj = session.getAttribute("v1_av");
+								out.println(v1_av_obj);
 								Double dD = (Double) session.getAttribute("ob");
-							%> %</span> </label><span class="tooltiptext">Click to see recommendations</span>
+							%> % </p>
+							<span class="tooltiptext">Click to see recommendations</span> --%>
+							<a  class="test" href="Recommendations.jsp#V1" data-toggle="tooltip"  title="See recommendations"><p>	1. Equipment procurement compliance with Green ICT guidelines is
+									about <%
+								Object obj1 = session.getAttribute("ob");
+							//	out.println(obj1);
+								Object v1_av_obj = session.getAttribute("v1_av");
+								out.println(v1_av_obj);
+								Double dD = (Double) session.getAttribute("ob");
+							%> % </p></a>
 						</div>
 						<div class="form-row" onClick="window.location.href='Recommendations.jsp#V2';">
-							<label><span>2. Energy performance improvement and monitoring is about <%
+							<%-- <p>2. Energy performance improvement and monitoring is about <%
 								Object obj2 = session.getAttribute("ob2");
-								out.println(obj2);
-							%> %</span> </label><span class="tooltiptext">Click to see recommendations</span>
+							//	out.println(obj2);
+								Object v2_av_obj = session.getAttribute("v2_av");
+								out.println(v2_av_obj);
+							%> %</p>
+							<span class="tooltiptext">Click to see recommendations</span> --%>
+							<a class="test" href="Recommendations.jsp#V2" data-toggle="tooltip" data-placement="top" title="See recommendations">2. Energy performance improvement and monitoring is about <%
+								Object obj2 = session.getAttribute("ob2");
+							//	out.println(obj2);
+								Object v2_av_obj = session.getAttribute("v2_av");
+								out.println(v2_av_obj);
+							%> %</a>
 						</div>
 						<div class="form-row" onClick="window.location.href='Recommendations.jsp#V3';">
-							<label><span>3. Energy aware networks engineering adherence is about <%
+							<%-- <p>3. Energy aware networks engineering adherence is about <%
 								Object obj3 = session.getAttribute("ob3");
-								out.println(obj3);
-							%> %</span> </label><span class="tooltiptext">Click to see recommendations</span>
+								//out.println(obj3);
+								Object v3_av_obj = session.getAttribute("v3_av");
+								out.println(v3_av_obj);
+							%> %</p>
+							<span class="tooltiptext">Click to see recommendations</span> --%>
+							<a class="test" href="Recommendations.jsp#V3" data-toggle="tooltip" data-placement="top" title="See recommendations">3. Energy aware networks engineering adherence is about <%
+								Object obj3 = session.getAttribute("ob3");
+								//out.println(obj3);
+								Object v3_av_obj = session.getAttribute("v3_av");
+								out.println(v3_av_obj);
+							%> %</a>
 						</div>
 						<div class="form-row" onClick="window.location.href='Recommendations.jsp#V4';">
-							<label><span>4. Social commitment is about <%
+							<%-- <p>4. Social commitment is about <%
 								Object obj4 = session.getAttribute("ob4");
-								out.println(obj4);
-							%> %</span> </label><span class="tooltiptext">Click to see recommendations</span>
+								//out.println(obj4);
+								Object v4_av_obj = session.getAttribute("v4_av");
+								out.println(v4_av_obj);
+							%> %</p>
+							<span class="tooltiptext">Click to see recommendations</span> --%>
+							<a class="test" href="Recommendations.jsp#V4" data-toggle="tooltip"
+								data-placement="top" title="See recommendations">4. Social commitment is about <%
+								Object obj4 = session.getAttribute("ob4");
+								//out.println(obj4);
+								Object v4_av_obj = session.getAttribute("v4_av");
+								out.println(v4_av_obj);
+							%> %</a>
 						</div>
 						<div class="form-row" onClick="window.location.href='Recommendations.jsp#V5';">
-							<label><span>5. Waste management is about <%
+							<%-- <p>5. Waste management is about <%
 								Object obj5 = session.getAttribute("ob5");
-								out.println(obj5);
-							%> %</span> </label><span class="tooltiptext">Click to see recommendations</span>
+								//out.println(obj5);
+								Object v5_av_obj = session.getAttribute("v5_av");
+								out.println(v5_av_obj);
+							%> %</p>
+							<span class="tooltiptext">Click to see recommendations</span> --%>
+							<a class="test" href="Recommendations.jsp#V5" data-toggle="tooltip"
+								data-placement="top" title="See recommendations">5. Waste management is about <%
+								Object obj5 = session.getAttribute("ob5");
+								//out.println(obj5);
+								Object v5_av_obj = session.getAttribute("v5_av");
+								out.println(v5_av_obj);
+							%> %</a>
 						</div>
 						<div class="form-row">
-							<label><span><B> Please hover over to see more</B> </span> </label>
-						</div></td>
-					<td style="width: 50%">
-						<div class="form-row">
-							<div id="piechart" style="width: 470px; height: 400px;"></div>
-						</div></td>
-				</tr>
-			</table>
+							<B> Please hover over to see more</B> 
+						</div>
+						
+					</div>
+					<div class="col-md-6">
+						
+							<div id="piechart" style="width:100%;" ></div>
+							<!--  -->
+						
+						<div class="form-row" style="color:grey">
+							Total estimated ER index is calculated as a mean value based on rules defined in application logic.<BR>
+							Per category breakdown scores depend on form responses.
+						</div>
+						</div>
+						</div>
+						</DIV>
+			
+			
 		</form>
 	</div>
 </body>
