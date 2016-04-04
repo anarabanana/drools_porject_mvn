@@ -174,7 +174,6 @@ font-family: Verdana, sans-serif;
 	 width: 100%; 
 }
 .test{
-
 color: #1a1a1a;
 }
 .test:hover{
@@ -184,14 +183,14 @@ color:grey;
  
   /* Tooltip */
   .test + .tooltip > .tooltip-inner {
-      background-color: #009900; 
+      background-color: #b3b3b3; 
       color: #FFFFFF; 
-      border: 1px solid green; 
+      border: 1px solid grey; 
       padding: 10px;
       font-size: 18px;
   }
 
-.form-basic .form-row>p:hover {
+.form-basic .form-row>p:hover{
 	color: #8000ff;
 	/* font-weight: bold; */
 } 
@@ -276,8 +275,10 @@ color:grey;
 </header>
 <ul>
 	<LI><A href="index.html">Home</A></LI>
+	<LI><span style="color:#4c565e;">&#10148;</span></LI>
 	<li><a href="Assessment.jsp">Form</a>
 	</li>
+	<LI><span style="color:#4c565e;">&#10148;</span></LI>
 	<li><a href="Results.jsp" class="active">Results</a>
 	</li>
 	<li><a href="Recommendations.jsp">Recommendations</a>
@@ -349,7 +350,7 @@ color:grey;
 							<br>ER indexes for: <br>
 							
 						</div>
-						<div class="form-row" onClick="window.location.href='Recommendations.jsp#V1';">
+						<div class="form-row" onClick="">
 						<%-- <p>	1. Equipment procurement compliance with Green ICT guidelines is
 									about <%
 								Object obj1 = session.getAttribute("ob");
@@ -359,7 +360,7 @@ color:grey;
 								Double dD = (Double) session.getAttribute("ob");
 							%> % </p>
 							<span class="tooltiptext">Click to see recommendations</span> --%>
-							<a  class="test" href="Recommendations.jsp#V1" data-toggle="tooltip"  title="See recommendations"><p>	1. Equipment procurement compliance with Green ICT guidelines is
+							<a  class="test" href="Recommendations.jsp#V1" data-toggle="tooltip" title="See recommendations"><p>	1. Equipment procurement compliance with Green ICT guidelines is
 									about <%
 								Object obj1 = session.getAttribute("ob");
 							//	out.println(obj1);
@@ -431,7 +432,8 @@ color:grey;
 							%> %</a>
 						</div>
 						<div class="form-row">
-							<B> Please hover over to see more</B> 
+							<a class="test" data-toggle="tooltip"
+								data-placement="top" title="Click to see" href="Recommendations.jsp"><i class="glyphicon glyphicon-info-sign"></i> Full list of recommendations</a> 
 						</div>
 						
 					</div>
@@ -442,7 +444,7 @@ color:grey;
 						
 						<div class="form-row" style="color:grey">
 							Total estimated ER index is calculated as a mean value based on rules defined in application logic.<BR>
-							Per category breakdown scores depend on form responses.
+							Per category breakdown scores depended on form responses.
 						</div>
 						</div>
 						</div>
@@ -451,5 +453,15 @@ color:grey;
 			
 		</form>
 	</div>
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-75929935-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 </body>
 </html>

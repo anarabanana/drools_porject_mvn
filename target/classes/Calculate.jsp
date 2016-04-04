@@ -73,8 +73,6 @@
 <script src='assets/xlsx.full.min.js'></script>
 <!-- <script src='assets/alasql.min.js'></script>
 <script src='assets/xlsx.core.min.js'></script> -->
-
-	
 <SCRIPT type="text/javascript">
 	var indexesData = [];
 	//var indexesData; 
@@ -134,7 +132,7 @@
 										'=+((D15*F15)+(E15*G15))/1000', '=+(H15*C15)' ],
 								[ "16", "CRT Monitors", 0, 70, 5, 2080, '=(8760-F16)',
 										'=+((D16*F16)+(E16*G16))/1000', '=+(H16*C16)' ],
-								[ "17", "POS terminals", , , , , , , 0 ],
+								[ "17", "POS terminals",0 ,0 ,0 ,2080 ,'=(8760-F17)','=+((D17*F17)+(E17*G17))/1000' , '=+(H17*C17)' ],
 								[ "18", "Other", , , , , , , 0 ],
 								[ "19", "Aircon overhead for computer suites", , , , , , , 0 ],
 								[ "20", "PCs & MONITORS SUB-TOTAL", , , , , , , '=(SUM(I11:I19))' ],
@@ -375,6 +373,16 @@
 									}, {
 										row : 15,
 										col : 6,
+										readOnly : true
+									},
+									{
+										row : 16,
+										col : 6,
+										readOnly : true
+									},
+									{
+										row : 16,
+										col : 7,
 										readOnly : true
 									},
 
@@ -1213,13 +1221,10 @@
 						}
 
 						// alert(indexesData[i].name)
-						$.getJSON("http://ip-api.com/xml/?fields=countryCode", function(data) {
-
-							country = data.CountryCode;
-							alert(country + " yeah");
-						});
-						$.getJSON("http://freegeoip.net/json/", function(data) {
-							country = data.country_code;
+	
+						/* $.getJSON("http://freegeoip.net/json/", function(data) { */
+							$.getJSON("http://ip-api.com/json/?fields=countryCode", function(data) {
+							country = data.countryCode;
 							//country_name = data.country_name;
 							//alert(country_name);
 
@@ -1258,7 +1263,6 @@
 /* .form-mini {
 	padding: 20px;
 } */
-
 .text {
 	color: grey;
 	width: 100%;
@@ -1278,44 +1282,51 @@
 	<H1>ER ASSESSMENT BELIEF RULE-BASED SYSTEM</H1>
 </HEADER>
 <UL>
-	<LI><A href="index.html">Home</A></LI>
-	<LI><A href="Assessment.jsp">Form</A></LI>
-	<LI><A href="Results.jsp">Results</A></LI>
-	<LI><A href="Recommendations.jsp">Recommendations</A></LI>
-	<LI><A href="Calculate.jsp" class="active">Calculator</A>
+	<LI><A href="index.html">Home</A>
 	</LI>
+	<LI><span style="color:#4c565e;">&#10148;</span></LI>
+	<LI><A href="Assessment.jsp">Form</A>
+	</LI>
+	<LI><span style="color:#4c565e;">&#10148;</span></LI>
+	<LI><A href="Results.jsp">Results</A>
+	</LI>
+	<LI><span style="color:#4c565e;">&#10148;</span></LI>
+	<LI><A href="Recommendations.jsp">Recommendations</A>
+	</LI>
+	<LI><span style="color:#4c565e;">&#10148;</span></LI>
+	<LI><A href="Calculate.jsp" class="active">Calculator</A></LI>
 </UL>
 <BODY>
 	<DIV class="main-content">
 		<FORM class="form-mini" action="">
 			<DIV class="container">
-				<DIV class="text" >
-					This tool is designed to help SMEs estimate their in-office energy use, costs and carbon
-					footprint of non-residential ICT usage. It requires a number for each of the different types of
-					ICT device and/or to get more accurate results in addition to numbers of devices users can
-					enter company specific data on the power rating of equipment and typical usage hours. For each
-					item please fill in determined (estimated) data and measure your progress directly (totals
-					sections gets adjusted). For more information and assumptions please check <a href="Readme.jsp">README</a>
-					section.<br> <b>For your convenience the grid is completed with some default values as an
-					indicative example for information purpose.</b> Please make appropriate changes according to your company's information.
-					<div class="row" style="text-align:center;">
-						
-							<svg width="52" height="25">
+				<DIV class="text">
+					This tool is designed to help SME's estimate their in-office, non-residential ICT usage; their
+					energy usage, carbon footprint and costs/savings. Users of the calculator are required to enter
+					values for: the quantity of each ICT device type operated by the company and device specific
+					ratings, e.g. power ratings.<br>More information and assumptions can be found in <a
+						href="Readme.jsp" target="_blank">README</a> section. To reset the grid simply refresh the page.<br> <b>For your convenience the grid is
+						completed with some default values as an indicative example for information purpose.</b><br>Please
+					make appropriate changes according to your company's information.
+					<div class="row" style="text-align: center;">
+						<svg width="52" height="25">
   <rect width="50" height="25"
-									style="fill:'#eaeafb';stroke:grey;stroke-width:2;fill-opacity:0.1;stroke-opacity:0.9" />
-	<text x="7" y="17" font-family="Verdana" font-style = "italic" font-size="15" fill="black">N</text>
-</svg> - adjust number of devices. 
-<svg width="52" height="25">
+								style="fill:'#eaeafb';stroke:grey;stroke-width:2;fill-opacity:0.1;stroke-opacity:0.9" />
+	<text x="7" y="17" font-family="Verdana" font-style="italic" font-size="15" fill="black">N</text>
+</svg>
+						- adjust number of devices.
+						<svg width="52" height="25">
   <rect width="50" height="25"
-									style="fill:white;stroke:grey;stroke-width:2;fill-opacity:0.1;stroke-opacity:0.9" />
+								style="fill:white;stroke:grey;stroke-width:2;fill-opacity:0.1;stroke-opacity:0.9" />
 	<text x="7" y="17" font-family="Verdana" font-size="15" fill="black">N</text>
-</svg> - fill in for more accurate estimations. 
-<svg width="52" height="25">
+</svg>
+						- power ratings for more accurate estimations.
+						<svg width="52" height="25">
   <rect width="50" height="25"
-									style="fill:white;stroke:grey;stroke-width:2;fill-opacity:0.1;stroke-opacity:0.9" />
+								style="fill:white;stroke:grey;stroke-width:2;fill-opacity:0.1;stroke-opacity:0.9" />
 	<text x="7" y="17" font-family="Verdana" font-size="15" fill="grey"> N </text>
-</svg> - read-only values and formula results. 
-						
+</svg>
+						- read-only values and formula results.
 					</DIV>
 				</DIV>
 				<BR>
@@ -1323,13 +1334,10 @@
 				<BR> <BR> <BR>
 				<TABLE>
 					<TR>
-						<TD><DIV id="piechart" style="width: 400px; height: 400px;"></DIV>
-						</TD>
-						<TD><DIV id="piechart_energy" style="width: 400px; height: 400px;"></DIV>
-						</TD>
+						<TD><DIV id="piechart" style="width: 400px; height: 400px;"></DIV></TD>
+						<TD><DIV id="piechart_energy" style="width: 400px; height: 400px;"></DIV></TD>
 						<TD>
-							<DIV id="piechart_carbon" style="width: 400px; height: 400px;"></DIV>
-						</TD>
+							<DIV id="piechart_carbon" style="width: 400px; height: 400px;"></DIV></TD>
 					</TR>
 				</TABLE>
 			</DIV>
@@ -1337,5 +1345,15 @@
 	</DIV>
 	<!-- </div> -->
 </BODY>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-75929935-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 </HTML>
 <!-- http://codepen.io/ashblue/pen/mCtuA -->

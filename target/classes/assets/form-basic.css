@@ -210,5 +210,10 @@ html {
 	.form-basic .column-align { 
 	width: 100%;
 	
-	
+
 }
+.form-basic .form-row .test{
+	
+	text-decoration: underline;
+	/* font-weight: bold; */
+} 

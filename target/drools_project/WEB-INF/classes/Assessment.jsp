@@ -74,6 +74,24 @@ a:link {
 		}
 	}
 </SCRIPT>
+<script type='text/javascript'>
+var formSubmitting = false;
+var setFormSubmitting = function() { formSubmitting = true; };
+window.onload = function() {
+    window.addEventListener("beforeunload", function (e) {
+        if (formSubmitting) {
+            return undefined;
+        }
+
+        var confirmationMessage = 'If you leave before submitting the form, changes you have made will be lost. ';
+                                
+
+        (e || window.event).returnValue = confirmationMessage; //Gecko + IE
+        return confirmationMessage; //Gecko + Webkit, Safari, Chrome etc.
+    });
+};
+
+</script>
 <TITLE>ER Assessment BRB toolkit</TITLE>
 <LINK rel="stylesheet" href="assets/demo.css">
 <LINK rel="stylesheet" href="assets/form-basic.css">
@@ -85,19 +103,23 @@ a:link {
 <UL>
 	<LI><A href="index.html">Home</A>
 	</LI>
+	<LI><span style="color:#4c565e;">&#10148;</span></LI>
 	<LI><A href="Assessment.jsp" class="active">Form</A>
 	</LI>
+
 	<LI><A href="Results.jsp">Results</A>
 	</LI>
+	
 	<LI><A href="Recommendations.jsp">Recommendations</A>
 	</LI>
+	
 	<LI><A href="Calculate.jsp">Calculate</A>
 	</LI>
 </UL>
 <BODY>
 	<DIV class="main-content">
 		<!-- You only need this form and the form-labels-on-top.css -->
-		<FORM class="form-basic" method="POST" action="ReadParams">
+		<FORM class="form-basic" method="POST" action="ReadParams" onsubmit="setFormSubmitting()">
 			<DIV class="form-title-row">
 				<H1>Please answer the questions</H1>
 			</DIV>
@@ -180,7 +202,7 @@ a:link {
 				</TABLE>
 			</DIV>
 			<DIV class="form-row" id="v1_4" style="display: none;">
-				<LABEL><SPAN><B>4. </B>Are you familiar with use of services that minimise the
+				<LABEL><SPAN><B>4. </B>How familiar are you with services that minimize the
 						energy consumption and environmental impact of ICT equipment (e.g. virtualization,
 						optimization, etc.)?</SPAN> </LABEL>
 				<DIV class="form-radio-buttons">
@@ -235,7 +257,7 @@ a:link {
 				</TABLE>
 			</DIV>
 			<DIV class="form-row" id="v2_2" style="display: none;">
-				<LABEL><SPAN><B>6. </B>Is use of switch off and standby modes common in your
+				<LABEL><SPAN><B>6. </B>Is the use of 'switch off' and 'standby' modes common in your
 						company?</SPAN> </LABEL>
 				<DIV class="form-radio-buttons">
 					<DIV>
@@ -266,7 +288,7 @@ a:link {
 			</DIV>
 			<DIV class="form-row" id="v2_3" style="display: none;">
 				<LABEL><SPAN><B>7. </B>Have you installed any power management software in your
-						company ICT equipment?</SPAN> </LABEL>
+						company's ICT equipment?</SPAN> </LABEL>
 				<DIV class="form-radio-buttons">
 					<DIV>
 						<LABEL> <INPUT type="radio" name="v2_3" value="high"> <SPAN>Yes</SPAN> </LABEL>
@@ -290,7 +312,7 @@ a:link {
 				</TABLE>
 			</DIV>
 			<DIV class="form-row" id="v2_4" style="display: none;">
-				<LABEL><SPAN><B>8. </B>Have you followed any systematic approach for energy
+				<LABEL><SPAN><B>8. </B>How often do you follow any systematic approach for energy
 						efficiency improvement (e.g. data collection, and data analysis)?</SPAN> </LABEL>
 				<DIV class="form-radio-buttons">
 					<DIV>
@@ -346,7 +368,7 @@ a:link {
 				</TABLE>
 			</DIV>
 			<DIV class="form-row" id="v3_1" style="display: none;">
-				<LABEL><SPAN><B>10. </B>Do the following statement apply to your company? "The
+				<LABEL><SPAN><B>10. </B>To what extent does the following statement apply to your company? "The
 						network infrastructure makes use of equipment that adheres to the latest energy efficiency
 						standards (sleep mode or Energy Efficient Ethernet)" </SPAN> </LABEL>
 				<DIV class="form-radio-buttons">
@@ -375,8 +397,7 @@ a:link {
 				</TABLE>
 			</DIV>
 			<DIV class="form-row" id="v3_2" style="display: none;">
-				<LABEL><SPAN><B>11. </B>Do the following statement apply to your company? "The
-						number of required IT equipment, functionalities, and quality of service are optimized in
+				<LABEL><SPAN><B>11. </B>To what extent does the following statement apply to your company? "Our company's required IT equipment, functionalities and quality of service are optimized in
 						order to reduce environmental impact."</SPAN> </LABEL>
 				<DIV class="form-radio-buttons">
 					<DIV>
@@ -404,7 +425,7 @@ a:link {
 				</TABLE>
 			</DIV>
 			<DIV class="form-row" id="v3_3" style="display: none;">
-				<LABEL><SPAN><B>12. </B>Do the following statement apply to your company?
+				<LABEL><SPAN><B>12. </B>To what extent does the following statement apply to your company?
 						"Routing is made energy aware and offers possibilities to choose the most energy efficient
 						route instead of the shortest path."</SPAN> </LABEL>
 				<DIV class="form-radio-buttons">
@@ -434,7 +455,7 @@ a:link {
 			</DIV>
 			<DIV class="form-row" id="v4_1" style="display: none;">
 				<LABEL><SPAN><B>13. </B>Has your company adopted any documented reference
-						architecture (with guiding principles for designing new services/products) aimed to minimize
+						architecture, with guiding principles for designing new services/products, aimed at minimize
 						environmental impact?</SPAN> </LABEL>
 				<DIV class="form-radio-buttons">
 					<DIV>
@@ -485,7 +506,7 @@ a:link {
 			</DIV>
 			<DIV class="form-row" id="v4_3" style="display: none;">
 				<LABEL><SPAN><B>15. </B>Does your company promote the use of audio and video
-						conferencing facilities reduce travel?</SPAN> </LABEL>
+						conferencing facilities that reduce business travel expenses?</SPAN> </LABEL>
 				<DIV class="form-radio-buttons">
 					<DIV>
 						<LABEL> <INPUT type="radio" name="v4_3" value="high" checked="checked"> <SPAN>Yes</SPAN>
@@ -510,7 +531,7 @@ a:link {
 			</DIV>
 			<DIV class="form-row" id="v5_1" style="display: none;">
 				<LABEL><SPAN><B>16. </B>Does the following statement apply to your company?
-						"Ensure a strict implementation of an e-waste policy for the reuse or recycling of ICT
+						"Our company ensures the strict implementation of an e-waste policy for the reuse or recycling of ICT
 						equipment to minimize environmental and social hazards after disposal." </SPAN> </LABEL>
 				<DIV class="form-radio-buttons">
 					<DIV>
@@ -539,7 +560,7 @@ a:link {
 				</TABLE>
 			</DIV>
 			<DIV class="form-row" id="v5_2" style="display: none;">
-				<LABEL><SPAN><B>17. </B>Does your company have any collection and recovery (e.g.
+				<LABEL><SPAN><B>17. </B>Does your company use any collection and recovery (e.g.
 						reuse, repairing, remanufacturing) channels (subcontractors) that can reduce the amount of
 						waste sent to landfill? </SPAN> </LABEL>
 				<DIV class="form-radio-buttons">
