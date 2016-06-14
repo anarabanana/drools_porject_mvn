@@ -1331,7 +1331,7 @@
 				</DIV>
 				<BR>
 				<DIV id="servers_grid" style="margin: 0 auto;"></DIV>
-				<BR> <BR> <BR>
+		
 				<TABLE>
 					<TR>
 						<TD><DIV id="piechart" style="width: 400px; height: 400px;"></DIV></TD>

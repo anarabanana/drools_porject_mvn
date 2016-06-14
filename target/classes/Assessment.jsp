@@ -320,7 +320,7 @@ window.onload = function() {
 								all</SPAN> </LABEL>
 					</DIV>
 					<DIV>
-						<LABEL> <INPUT type="radio" name="v2_4" value="medium" checked="checked"> <SPAN>Sometimes</SPAN>
+						<LABEL> <INPUT type="radio" name="v2_4" value="medium"> <SPAN>Sometimes</SPAN>
 						</LABEL>
 					</DIV>
 					<DIV>

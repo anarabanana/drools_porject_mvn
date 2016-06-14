@@ -132,7 +132,7 @@
 										'=+((D15*F15)+(E15*G15))/1000', '=+(H15*C15)' ],
 								[ "16", "CRT Monitors", 0, 70, 5, 2080, '=(8760-F16)',
 										'=+((D16*F16)+(E16*G16))/1000', '=+(H16*C16)' ],
-								[ "17", "POS terminals", , , , , , , 0 ],
+								[ "17", "POS terminals",0 ,0 ,0 ,2080 ,'=(8760-F17)','=+((D17*F17)+(E17*G17))/1000' , '=+(H17*C17)' ],
 								[ "18", "Other", , , , , , , 0 ],
 								[ "19", "Aircon overhead for computer suites", , , , , , , 0 ],
 								[ "20", "PCs & MONITORS SUB-TOTAL", , , , , , , '=(SUM(I11:I19))' ],
@@ -373,6 +373,16 @@
 									}, {
 										row : 15,
 										col : 6,
+										readOnly : true
+									},
+									{
+										row : 16,
+										col : 6,
+										readOnly : true
+									},
+									{
+										row : 16,
+										col : 7,
 										readOnly : true
 									},
 
@@ -1211,13 +1221,7 @@
 						}
 
 						// alert(indexesData[i].name)
-					/* 	$.getJSON("http://ip-api.com/json/?fields=countryCode", function(data) {
-							var country = data;
-							alert(country.countryCode);
-							console.log(country.countryCode)
-					
-							
-						}); */
+	
 						/* $.getJSON("http://freegeoip.net/json/", function(data) { */
 							$.getJSON("http://ip-api.com/json/?fields=countryCode", function(data) {
 							country = data.countryCode;
@@ -1341,5 +1345,15 @@
 	</DIV>
 	<!-- </div> -->
 </BODY>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-75929935-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 </HTML>
 <!-- http://codepen.io/ashblue/pen/mCtuA -->

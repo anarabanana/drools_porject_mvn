@@ -36,7 +36,7 @@ html {
 
 @media(min-width:767px) {
     .navbar {
-        padding: 20px 0;
+        padding: 10px 0;
         -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
         -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
         transition: background .5s ease-in-out,padding .5s ease-in-out;
@@ -50,6 +50,7 @@ html {
     .top-nav-collapse {
         padding: 0;
     }
+    
 }
 
 /* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
@@ -70,23 +71,36 @@ of those sections to manage the look and feel of the site. */
      height: 100%; 
     padding-top: 10%;
     text-align: left;
-    background: #3A0E85	;
+    /* background: #3A0E85	; */
+     background: #8D66EB	;
+     
+    
 }
+.about-section h1{
+	color: #d9d9d9;
+}
+.glyphicon{
+	color: #270758;
+	}
 
 .services-section {
     height: 100%;
     padding-top: 15%;
     text-align: center;
-    background: #4611a2;
+    /* background: #4611a2; */
+    background: #CEC5F7;
+    color:#270758;  
 }
-
+.services-section a{
+	color: #404040;
+	}
 .contact-section {
     height: 100%;
     padding-top: 15%;
     text-align: center;
     /* background: #bfbfbf; */
     background: white;
-    color: black;
+    color: #404040;
     
     
 }

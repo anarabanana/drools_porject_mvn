@@ -336,7 +336,7 @@ li {
 					<div>
 						<div>
 							<span class="checkmark" style="float: left;"> </span> &nbsp;&nbsp;- acitivites you are
-							assumed to fulfill completely, if answered "Yes/Always etc.
+							assumed to fulfill completely, if answered "Yes/Always" etc.
 						</div>
 						</br> <label><span>1. Equipment procurement compliant with Green ICT guidelines</span>
 							<li class="flip" id="flip_1_1">Green ICT procurement guidelines when buying new ICT

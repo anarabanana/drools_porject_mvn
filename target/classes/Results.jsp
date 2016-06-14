@@ -299,17 +299,16 @@ color:grey;
 			%>
 			<div class="alert success">
 				<span class="closebtn">×</span> <strong>Level: Leading.</strong> Your ER index is great.Keep
-				doing.
+				doing!
 			</div>
 			<%
-				} else if (doubleVar >= 60.0 && doubleVar < 80.0) {
+				} else if (doubleVar > 50.0 && doubleVar < 80.0) {
 			%>
 			<div class="alert info">
-				<span class="closebtn">×</span> <strong>Level: Succeeding.</strong> You are doing almost
-				perfect.
+				<span class="closebtn">×</span> <strong>Level: Succeeding.</strong> You are on the right track. Stay the course!
 			</div>
 			<%
-				} else if (doubleVar >= 40.0 && doubleVar < 60.0) {
+				} else if (doubleVar > 25.0 && doubleVar <= 50.0) {
 			%>
 			<div class="alert warning">
 				<span class="closebtn">×</span> <strong>Level: Improving.</strong> You might want to see
@@ -346,6 +345,7 @@ color:grey;
 						<p>Total estimated ER index is <%
 								Object obj = session.getAttribute("object");
 								out.println(obj);
+								
 							%> %</p>
 							<br>ER indexes for: <br>
 							
@@ -379,7 +379,7 @@ color:grey;
 							<span class="tooltiptext">Click to see recommendations</span> --%>
 							<a class="test" href="Recommendations.jsp#V2" data-toggle="tooltip" data-placement="top" title="See recommendations">2. Energy performance improvement and monitoring is about <%
 								Object obj2 = session.getAttribute("ob2");
-							//	out.println(obj2);
+								//out.println(obj2);
 								Object v2_av_obj = session.getAttribute("v2_av");
 								out.println(v2_av_obj);
 							%> %</a>

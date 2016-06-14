@@ -80,7 +80,7 @@ public class ReadParams extends HttpServlet {
 		if (myListV1.get(0).toString().equalsIgnoreCase("high")) {
 			v1_av += 25;
 		} else if (myListV1.get(0).toString().equalsIgnoreCase("medium")) {
-			v1_av += 12.25;
+			v1_av += 12.5;
 		} else if (myListV1.get(0).toString().equalsIgnoreCase("low")) {
 			v1_av += 0;
 		}
@@ -94,21 +94,21 @@ public class ReadParams extends HttpServlet {
 		if (myListV1.get(2).toString().equalsIgnoreCase("high")) {
 			v1_av += 25;
 		} else if (myListV1.get(2).toString().equalsIgnoreCase("medium")) {
-			v1_av += 12.25;
+			v1_av += 12.5;
 		} else if (myListV1.get(2).toString().equalsIgnoreCase("low")) {
 			v1_av += 0;
 		}
 		if (myListV1.get(3).toString().equalsIgnoreCase("high")) {
 			v1_av += 25;
 		} else if (myListV1.get(3).toString().equalsIgnoreCase("medium")) {
-			v1_av += 12.25;
+			v1_av += 12.5;
 		} else if (myListV1.get(3).toString().equalsIgnoreCase("low")) {
 			v1_av += 0;
 		}
 
-		if (v1_av >= 66) {
+		if (v1_av >= 75) {
 			myList.add("high");
-		} else if (v1_av < 66 && v1_av >= 33) {
+		} else if (v1_av < 75 && v1_av > 37.5) {
 			myList.add("medium");
 		} else {
 			myList.add("low");
@@ -156,9 +156,9 @@ public class ReadParams extends HttpServlet {
 			v2_av += 0;
 		}
 
-		if (v1_av >= 66) {
+		if (v2_av >= 70) {
 			myList.add("high");
-		} else if (v2_av < 66 && v2_av >= 33) {
+		} else if (v2_av <= 60 && v2_av >= 40) {
 			myList.add("medium");
 		} else {
 			myList.add("low");
@@ -174,28 +174,28 @@ public class ReadParams extends HttpServlet {
 		if (myListV3.get(0).toString().equalsIgnoreCase("high")) {
 			v3_av += 33;
 		} else if (myListV3.get(0).toString().equalsIgnoreCase("medium")) {
-			v3_av += 16;
+			v3_av += 16.5;
 		} else {
 			v3_av = v3_av + 0;
 		}
 		if (myListV3.get(1).toString().equalsIgnoreCase("high")) {
 			v3_av += 33;
 		} else if (myListV3.get(1).toString().equalsIgnoreCase("medium")) {
-			v3_av += 16;
+			v3_av += 16.5;
 		} else {
 			v3_av = v3_av + 0;
 		}
 		if (myListV3.get(2).toString().equalsIgnoreCase("high")) {
 			v3_av += 34;
 		} else if (myListV3.get(2).toString().equalsIgnoreCase("medium")) {
-			v3_av += 16;
+			v3_av += 16.5;
 		} else {
 			v3_av = v3_av + 0;
 		}
 
-		if (v3_av >= 66) {
+		if (v3_av > 66) {
 			myList.add("high");
-		} else if (v3_av < 66 && v3_av >= 33) {
+		} else if (v3_av <= 66 && v3_av >= 33) {
 			myList.add("medium");
 		} else {
 			myList.add("low");
@@ -224,9 +224,9 @@ public class ReadParams extends HttpServlet {
 			v4_av = v4_av + 0;
 		}
 
-		if (v4_av >= 66) {
+		if (v4_av > 66) {
 			myList.add("high");
-		} else if (v4_av < 66 && v4_av >= 33) {
+		} else if (v4_av <= 66 && v4_av >= 33) {
 			myList.add("medium");
 		} else {
 			myList.add("low");
@@ -252,9 +252,9 @@ public class ReadParams extends HttpServlet {
 			v5_av = v5_av + 0;
 		}
 
-		if (v5_av >= 66) {
+		if (v5_av >= 75) {
 			myList.add("high");
-		} else if (v5_av < 66 && v5_av >= 33) {
+		} else if (v5_av < 75 && v5_av > 25) {
 			myList.add("medium");
 		} else {
 			myList.add("low");
